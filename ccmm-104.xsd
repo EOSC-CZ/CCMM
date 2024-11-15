@@ -1,19 +1,19 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:ccmm="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
-           targetNamespace="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
-           elementFormDefault="qualified"
-           attributeFormDefault="unqualified">
+    xmlns:ccmm="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+    targetNamespace="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
 
-    <xs:include schemaLocation="include/identifierScheme.xsd"/>
+    <xs:include schemaLocation="include/identifierScheme.xsd" />
 
-
-<xs:element name="dataset">
+    <xs:element name="dataset">
         <xs:complexType>
             <xs:all>
                 <xs:element name="creators">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="creator" type="ccmm:AuthorityType" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="creator" type="ccmm:AuthorityType" minOccurs="1"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -21,7 +21,8 @@
                 <xs:element name="contributors">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="contributor" type="ccmm:ContributorType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="contributor" type="ccmm:ContributorType" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -29,38 +30,42 @@
                 <xs:element name="publishers">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="publisher" type="ccmm:OrganizationType" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element name="publisher" type="ccmm:OrganizationType" minOccurs="1"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                
-                <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="1"/>
+
+                <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="1" />
 
                 <xs:element name="alternateIdentifiers">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="alternateIdentifier" type="ccmm:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="alternateIdentifier" type="ccmm:IdentifierType"
+                                minOccurs="0" maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <xs:element name="title" type="ccmm:langString" minOccurs="1"/>
+                <xs:element name="title" type="ccmm:langString" minOccurs="1" />
 
                 <xs:element name="alternateTitles">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="alternateTitle" type="ccmm:langString" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="alternateTitle" type="ccmm:langString" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
 
-                <xs:element name="resourceType" type="xs:string" minOccurs="1"/>
-                <xs:element name="abstract" type="ccmm:langString" minOccurs="1"/>
+                <xs:element name="resourceType" type="xs:string" minOccurs="1" />
+                <xs:element name="abstract" type="ccmm:langString" minOccurs="1" />
 
                 <xs:element name="funding">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="award" type="ccmm:AwardType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="award" type="ccmm:AwardType" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -68,7 +73,8 @@
                 <xs:element name="subjects">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="subject" type="ccmm:SubjectType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="subject" type="ccmm:SubjectType" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -76,17 +82,19 @@
                 <xs:element name="termsOfUse">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="accessRights" type="ccmm:AccessRightsType"/>
-                            <xs:element name="rights" type="ccmm:RightsType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="accessRights" type="ccmm:AccessRightsType" />
+                            <xs:element name="rights" type="ccmm:RightsType" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-            
+
                 <xs:element name="timeReferences">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="publicationYear" type="xs:gYear"/>
-                            <xs:element name="date" type="ccmm:DateType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="publicationYear" type="xs:gYear" />
+                            <xs:element name="date" type="ccmm:DateType" minOccurs="0"
+                                maxOccurs="unbounded" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -97,18 +105,19 @@
 
     <xs:complexType name="AuthorityType" abstract="true">
         <xs:sequence>
-            <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="0"
+                maxOccurs="unbounded" />
         </xs:sequence>
-        
+
     </xs:complexType>
 
     <xs:complexType name="PersonType">
         <xs:complexContent>
             <xs:extension base="ccmm:AuthorityType">
                 <xs:sequence>
-                    <xs:element name="givenName" type="xs:string" minOccurs="1"/>
-                    <xs:element name="familyName" type="xs:string" minOccurs="1"/>
-                    <xs:element name="affiliation" type="ccmm:OrganizationType" minOccurs="0"/>
+                    <xs:element name="givenName" type="xs:string" minOccurs="1" />
+                    <xs:element name="familyName" type="xs:string" minOccurs="1" />
+                    <xs:element name="affiliation" type="ccmm:OrganizationType" minOccurs="0" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -118,8 +127,9 @@
         <xs:complexContent>
             <xs:extension base="ccmm:AuthorityType">
                 <xs:sequence>
-                    <xs:element name="organizationName" type="xs:string" minOccurs="1"/>
-                    <xs:element name="alternateName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="organizationName" type="xs:string" minOccurs="1" />
+                    <xs:element name="alternateName" type="xs:string" minOccurs="0"
+                        maxOccurs="unbounded" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -127,28 +137,29 @@
 
     <xs:complexType name="ContributorType">
         <xs:sequence>
-            <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="identifier" type="ccmm:IdentifierType" minOccurs="0"
+                maxOccurs="unbounded" />
             <xs:choice>
                 <xs:sequence>
-                    <xs:element name="givenName" type="xs:string" minOccurs="1"/>
-                    <xs:element name="familyName" type="xs:string" minOccurs="1"/>
-                    <xs:element name="affiliation" type="ccmm:OrganizationType" minOccurs="0"/>
+                    <xs:element name="givenName" type="xs:string" minOccurs="1" />
+                    <xs:element name="familyName" type="xs:string" minOccurs="1" />
+                    <xs:element name="affiliation" type="ccmm:OrganizationType" minOccurs="0" />
                 </xs:sequence>
                 <xs:sequence>
-                    <xs:element name="organizationName" type="xs:string" minOccurs="1"/>
+                    <xs:element name="organizationName" type="xs:string" minOccurs="1" />
                 </xs:sequence>
             </xs:choice>
         </xs:sequence>
-        <xs:attribute name="role" type="xs:string" use="required"/>
+        <xs:attribute name="role" type="xs:string" use="required" />
     </xs:complexType>
 
 
     <xs:complexType name="IdentifierType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="identifierScheme" type="ccmm:identifierScheme" use="required"/>
-                <xs:attribute name="schemeURI" type="xs:anyURI" use="optional"/>
-                <xs:attribute name="valueURI" type="xs:anyURI" use="optional"/>
+                <xs:attribute name="identifierScheme" type="ccmm:identifierScheme" use="required" />
+                <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+                <xs:attribute name="valueURI" type="xs:anyURI" use="optional" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -156,29 +167,30 @@
     <xs:complexType name="langString">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="lang" type="xs:language"/>
+                <xs:attribute name="lang" type="xs:language" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
     <xs:complexType name="AwardType">
         <xs:sequence>
-            <xs:element name="localIdentifier" type="ccmm:IdentifierType" minOccurs="1"/>
-            <xs:element name="alternateIdentifier" type="ccmm:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="awardTitle" type="ccmm:langString" minOccurs="1"/>
-            <xs:element name="fundingProgram" type="xs:string" minOccurs="0"/>
-            <xs:element name="funder" type="ccmm:OrganizationType" minOccurs="0"/>
+            <xs:element name="localIdentifier" type="ccmm:IdentifierType" minOccurs="1" />
+            <xs:element name="alternateIdentifier" type="ccmm:IdentifierType" minOccurs="0"
+                maxOccurs="unbounded" />
+            <xs:element name="awardTitle" type="ccmm:langString" minOccurs="1" />
+            <xs:element name="fundingProgram" type="xs:string" minOccurs="0" />
+            <xs:element name="funder" type="ccmm:OrganizationType" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="SubjectType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="subjectScheme" use="optional"/>
-                <xs:attribute name="schemeURI" type="xs:anyURI" use="optional"/>
-                <xs:attribute name="valueURI" type="xs:anyURI" use="optional"/>
-                <xs:attribute name="classificationCode" type="xs:anyURI" use="optional"/>
-                <xs:attribute name="lang" type="xs:language"/>
+                <xs:attribute name="subjectScheme" use="optional" />
+                <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+                <xs:attribute name="valueURI" type="xs:anyURI" use="optional" />
+                <xs:attribute name="classificationCode" type="xs:anyURI" use="optional" />
+                <xs:attribute name="lang" type="xs:language" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -186,7 +198,7 @@
     <xs:complexType name="AccessRightsType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="rightsURI" type="xs:anyURI" use="required"/>
+                <xs:attribute name="rightsURI" type="xs:anyURI" use="required" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -194,8 +206,8 @@
     <xs:complexType name="RightsType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="rightsType" type="xs:string" use="required"/>
-                <xs:attribute name="rightsURI" type="xs:anyURI" use="required"/>
+                <xs:attribute name="rightsType" type="xs:string" use="required" />
+                <xs:attribute name="rightsURI" type="xs:anyURI" use="required" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -203,7 +215,7 @@
     <xs:complexType name="DateType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="dateType" type="xs:string" use="required"/>
+                <xs:attribute name="dateType" type="xs:string" use="required" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
