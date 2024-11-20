@@ -1,0 +1,18 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ccmm="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+           targetNamespace="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:simpleType name="checksumAlgorithmScheme" id="checksumAlgorithmScheme">
+        <xs:annotation>
+            <xs:documentation>Controlled vocabulary for checksum algorithms</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="md5"/>
+            <xs:enumeration value="sha-256"/>
+            <xs:enumeration value="sha-512"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

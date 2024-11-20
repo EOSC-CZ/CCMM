@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ccmm="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+           targetNamespace="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:simpleType name="mediaTypeScheme" id="mediaTypeScheme">
+        <xs:annotation>
+            <xs:documentation>Controlled vocabulary for media types</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="audio/aac"/>
+            <xs:enumeration value="application/octet-stream"/>
+            <xs:enumeration value="application/x-bzip"/>
+            <xs:enumeration value="text/csv"/>
+            <xs:enumeration value="application/msword"/>
+            <xs:enumeration value="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+            <xs:enumeration value="application/gzip"/>
+            <xs:enumeration value="image/gif"/>
+            <xs:enumeration value="text/html"/>
+            <xs:enumeration value="image/jpeg"/>
+            <xs:enumeration value="application/json"/>
+            <xs:enumeration value="application/ld+json"/>
+            <xs:enumeration value="audio/mpeg"/>
+            <xs:enumeration value="video/mp4"/>
+            <xs:enumeration value="image/png"/>
+            <xs:enumeration value="application/vnd.rar"/>
+            <xs:enumeration value="image/svg+xml"/>
+            <xs:enumeration value="application/x-tar"/>
+            <xs:enumeration value="image/tiff"/>
+            <xs:enumeration value="text/plain"/>
+            <xs:enumeration value="audio/wav"/>
+            <xs:enumeration value="application/vnd.ms-excel"/>
+            <xs:enumeration value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+            <xs:enumeration value="application/xml"/>
+            <xs:enumeration value="application/zip"/>
+            <xs:enumeration value="application/x-7z-compressed"></xs:enumeration>
+
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

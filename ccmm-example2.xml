@@ -1,0 +1,181 @@
+<ccmm:dataset 
+    xmlns:ccmm="https://www.techlib.cz/ontologies/czech-core-metadata-model/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.techlib.cz/ontologies/czech-core-metadata-model/ ccmm-v01.xsd">
+
+    <ccmm:identifier identifierScheme="DOI">10.5281/zenodo.3338675</ccmm:identifier>
+    <ccmm:alternateIdentifiers>
+        <ccmm:alternateIdentifier identifierScheme="handle">20.500.11956/110038</ccmm:alternateIdentifier>
+        <ccmm:alternateIdentifier identifierScheme="URL">https://zenodo.org/records/3338675</ccmm:alternateIdentifier>
+        <ccmm:alternateIdentifier identifierScheme="oai">oai:zenodo.org:3338675</ccmm:alternateIdentifier>
+    </ccmm:alternateIdentifiers>
+
+    <ccmm:title lang="en">Relationships of research outputs and projects in NUSL, Czech R&amp;D Information System and OpenAIRE:  Supporting Data for Master Thesis</ccmm:title>
+    <ccmm:alternateTitles/>
+
+    <ccmm:resourceType>supporting data</ccmm:resourceType>
+    <ccmm:abstract lang="en">Research data for master thesis related to relationships of research outputs and projects in three resources: Czech National Repository of Grey Literature (www.nusl.cz), Czech Research and Development Information System (www.rvvi.cz) and OpenAIRE (www.openaire.eu). The dataset relates to relationships between research outputs and research projects. Collected in July 2019.</ccmm:abstract>
+
+    <ccmm:creators>
+        <ccmm:creator xsi:type="ccmm:PersonType">
+            <ccmm:identifier identifierScheme="ORCID">0000-0001-8683-6156</ccmm:identifier>
+            <ccmm:givenName>Petra</ccmm:givenName>
+            <ccmm:familyName>Černohlávková</ccmm:familyName>
+            <ccmm:affiliation>
+                <ccmm:identifier identifierScheme="ROR" valueURI="https://ror.org/024d6js02">024d6js02</ccmm:identifier>
+                <ccmm:identifier identifierScheme="ico">00216208</ccmm:identifier>
+                <ccmm:organizationName>Univerzita Karlova</ccmm:organizationName>
+                <ccmm:alternateName>Charles University</ccmm:alternateName>
+            </ccmm:affiliation>
+        </ccmm:creator>
+    </ccmm:creators>
+
+    <ccmm:contributors>
+        <ccmm:contributor role="DataCollector">
+            <ccmm:givenName>Jan</ccmm:givenName>
+            <ccmm:familyName>Dobiášovský</ccmm:familyName>
+            <ccmm:affiliation>
+                <ccmm:identifier identifierScheme="ROR">028txef36</ccmm:identifier>
+                <ccmm:identifier identifierScheme="ico">61387142</ccmm:identifier>
+                <ccmm:organizationName>Národní technická knihovna</ccmm:organizationName>
+                <ccmm:alternateName>National Library of Technology in Prague</ccmm:alternateName>
+            </ccmm:affiliation>
+        </ccmm:contributor>
+        <ccmm:contributor role="DataCollector">
+            <ccmm:identifier identifierScheme="ORCID">0000-0003-1972-321X</ccmm:identifier>
+            <ccmm:givenName>Daniel</ccmm:givenName>
+            <ccmm:familyName>Kopecký</ccmm:familyName>
+            <ccmm:affiliation>
+                <ccmm:identifier identifierScheme="ROR">028txef36</ccmm:identifier>
+                <ccmm:identifier identifierScheme="ico">61387142</ccmm:identifier>
+                <ccmm:organizationName>Národní technická knihovna</ccmm:organizationName>
+                <ccmm:alternateName>National Library of Technology in Prague</ccmm:alternateName>
+            </ccmm:affiliation>
+        </ccmm:contributor>
+        <ccmm:contributor role="DataCollector">
+            <ccmm:givenName>Jana</ccmm:givenName>
+            <ccmm:familyName>Slouková</ccmm:familyName>
+        </ccmm:contributor>
+        <ccmm:contributor role="Supervisor">
+            <ccmm:identifier identifierScheme="ORCID">0000-0001-8985-152X</ccmm:identifier>
+            <ccmm:givenName>Jan</ccmm:givenName>
+            <ccmm:familyName>Dvořák</ccmm:familyName>
+            <ccmm:affiliation>
+                <ccmm:identifier identifierScheme="ROR" valueURI="https://ror.org/024d6js02">024d6js02</ccmm:identifier>
+                <ccmm:identifier identifierScheme="ico">00216208</ccmm:identifier>
+                <ccmm:organizationName>Univerzita Karlova</ccmm:organizationName>
+                <ccmm:alternateName>Charles University</ccmm:alternateName>
+            </ccmm:affiliation>
+        </ccmm:contributor>
+    </ccmm:contributors>
+
+    <ccmm:publishers>
+        <ccmm:publisher>
+            <ccmm:identifier identifierScheme="URL">https://zenodo.org</ccmm:identifier>
+            <ccmm:organizationName>zenodo</ccmm:organizationName>
+        </ccmm:publisher>
+    </ccmm:publishers>
+
+    <ccmm:funding/>
+
+    <ccmm:subjects>
+        <ccmm:subject lang="en">research outputs</ccmm:subject>
+        <ccmm:subject lang="en">research projects</ccmm:subject>
+        <ccmm:subject lang="en">OpenAIRE</ccmm:subject>
+        <ccmm:subject lang="en">interoperability</ccmm:subject>
+        <ccmm:subject lang="en">funding acknowledgements</ccmm:subject>
+        <ccmm:subject lang="en">NUSL</ccmm:subject>
+        <ccmm:subject lang="en">IS VaVaI</ccmm:subject>
+        <ccmm:subject lang="en">research outputs</ccmm:subject>
+        <ccmm:subject lang="cs">vědecké výsledky</ccmm:subject>
+        <ccmm:subject lang="cs">výzkumné projekty</ccmm:subject>
+        <ccmm:subject lang="cs">OpenAIRE</ccmm:subject>
+        <ccmm:subject lang="cs">interoperabilita</ccmm:subject>
+        <ccmm:subject lang="cs">návaznost na výzkumné aktivity</ccmm:subject>
+        <ccmm:subject lang="cs">NUŠL</ccmm:subject>
+        <ccmm:subject lang="cs">IS VaVaI</ccmm:subject>
+    </ccmm:subjects>
+
+    <ccmm:termsOfUseList>
+        <ccmm:accessRights rightsURI="http://purl.org/coar/access_right/c_abf2">open access</ccmm:accessRights>
+        <ccmm:license rightsURI="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</ccmm:license>
+    </ccmm:termsOfUseList>
+
+    <ccmm:timeReferences>
+        <ccmm:publicationYear>2019</ccmm:publicationYear>
+        <ccmm:timeReference timeReferenceType="collected">
+            <ccmm:date>2019-07</ccmm:date>
+        </ccmm:timeReference>
+
+        <ccmm:timeReference timeReferenceType="issued">
+            <ccmm:date>2019-07-31</ccmm:date>
+        </ccmm:timeReference>
+
+        <ccmm:timeReference timeReferenceType="updated">
+            <ccmm:date>2021-07-21</ccmm:date>
+        </ccmm:timeReference>
+    </ccmm:timeReferences>
+
+    <ccmm:relatedResources>
+        <ccmm:relatedResource relationType="IsDocumentedBy">
+            <ccmm:identifier identifierScheme="handle">20.500.11956/110038</ccmm:identifier>
+            <ccmm:title lang="en">Relations of research outputs and projects: NUSL, R&amp;D Information System and OpenAIRE</ccmm:title>
+            <ccmm:resourceType>master thesis</ccmm:resourceType>
+        </ccmm:relatedResource>
+
+        <ccmm:relatedResource relationType="IsVersionOf">
+            <ccmm:identifier identifierScheme="DOI">10.5281/zenodo.3338674</ccmm:identifier>
+            <ccmm:title lang="en">Relationships of research outputs and projects in NUSL, Czech R&amp;D Information System and OpenAIRE:  Supporting Data for Master Thesis</ccmm:title>
+            <ccmm:resourceType>supporting data</ccmm:resourceType>
+        </ccmm:relatedResource>
+    </ccmm:relatedResources>
+
+    <ccmm:distributions>
+        <ccmm:distribution xsi:type="ccmm:FileType">
+            <ccmm:distributionName>NUSL.zip</ccmm:distributionName>
+            <ccmm:downloadURL>https://zenodo.org/records/3338675/files/NUSL.zip</ccmm:downloadURL>
+            <ccmm:mediaType>application/zip</ccmm:mediaType>
+            <ccmm:innerFormat>text/csv</ccmm:innerFormat>
+            <ccmm:checksum algorithm="md5">3df639720e686a6838a06d88d3de4d11</ccmm:checksum>
+            <ccmm:byteSize>130285</ccmm:byteSize>
+        </ccmm:distribution>
+
+        <ccmm:distribution xsi:type="ccmm:FileType">
+            <ccmm:distributionName>analysis_excel.zip</ccmm:distributionName>
+            <ccmm:downloadURL>https://zenodo.org/records/3338675/files/analysis_excel.zip</ccmm:downloadURL>
+            <ccmm:mediaType>application/zip</ccmm:mediaType>
+            <ccmm:innerFormat>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</ccmm:innerFormat>
+            <ccmm:checksum algorithm="md5">7ee79fb5df97ad0fb58884e526166d90</ccmm:checksum>
+            <ccmm:byteSize>324062</ccmm:byteSize>
+        </ccmm:distribution>
+
+        <ccmm:distribution xsi:type="ccmm:FileType">
+            <ccmm:distributionName>OpenAIRE.zip</ccmm:distributionName>
+            <ccmm:downloadURL>https://zenodo.org/records/3338675/files/OpenAIRE.zip</ccmm:downloadURL>
+            <ccmm:mediaType>application/zip</ccmm:mediaType>
+            <ccmm:innerFormat>text/csv</ccmm:innerFormat>
+            <ccmm:checksum algorithm="md5">79286a9d67e40cc029a8abc48f2822f3</ccmm:checksum>
+            <ccmm:byteSize>14982288</ccmm:byteSize>
+        </ccmm:distribution>
+
+        <ccmm:distribution xsi:type="ccmm:FileType">
+            <ccmm:distributionName>RIV.zip</ccmm:distributionName>
+            <ccmm:downloadURL>https://zenodo.org/records/3338675/files/RIV.zip</ccmm:downloadURL>
+            <ccmm:mediaType>application/zip</ccmm:mediaType>
+            <ccmm:innerFormat>text/csv</ccmm:innerFormat>
+            <ccmm:checksum algorithm="md5">ba244c22945f01c554af038ae2909f9c</ccmm:checksum>
+            <ccmm:byteSize>4309495</ccmm:byteSize>
+        </ccmm:distribution>
+
+        <ccmm:distribution xsi:type="ccmm:FileType">
+            <ccmm:distributionName>readme.txt</ccmm:distributionName>
+            <ccmm:downloadURL>https://zenodo.org/records/3338675/files/readme.txt</ccmm:downloadURL>
+            <ccmm:mediaType>text/plain</ccmm:mediaType>
+            <ccmm:checksum algorithm="md5">78e797b30f5c5c4ea12ad9168b19e126</ccmm:checksum>
+            <ccmm:byteSize>5751</ccmm:byteSize>
+        </ccmm:distribution>
+
+    </ccmm:distributions>
+
+    <ccmm:geolocations/>
+</ccmm:dataset>
