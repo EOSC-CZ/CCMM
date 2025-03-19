@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+  <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
+  <xs:element name="dataset" type="dataset"/>
+  <xs:element name="metadata_record" type="metadata_record"/>
+  <xs:complexType name="dataset" sawsdl:modelReference="http://www.w3.org/ns/dcat#Dataset">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="publication_year" type="xs:gYear"
+        sawsdl:modelReference="relatedItemPublicationYear">
+        
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="descriptions" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/description">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="version" type="xs:string"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#version">
+        
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="other_languages" type="xs:string"
+        sawsdl:modelReference="language">
+        
+      </xs:element>
+      <xs:element name="primary_language" type="xs:string" sawsdl:modelReference="language">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_titles" type="xs:string"
+        sawsdl:modelReference="alternativeTitle">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="abstract" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/abstract">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="resource_type" type="xs:string"
+        sawsdl:modelReference="resourceType">
+        
+      </xs:element>
+      <xs:element name="title" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/title http://purl.org/dc/terms/title">
+        
+      </xs:element>
+      <xs:element name="identifier" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/identifier http://purl.org/dc/terms/identifier">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="locations"
+        sawsdl:modelReference="http://purl.org/dc/terms/spatial http://purl.org/dc/terms/spatial">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="location"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="provenance"
+        sawsdl:modelReference="http://purl.org/dc/terms/provenance">
+        
+        <xs:complexType sawsdl:modelReference="http://purl.org/dc/terms/ProvenanceStatement">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="provenance_statement"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relations"
+        sawsdl:modelReference="qualifiedRelation http://www.w3.org/ns/dcat#qualifiedRelation">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="resource_to_agent_relationship"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="time_references"
+        sawsdl:modelReference="hasTimeReference">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="time_reference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="subjects"
+        sawsdl:modelReference="hasSubject">
+        
+        <xs:complexType sawsdl:modelReference="Subject">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="c:iri"/>
+            <xs:element minOccurs="0" name="definition" type="xs:string"
+              sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#definition">
+              
+            </xs:element>
+            <xs:element name="title" type="xs:string"
+              sawsdl:modelReference="http://purl.org/dc/terms/title">
+              
+            </xs:element>
+            <xs:element minOccurs="0" name="classification_code" type="xs:string"
+              sawsdl:modelReference="subjectClassificationCode">
+              
+            </xs:element>
+            <xs:element minOccurs="0" name="in_subject_scheme"
+              sawsdl:modelReference="inSubjectScheme">
+              
+              <xs:complexType sawsdl:modelReference="SubjectScheme">
+                
+                <xs:sequence>
+                  <xs:element minOccurs="0" ref="subject_scheme"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="validation_results"
+        sawsdl:modelReference="hasValidationResult">
+        
+        <xs:complexType sawsdl:modelReference="ValidationResult">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="validation_result"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="distributions"
+        sawsdl:modelReference="hasDistribution">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="distribution"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="funding_references"
+        sawsdl:modelReference="hasFundingReference">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="funding_reference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="terms_of_use"
+        sawsdl:modelReference="hasVersion">
+        
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="terms_of_use"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="related_resources"
+        sawsdl:modelReference="hasRelatedResource">
+        
+        <xs:complexType
+          sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+          
+          <xs:sequence>
+            <xs:element ref="resource"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_identifiers"
+        sawsdl:modelReference="hasAlternateIdentifier">
+        
+        <xs:complexType sawsdl:modelReference="AlternateIdentifier">
+          
+          <xs:sequence>
+            <xs:element ref="alternate_identifier"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="distribution" sawsdl:modelReference="http://www.w3.org/ns/dcat#Distribution">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/title">
+        
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="agent" sawsdl:modelReference="http://xmlns.com/foaf/0.1/Agent"
+    abstract="true">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="external_identifiers" type="xs:string"
+        sawsdl:modelReference="agentExternalIdentifier">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contactPoint"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
+        
+        <xs:complexType sawsdl:modelReference="ContactDetails">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="contact_details"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="agent" type="agent"/>
+  <xs:complexType name="application_profile"
+    sawsdl:modelReference="http://purl.org/dc/terms/Standard">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="application_profile" type="application_profile"/>
+  <xs:complexType name="contact_details" sawsdl:modelReference="ContactDetails">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataBox" type="xs:string"
+        sawsdl:modelReference="dataBox">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="email" type="xs:string"
+        sawsdl:modelReference="email">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="phone" type="xs:string"
+        sawsdl:modelReference="phone">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="addresses"
+        sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#hasAddress">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/locn#Address">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="address"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="contact_details" type="contact_details"/>
+  <xs:complexType name="distribution_data_service" sawsdl:modelReference="Distribution-DataService">
+    
+    <xs:complexContent>
+      <xs:extension base="distribution">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="description" type="xs:string"
+            sawsdl:modelReference="http://purl.org/dc/terms/description">
+            
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="specifications"
+            sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+            
+            <xs:complexType sawsdl:modelReference="http://purl.org/dc/terms/Standard">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="documentation"
+            sawsdl:modelReference="http://xmlns.com/foaf/0.1/page">
+            
+            <xs:complexType sawsdl:modelReference="http://xmlns.com/foaf/0.1/Document">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="access_services"
+            sawsdl:modelReference="http://www.w3.org/ns/dcat#accessService">
+            
+            <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/dcat#DataService">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="distribution_data_service" type="distribution_data_service"
+    substitutionGroup="distribution"/>
+  <xs:complexType name="distribution_downloadable_file"
+    sawsdl:modelReference="Distribution-DownloadableFile">
+    
+    <xs:complexContent>
+      <xs:extension base="distribution">
+        <xs:sequence>
+          <xs:element name="checksum" type="xs:string"
+            sawsdl:modelReference="http://spdx.org/rdf/terms#checksumValue">
+            
+          </xs:element>
+          <xs:element minOccurs="0" name="byte_size" type="xs:integer"
+            sawsdl:modelReference="http://www.w3.org/ns/dcat#byteSize">
+            
+          </xs:element>
+          <xs:element minOccurs="0" name="format" type="xs:anyURI"
+            sawsdl:modelReference="http://purl.org/dc/terms/format">
+            
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_schema"
+            sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+            
+            <xs:complexType sawsdl:modelReference="http://purl.org/dc/terms/Standard">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" sawsdl:modelReference="http://www.w3.org/ns/dcat#mediaType"
+            ref="media_type">
+            
+          </xs:element>
+          <xs:element maxOccurs="unbounded" name="access_URL"
+            sawsdl:modelReference="http://www.w3.org/ns/dcat#accessURL">
+            
+            <xs:complexType
+              sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="download_URL"
+            sawsdl:modelReference="http://www.w3.org/ns/dcat#downloadURL">
+            
+            <xs:complexType
+              sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+              
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="c:iri"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="distribution_downloadable_file" type="distribution_downloadable_file"
+    substitutionGroup="distribution"/>
+  <xs:complexType name="file"
+    sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="file" type="file"/>
+  <xs:complexType name="funder_identifier" sawsdl:modelReference="FunderIdentifier">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="funder_identifier_scheme_uri" type="xs:anyURI"
+        sawsdl:modelReference="funderIdentifierSchemeUri">
+        
+      </xs:element>
+      <xs:element name="funderIdentifierType" type="xs:string"
+        sawsdl:modelReference="funderIdentifierType">
+        
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="funder_identifier" type="funder_identifier"/>
+  <xs:complexType name="funding_reference" sawsdl:modelReference="FundingReference">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="funding_program" type="xs:string">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="award_title" type="xs:string"
+        sawsdl:modelReference="awardTitle">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="local_identifier" type="xs:string"
+        sawsdl:modelReference="awardNumber">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="funders"
+        sawsdl:modelReference="hasFunderIdentifier">
+        
+        <xs:complexType sawsdl:modelReference="FunderIdentifier">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="funder_identifier"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="funding_reference" type="funding_reference"/>
+  <xs:complexType name="location"
+    sawsdl:modelReference="http://purl.org/dc/terms/Location Geolocation">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="bbox" type="xs:anySimpleType"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#bbox">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="location_name" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/title">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataset_relations" type="xs:string"
+        sawsdl:modelReference="relationType">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="geometry"
+        sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/locn#Geometry">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="c:iri"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="related_object_identifiers"
+        sawsdl:modelReference="hasRelatedResource">
+        
+        <xs:complexType
+          sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="resource"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="location" type="location"/>
+  <xs:complexType name="media_type" sawsdl:modelReference="http://purl.org/dc/terms/MediaType">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="media_type" type="media_type"/>
+  <xs:complexType name="metadata_record"
+    sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="date_updated" type="xs:date"
+        sawsdl:modelReference="http://purl.org/dc/terms/modified">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="date_created" type="xs:date"
+        sawsdl:modelReference="http://purl.org/dc/terms/created">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="language" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/language">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="describes"
+        sawsdl:modelReference="describes">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/dcat#Dataset">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="dataset"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relations"
+        sawsdl:modelReference="qualifiedRelation">
+        
+        <xs:complexType sawsdl:modelReference="MetadataToAgentRelationship">
+          
+          <xs:sequence>
+            <xs:element ref="metadata_to_agent_relationship"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="original_repository"
+        sawsdl:modelReference="originalRepository">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/dcat#Catalog">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="catalogue"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="local_identifier"
+        sawsdl:modelReference="http://purl.org/dc/terms/source">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="metadata_record"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard"
+        sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+        
+        <xs:complexType sawsdl:modelReference="http://purl.org/dc/terms/Standard">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="application_profile"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="organization"
+    sawsdl:modelReference="http://www.w3.org/ns/prov#Organization http://xmlns.com/foaf/0.1/Agent">
+    
+    <xs:complexContent>
+      <xs:extension base="agent">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_names" type="xs:string"
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
+            
+          </xs:element>
+          <xs:element name="name" type="xs:string"
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
+            
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="organization" type="organization" substitutionGroup="agent"/>
+  <xs:complexType name="person" sawsdl:modelReference="http://www.w3.org/ns/prov#Person">
+    
+    <xs:complexContent>
+      <xs:extension base="agent">
+        <xs:sequence>
+          <xs:element name="family_name" type="xs:string"
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#family-name">
+            
+          </xs:element>
+          <xs:element maxOccurs="unbounded" name="given_name" type="xs:string"
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#given-name">
+            
+          </xs:element>
+          <xs:element minOccurs="0" name="affiliation" sawsdl:modelReference="hasAffiliation">
+            
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element ref="organization"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="person" type="person" substitutionGroup="agent"/>
+  <xs:complexType name="resource"
+    sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#Resource Resource">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="relationType" type="xs:string"
+        sawsdl:modelReference="relationType">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="type" type="xs:string"
+        sawsdl:modelReference="resourceType http://purl.org/dc/terms/type">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="title" type="xs:string"
+        sawsdl:modelReference="relatedItemTitle http://purl.org/dc/terms/title">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="identifier" type="xs:string"
+        sawsdl:modelReference="identifier http://purl.org/dc/terms/identifier">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relations"
+        sawsdl:modelReference="qualifiedRelation">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/ns/dcat#Relationship">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="resource_to_agent_relationship"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="hasTimeReference"
+        sawsdl:modelReference="hasTimeReference">
+        
+        <xs:complexType sawsdl:modelReference="TimeReference">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="time_reference"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="resource" type="resource"/>
+  <xs:complexType name="resource_agent_role_type"
+    sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="resource_agent_role_type" type="resource_agent_role_type"/>
+  <xs:complexType name="resource_to_agent_relationship"
+    sawsdl:modelReference="http://www.w3.org/ns/dcat#Relationship">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element maxOccurs="unbounded" name="roles"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#hadRole">
+        
+        <xs:complexType sawsdl:modelReference="http://www.w3.org/2004/02/skos/core#Concept">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="resource_agent_role_type"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="relations"
+        sawsdl:modelReference="http://purl.org/dc/terms/relation">
+        
+        <xs:complexType sawsdl:modelReference="http://xmlns.com/foaf/0.1/Agent">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="agent"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="resource_to_agent_relationship" type="resource_to_agent_relationship"/>
+  <xs:element name="metadata_agent_role_type" type="metadata_agent_role_type"/>
+  <xs:complexType name="metadata_agent_role_type">
+    <xs:sequence>
+      <xs:element ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="metadata_to_agent_relationship" type="metadata_to_agent_relationship"/>
+  <xs:complexType name="metadata_to_agent_relationship">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="relations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="agent"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="roles">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="metadata_agent_role_type"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="terms_of_use" sawsdl:modelReference="Rights">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/description">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="license" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/license">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="access_rights" type="xs:string">
+        
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact_persons"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
+        
+        <xs:complexType sawsdl:modelReference="http://xmlns.com/foaf/0.1/Agent">
+          
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="agent"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="terms_of_use" type="terms_of_use"/>
+  <xs:complexType name="time_reference" sawsdl:modelReference="TimeReference">
+    
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" name="date_information" type="xs:string"
+        sawsdl:modelReference="dateInformation">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="date_type" type="xs:string" sawsdl:modelReference="dateType">
+        
+      </xs:element>
+      <xs:element minOccurs="0" name="date" type="xs:date" sawsdl:modelReference="dateValue">
+        
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="time_reference" type="time_reference"/>
+  <xs:element name="distribution" type="distribution" abstract="true"/>
+  <xs:element name="provenance_statement" type="provenance_statement"/>
+  <xs:complexType name="provenance_statement"/>
+  <xs:element name="address" type="address"/>
+  <xs:complexType name="address"/>
+  <xs:element name="subject_scheme" type="subject_scheme"/>
+  <xs:complexType name="subject_scheme">
+    <xs:sequence>
+      <xs:element ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="validation_result" type="validation_result"/>
+  <xs:complexType name="validation_result"/>
+  <xs:element name="alternate_identifier" type="alternate_identifier"/>
+  <xs:complexType name="alternate_identifier">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="alternate_identifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="alternate_identifier_type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="catalogue" type="catalogue"/>
+  <xs:complexType name="catalogue">
+    <xs:sequence>
+      <xs:element ref="c:iri"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

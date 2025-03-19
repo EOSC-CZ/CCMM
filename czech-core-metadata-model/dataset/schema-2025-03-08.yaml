@@ -1,0 +1,428 @@
+#
+# YAML schema for invenio model
+#
+# Only metadata part is captured here, distributions are not included yet
+# These will be captured via the "R" transfer type in the native files
+# section of invenio.
+#
+$defs:
+  TimeReference:
+    id: TimeReference
+    properties:
+      date_information:
+        type: keyword
+        label.en: Date information
+        help.en: Additional information to the date in text form.
+        required: false
+      date_type:
+        # TODO: vocabulary
+        type: keyword
+        label.en: Date type
+        help.en: Type of the date.
+      date:
+        type: date
+        label.en: Date
+        help.en: Date - A point or period of time associated with an event in the lifecycle of the resource.
+        required: false
+
+  Subject:
+    id: Subject
+    label.en: Subject
+    help.en: Subject, keyword, classification code, or key phrase describing the resource.
+    properties:
+      # TODO: languages?
+      definition:
+        type: fulltext
+        label.en: Definition
+        help.en: Definition of the subject.
+      title:
+        type: fulltext+keyword
+        label.en: Title
+        help.en: Title of the subject.
+        required: true
+      classification_code:
+        type: keyword
+        label.en: Classification code
+        help.en: The classification code used for the subject term in the subject scheme.
+      in_subject_scheme:
+        # TODO: prejmenovat na subject_scheme
+        type: keyword
+        label.en: In subject scheme
+        help.en: Collection of subjects (keywords, concepts, classification codes) curated by a single source.
+    required: false
+
+  Location:
+    id: Location
+    type: object
+    label.en: Location
+    help.en: Spatial region, named place, or geometry representation of a place related to the dataset.
+    properties:
+      iri:
+        type: url
+        required: false
+      bbox:
+        # TODO: define bbox type
+        type: any
+        label.en: bbox
+        help.en: Bounding box of the location geometry.
+        required: false
+      location_names[]:
+        # TODO: why array? What is the meaning of the names?
+        type: keyword
+        label.en: Location name
+        help.en: Name of the spatial location.
+        required: false
+      dataset_relations[]:
+        type: keyword
+        label.en: Relation to dataset
+        help.en: Type of relation of the spatial location to the dataset.
+        required: false
+      geometry:
+        # TODO: define the geometry type
+        type: object
+        label.en: geometry
+        help.en: The corresponding geometry for a resource.
+        properties:
+          iri:
+            type: url
+            required: false
+        required: false
+      related_object_identifiers[]:
+        label.en: Related Object Identifier
+        help.en: Relation to the existing spatial object.
+        properties:
+          iri:
+            type: object
+            label.en: Resource
+            help.en: Resource represents any resource, physical or digital, that is related to the described dataset.
+          relationType:
+            # TODO: vocabulary
+            type: keyword
+            label.en: Relation type
+            help.en: Type of relation of the spatial location to the dataset.
+        required: false
+
+  MetadataRecord:
+    label.en: Metadata Record
+    help.en: Description of the metadata record of the dataset.
+    properties:
+      iri:
+        type: url
+        required: false
+      date_updated[]:
+        # array?
+        type: date
+        label.en: Date updated
+        help.en: Date on which the resource was changed.
+        required: false
+      date_created:
+        type: date
+        label.en: Date Created
+        help.en: The date on which the metadata record was created.
+        required: false
+      language:
+        type: vocabulary
+        vocabulary-type: languages
+        label.en: Language
+        help.en: Language of the metadata record.
+        required: false
+      qualified_relations[]:
+        type: object
+        label.en: qualified relation
+        help.en: Attachment of resource to the relationship.
+        properties:
+          metadata_to_agent_relationship:
+            type: object
+            label.en: Metadata to agent relationship
+            help.en: Relationship between metadata record and agent.
+        required: false
+      original_repository:
+        label.en: original repository
+        help.en: Link to the repository from which the metadata were originally stored and curated.
+        properties:
+          catalogue:
+            type: object
+            label.en: Repository
+            help.en: A curated collection of metadata about resources.
+            properties:
+              iri:
+                type: url
+                required: true
+        required: false
+
+      local_identifier:
+        type: keyword
+        label.en: Local identifier
+        help.en: Local identifier of original metadata record in any metadata catalogue.
+        required: false
+
+      conforms_to_standard[]:
+        type: object
+        label.en: Conforms to standard
+        help.en: An established standard to which the metadata record conforms.
+        properties:
+          application_profile:
+            type: object
+            label.en: Application profile
+            help.en: A standard or other specification to which a metadata record conforms.
+            properties:
+              iri:
+                type: url
+                required: true
+        required: false
+
+  TermsOfUse:
+    id: TermsOfUse
+    label.en: Terms of Use
+    help.en: Describes the rights, licenses, and access rights associated with the resource.
+    properties:
+      iri:
+        type: url
+        required: false
+      description:
+        type: keyword
+        label.en: Description
+        help.en: A free-text description of the terms of use.
+        required: false
+      license:
+        type: keyword
+        label.en: License
+        help.en: The license under which the resource is made available.
+        required: false
+      access_rights[]:
+        type: keyword
+        ^label.en: Access Rights
+        ^help.en: Information about who can access the resource or any restrictions on access.
+        required: false
+      contact_persons[]:
+        type: object
+        ^label.en: Contact Persons
+        ^help.en: Contact information for individuals or organizations associated with the resource.
+        use: rdm#PersonOrOrg
+        required: false
+
+  RelatedResource:
+    id: RelatedResource
+    label.en: Resource
+    help.en: Represents any resource, physical or digital, that is related to the described dataset.
+    properties:
+      iri:
+        type: url
+        required: false
+      relationType:
+        type: keyword
+        label.en: Relation Type
+        help.en: The type of relationship between the resource and the dataset.
+        required: false
+      type:
+        # resource-type to be consistent?
+        type: keyword
+        label.en: Type
+        help.en: The type or category of the resource.
+        required: false
+      title:
+        type: fulltext+keyword
+        label.en: Title
+        help.en: The title or name of the resource.
+        required: false
+      identifier:
+        # TODO: type?
+        type: keyword
+        label.en: Identifier
+        help.en: A unique identifier for the resource.
+        required: false
+
+      creators[]:
+        ^minItems: 1
+        ^uniqueItems: true
+        ^required: true
+        ^label.cs: Autoři
+        ^label.en: Authors
+        # bereme primo z RDM
+        use: "rdm#Creator"
+
+      contributors[]:
+        ^label.cs: Přispěvatelé
+        ^label.en: Contributors
+        ^uniqueItems: true
+        # bereme primo z RDM
+        use: "rdm#Contributor"
+
+      time_references[]:
+        ^label.en: Time references
+        ^required: false
+        use: "#TimeReference"
+
+  FundingReference:
+    id: FundingReference
+    label.en: Funding Reference
+    help.en: Describes funding information associated with the resource.
+    properties:
+      iri:
+        type: url
+        required: false
+      funding_program:
+        type: keyword
+        label.en: Funding Program
+        help.en: The name or identifier of the funding program.
+        required: false
+      award_title:
+        type: keyword
+        label.en: Award Title
+        help.en: The title of the award or grant associated with the funding.
+        required: false
+      local_identifier:
+        type: keyword
+        label.en: Local Identifier
+        help.en: A local identifier or award number for the funding.
+        required: false
+      funders[]:
+        type: object
+        ^label.en: Funders
+        ^help.en: Information about the funders associated with the funding.
+        properties:
+          funder_identifier:
+            type: object
+            label.en: Funder Identifier
+            help.en: An identifier for the funder.
+            properties:
+              iri:
+                type: url
+                required: true
+
+        required: false
+
+properties:
+  metadata:
+    properties:
+      iri:
+        type: url
+        label.en: URL
+        help.en: URL of the metadata record in its primary repositori
+        required: true
+
+      metadata_record:
+        use: "#MetadataRecord"
+        required: true
+
+      publication_year:
+        type: integer
+        label.en: Publication Year
+        help.en: The year when the item was or will be made publicly available.
+        required: true
+
+      descriptions[]:
+        type: i18nstr
+        label.en: Description
+        help.en: A free-text account of the Dataset.
+
+      version:
+        type: string
+        label.en: Version
+        help.en: The version indicator (name or identifier) of a resource.
+        required: false
+
+      other_languages[]:
+        type: vocabulary
+        vocabulary-type: language
+        label.en: Other languages of the dataset
+        help.en: Other languages of the dataset.
+        required: false
+
+      primary_language:
+        type: string
+        label.en: Primary language of the dataset
+        help.en: The primary language of the dataset.
+        required: false
+
+      alternate_titles[]:
+        type: string
+        label.en: Alternate title
+        required: false
+
+      abstract:
+        type: html
+        label.en: Abstract
+        help.en: Dataset abstract.
+        required: false
+
+      resource_type:
+        type: vocabulary
+        vocabulary-type: resource_type
+        label.en: Resource type
+        help.en: A description of the resource.
+        required: false
+
+      title:
+        type: fulltext+keyword
+        label.en: Title
+        help.en: A name given to the resource.
+        required: true
+
+      identifier:
+        type: string
+        label.en: Identifier
+        help.en: |
+          The Identifier is a unique string that identifies a resource. 
+          For DataCite, this MUST be a Digital Object Identifier (DOI). 
+          The format should be 10.21384/foo.
+        required: true
+      locations[]:
+        ^label.en: Locations
+        ^help.en: The geographical area covered by the dataset.
+        ^required: false
+        ^uniqueItems: true
+        use: "#Location"
+
+      # provenance[]:
+      #   ^label.en: Provenance
+      #   ^help.en: A statement about the lineage of a Dataset.
+      #   ^required: false
+      #   ^uniqueItems: true
+      #   use: "#Provenance"
+
+      creators[]:
+        ^minItems: 1
+        ^uniqueItems: true
+        ^required: true
+        ^label.cs: Autoři
+        ^label.en: Authors
+        # bereme primo z RDM
+        use: "rdm#Creator"
+
+      contributors[]:
+        ^label.cs: Přispěvatelé
+        ^label.en: Contributors
+        ^uniqueItems: true
+        # bereme primo z RDM
+        use: "rdm#Contributor"
+
+      time_references[]:
+        ^label.en: Time references
+        ^required: false
+        use: "#TimeReference"
+
+      subjects[]:
+        ^label.en: Subjects
+        ^required: false
+        ^uniqueItems: true
+        use: "#Subject"
+
+      funding_references[]:
+        ^label.en: Funding references
+        ^required: false
+        ^uniqueItems: true
+        # TODO: use RDM funding reference here?
+        use: "#FundingReference"
+
+      terms_of_use[]:
+        ^label.en: Terms of use
+        ^required: false
+        ^uniqueItems: true
+        use: "#TermsOfUse"
+
+      related_resources[]:
+        ^label.en: Related resources
+        ^required: false
+        ^uniqueItems: true
+        use: "#RelatedResource"
