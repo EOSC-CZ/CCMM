@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../agent/schema.xsd"/>
+  <xs:include schemaLocation="../resource-agent-role-type/schema.xsd"/>
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
   <xs:complexType name="resource_to_agent_relationship" sawsdl:modelReference="http://www.w3.org/ns/dcat#Relationship">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-        Resource to Agent Relationship - An association class for attaching additional information to a relationship between Dataset and Agent.
+        Resource to Agent Relationship
+      </xs:documentation>
+      <xs:documentation xml:lang="en">
+        An association class for attaching additional information to a relationship between Dataset and Agent.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element name="role" type="resource_agent_role_type" sawsdl:modelReference="http://www.w3.org/ns/dcat#hadRole">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            sehraná role - Funkce entity či agenta ve vztahu k jiné entitě či zdroji.
+          </xs:documentation>
+          <xs:documentation xml:lang="da">
+            havde rolle - Den funktion en entitet eller aktør har i forhold til en anden ressource.
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            had role - The function of an entity or agent with respect to another entity or resource.
+          </xs:documentation>
+          <xs:documentation xml:lang="es">
+            La función de una entidad o agente con respecto a otra entidad o recurso.
+          </xs:documentation>
+          <xs:documentation xml:lang="it">
+            tiene rol - La funzione di un'entità o un agente rispetto ad un'altra entità o risorsa.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element ref="agent" sawsdl:modelReference="http://purl.org/dc/terms/relation">
         <xs:annotation>
           <xs:documentation xml:lang="en">

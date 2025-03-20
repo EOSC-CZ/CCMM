@@ -143,6 +143,14 @@
           </xs:element>
           <xs:element minOccurs="0" maxOccurs="unbounded" name="affiliation"
             sawsdl:modelReference="hasAffiliation" type="organization">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">
+                Affiliation
+              </xs:documentation>
+              <xs:documentation xml:lang="en">
+            Affiliation of the person to the organization.
+          </xs:documentation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>

@@ -45,11 +45,11 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact_person"
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact"
         sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Contact person
+            Contact
           </xs:documentation>
           <xs:documentation xml:lang="ar">
             عنوان اتصال - تربط قائمة البيانات بعنوان اتصال موصف  باستخدام VCard
