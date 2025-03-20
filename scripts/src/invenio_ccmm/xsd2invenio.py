@@ -10,6 +10,7 @@ import json
 import sys
 from typing import Optional, Any, Iterator
 from ruamel.yaml import YAML
+import copy
 
 log = logging.getLogger(Path(sys.argv[0]).name)
 
@@ -58,6 +59,7 @@ singular_to_plural_element_names = {
     "funding_reference": "funding_references",
     "terms_of_use": "terms_of_use",
     "related_resource": "related_resources",
+    "contact": "contacts",
 }
 
 
@@ -416,6 +418,10 @@ class Schema:
                     yield from gather_element(el)
 
         def gather_element(el: SchemaElement) -> Iterator[SchemaType]:
+            if el.substitutions:
+                for sub in el.substitutions:
+                    yield from gather_element(sub)
+
             if el.schema_type:
                 yield from gather_type(el.schema_type)
 
@@ -504,6 +510,14 @@ def main(xsd_file: str, output_file: str):
 
     for el in schema.elements.values():
         el.resolve(schema)
+
+    for el in schema.elements.values():
+        if el.substitution_group:
+            schema.elements[el.substitution_group].substitutions.append(el)
+            el.schema_type = copy.copy(el.schema_type)
+            el.schema_type.elements.update(
+                schema.elements[el.substitution_group].schema_type.elements
+            )
 
     ret = {
         "$defs": {

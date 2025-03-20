@@ -1,10 +1,4 @@
 $defs:
-  '':
-    properties:
-      agent:
-        use: /$defs/
-    required:
-      - agent
   address:
     properties:
       iri:
@@ -84,6 +78,12 @@ $defs:
           use: /$defs/address
         label.en: Address
         help.en: To specify the components of the delivery address for the object
+  contact_point:
+    properties:
+      agent:
+        use: /$defs/agent
+    required:
+      - agent
   dataset:
     properties:
       iri:
@@ -172,7 +172,7 @@ $defs:
       distributions:
         type: array
         items:
-          use: /$defs/
+          use: /$defs/distribution
         label.en: distribution
       funding_references:
         type: array
@@ -294,6 +294,10 @@ $defs:
           use: /$defs/resource
         label.en: Related object identifier
         help.en: Relation to the existing spatial object.
+  metadata_agent_role_type:
+    properties:
+      iri:
+        type: keyword
   metadata_record:
     properties:
       iri:
@@ -337,14 +341,16 @@ $defs:
     properties:
       iri:
         type: keyword
-      external_identifiers:
-        type: array
-        items:
-          type: keyword
-      contact_points:
-        type: array
-        items:
-          use: /$defs/contact_details
+      role:
+        use: /$defs/metadata_agent_role_type
+        label.en: had role - The function of an entity or agent with respect to another
+          entity or resource.
+      agent:
+        use: /$defs/agent
+        label.en: relation
+    required:
+      - role
+      - agent
   ows:BoundingBoxType:
     properties:
       LowerCorners:
@@ -414,14 +420,23 @@ $defs:
         items:
           use: /$defs/time_reference
         label.en: time reference
+  resource_agent_role_type:
+    properties:
+      iri:
+        type: keyword
   resource_to_agent_relationship:
     properties:
       iri:
         type: keyword
+      role:
+        use: /$defs/resource_agent_role_type
+        label.en: had role - The function of an entity or agent with respect to another
+          entity or resource.
       agent:
-        use: /$defs/
+        use: /$defs/agent
         label.en: relation
     required:
+      - role
       - agent
   subject:
     properties:
@@ -474,11 +489,11 @@ $defs:
         label.en: Access rights
         help.en: Information about who access the resource or an indication of its
           security status.
-      contact_persons:
+      contacts:
         type: array
         items:
-          use: /$defs/
-        label.en: Contact person
+          use: /$defs/contact_point
+        label.en: Contact
         help.en: Contact person for the further details about the terms of use.
   time_reference:
     properties:
