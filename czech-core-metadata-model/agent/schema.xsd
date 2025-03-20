@@ -142,52 +142,7 @@
             </xs:annotation>
           </xs:element>
           <xs:element minOccurs="0" maxOccurs="unbounded" name="affiliation"
-            sawsdl:modelReference="hasAffiliation">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">
-                Affiliation
-              </xs:documentation>
-              <xs:documentation xml:lang="en">
-            Affiliation of the person to the organization.
-          </xs:documentation>
-            </xs:annotation>
-            <xs:complexType
-              sawsdl:modelReference="http://www.w3.org/ns/prov#Organization http://xmlns.com/foaf/0.1/Agent">
-              <xs:annotation>
-                <xs:documentation xml:lang="en">
-                  Organization
-                </xs:documentation>
-                <xs:documentation xml:lang="en">
-              Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures. 
-            </xs:documentation>
-              </xs:annotation>
-              <xs:sequence>
-                <xs:element minOccurs="0" ref="c:iri"/>
-                <xs:element minOccurs="0" maxOccurs="unbounded" name="alternate_name"
-                  type="xs:string"
-                  sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
-                  <xs:annotation>
-                    <xs:documentation xml:lang="en">
-                  Alternate name
-                </xs:documentation>
-                    <xs:documentation xml:lang="en">
-                  To specify the organizational name associated with the object
-                </xs:documentation>
-                  </xs:annotation>
-                </xs:element>
-                <xs:element name="name" type="xs:string"
-                  sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
-                  <xs:annotation>
-                    <xs:documentation xml:lang="en">
-                  Alternate name
-                </xs:documentation>
-                    <xs:documentation xml:lang="en">
-                  To specify the organizational name associated with the object
-                </xs:documentation>
-                  </xs:annotation>
-                </xs:element>
-              </xs:sequence>
-            </xs:complexType>
+            sawsdl:modelReference="hasAffiliation" type="organization">
           </xs:element>
         </xs:sequence>
       </xs:extension>

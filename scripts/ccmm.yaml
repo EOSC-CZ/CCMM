@@ -1,0 +1,509 @@
+$defs:
+  '':
+    properties:
+      agent:
+        use: /$defs/
+    required:
+      - agent
+  address:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Address label
+  agent:
+    properties:
+      iri:
+        type: keyword
+      external_identifiers:
+        type: array
+        items:
+          type: keyword
+        label.en: External identifier
+        help.en: External identifer of an Agent.
+      contact_points:
+        type: array
+        items:
+          use: /$defs/contact_details
+        label.en: Contact point
+        help.en: Relevant contact information for the catalogued resource. Use of
+          vCard is recommended.
+  alternate_title:
+    properties:
+      iri:
+        type: keyword
+      title:
+        type: i18nstr
+        label.en: Title
+        help.en: Alternate title name.
+      type:
+        type: keyword
+        label.en: Type
+        help.en: Type of alternate title.
+    required:
+      - title
+  application_profile:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Label of application profile
+  contact_details:
+    properties:
+      iri:
+        type: keyword
+      dataBoxes:
+        type: array
+        items:
+          type: keyword
+        label.en: Data box
+        help.en: Code of the data box.
+      emails:
+        type: array
+        items:
+          type: keyword
+        label.en: Email
+        help.en: Email address.
+      phones:
+        type: array
+        items:
+          type: keyword
+        label.en: Phone
+        help.en: Phone number
+      addresses:
+        type: array
+        items:
+          use: /$defs/address
+        label.en: Address
+        help.en: To specify the components of the delivery address for the object
+  dataset:
+    properties:
+      iri:
+        type: keyword
+      publication_year:
+        type: integer
+        label.en: Publication year
+        help.en: The year when the item was or will be made publicly available.
+      version:
+        type: keyword
+        label.en: Version
+        help.en: The version indicator (name or identifier) of a resource.
+      descriptions:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Description
+        help.en: A free-text account of the Dataset.
+      other_languages:
+        type: array
+        items:
+          type: keyword
+        label.en: Other language
+        help.en: The primary language of the resource.
+      primary_language:
+        type: keyword
+        label.en: Other language
+        help.en: The primary language of the resource.
+      resource_type:
+        type: keyword
+        label.en: Resource type
+        help.en: A description of the resource.
+      title:
+        type: keyword
+        label.en: Title
+        help.en: A name given to the resource.
+      alternate_titles:
+        type: array
+        items:
+          use: /$defs/alternate_title
+        label.en: alternate title
+      is_described_by:
+        type: array
+        items:
+          use: /$defs/metadata_record
+        label.en: is described by
+        help.en: Inverse relation between dataset and metadata record.
+      identifiers:
+        type: array
+        items:
+          use: /$defs/identifier
+        label.en: identifier
+        help.en: has identifier
+      locations:
+        type: array
+        items:
+          use: /$defs/location
+        label.en: Location
+        help.en: The geographical area covered by the dataset.
+      provenances:
+        type: array
+        items:
+          use: /$defs/provenance_statement
+        label.en: provenance - A statement about the lineage of a Dataset.
+      qualified_relations:
+        type: array
+        items:
+          use: /$defs/resource_to_agent_relationship
+        label.en: Qualified relation
+        help.en: Attachment of resource to the relationship.
+      time_references:
+        type: array
+        items:
+          use: /$defs/time_reference
+        label.en: time reference
+      subjects:
+        type: array
+        items:
+          use: /$defs/subject
+        label.en: subject
+      validation_results:
+        type: array
+        items:
+          use: /$defs/validation_result
+        label.en: validation result
+      distributions:
+        type: array
+        items:
+          use: /$defs/
+        label.en: distribution
+      funding_references:
+        type: array
+        items:
+          use: /$defs/funding_reference
+        label.en: funding reference
+      terms_of_use:
+        type: array
+        items:
+          use: /$defs/terms_of_use
+        label.en: terms of use
+      related_resources:
+        type: array
+        items:
+          use: /$defs/resource
+        label.en: related resource
+    required:
+      - descriptions
+      - primary_language
+      - title
+      - is_described_by
+      - identifiers
+  distribution:
+    properties:
+      iri:
+        type: keyword
+      title:
+        type: keyword
+        label.en: Title
+        help.en: A name given to the distribution.
+  funder_identifier:
+    properties:
+      iri:
+        type: keyword
+      funder_identifier_scheme_uri:
+        type: url
+        label.en: Funder identifier scheme URI
+        help.en: The URI of the funder identifier scheme.
+      funder_identifier_type:
+        type: keyword
+        label.en: Funder identifier type
+        help.en: The type of the funderIdentifier.
+    required:
+      - funder_identifier_type
+  funding_reference:
+    properties:
+      iri:
+        type: keyword
+      funding_program:
+        type: keyword
+        label.en: Funding program
+        help.en: Reference to the specific funding program.
+      award_title:
+        type: keyword
+        label.en: Award title
+        help.en: The human readable title or name of the award (grant).
+      local_identifier:
+        type: keyword
+        label.en: Local identifier
+        help.en: The code assigned by the funder to a sponsored award (grant).
+      funders:
+        type: array
+        items:
+          use: /$defs/funder_identifier
+        label.en: has funder
+  geometry:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Geometry label
+  identifier:
+    properties:
+      iri:
+        type: keyword
+      identifier_scheme:
+        type: url
+        label.en: Identifier scheme
+        help.en: Scheme URI of the identifier.
+      value:
+        type: keyword
+        label.en: Value
+        help.en: Value of the identifer within the given identifier scheme.
+    required:
+      - identifier_scheme
+      - value
+  langString: {}
+  location:
+    properties:
+      iri:
+        type: keyword
+      bbox:
+        use: /$defs/ows:BoundingBoxType
+        label.en: Bbox
+        help.en: Bounding box of the location geometry.
+      location_names:
+        type: array
+        items:
+          type: keyword
+        label.en: Location name
+        help.en: Name of the spatial location.
+      dataset_relations:
+        type: array
+        items:
+          type: keyword
+        label.en: Relation to dataset
+        help.en: Type of relation of the spatial location to the dataset.
+      geometry:
+        use: /$defs/geometry
+        label.en: Geometry
+        help.en: The corresponding geometry for a resource.
+      related_object_identifiers:
+        type: array
+        items:
+          use: /$defs/resource
+        label.en: Related object identifier
+        help.en: Relation to the existing spatial object.
+  metadata_record:
+    properties:
+      iri:
+        type: keyword
+      dates_updated:
+        type: array
+        items:
+          type: date
+        label.en: Date updated
+        help.en: Date on which the resource was changed.
+      date_created:
+        type: date
+        label.en: Date Created
+        help.en: The date on which the metadata record was created.
+      languages:
+        type: array
+        items:
+          type: keyword
+        label.en: Language
+        help.en: Language of the metadata record
+      qualified_relations:
+        type: array
+        items:
+          use: /$defs/metadata_to_agent_relationship
+        label.en: Qualified relation
+        help.en: Attachment of resource to the relationship.
+      original_repositories:
+        type: array
+        items:
+          use: /$defs/repository
+        label.en: Original repository
+        help.en: Link to the repository from which the metadata were originally stored
+          and curated.
+      conforms_to_standards:
+        type: array
+        items:
+          use: /$defs/application_profile
+        label.en: Conforms to standard
+        help.en: An established standard to which the metadata record conforms.
+  metadata_to_agent_relationship:
+    properties:
+      iri:
+        type: keyword
+      external_identifiers:
+        type: array
+        items:
+          type: keyword
+      contact_points:
+        type: array
+        items:
+          use: /$defs/contact_details
+  ows:BoundingBoxType:
+    properties:
+      LowerCorners:
+        type: array
+        items:
+          type: float
+      UpperCorners:
+        type: array
+        items:
+          type: float
+      crs:
+        type: url
+      dimensions:
+        type: integer
+    required:
+      - LowerCorners
+      - UpperCorners
+  provenance_statement:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Provenance state label
+  repository:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Repository label
+  resource:
+    properties:
+      iri:
+        type: keyword
+      relation_type:
+        type: keyword
+        label.en: Relation type
+        help.en: Type of the relation between Dataset and related resource.
+      type:
+        type: keyword
+        label.en: Type
+        help.en: A description of the resource. Gets the value from controlled list
+          https://datacite-metadata-schema.readthedocs.io/en/4.6/appendices/appendix-1/resourceTypeGeneral/.
+      title:
+        type: keyword
+        label.en: Title
+        help.en: A name given to the Catalogue Record.
+      identifier:
+        type: keyword
+        label.en: Identifier
+        help.en: An unambiguous reference to the resource within a given context.
+      qualified_relations:
+        type: array
+        items:
+          use: /$defs/resource_to_agent_relationship
+        label.en: Qualified relation
+        help.en: Attachment of resource to the relationship.
+      time_references:
+        type: array
+        items:
+          use: /$defs/time_reference
+        label.en: time reference
+  resource_to_agent_relationship:
+    properties:
+      iri:
+        type: keyword
+      agent:
+        use: /$defs/
+        label.en: relation
+    required:
+      - agent
+  subject:
+    properties:
+      iri:
+        type: keyword
+      definition:
+        type: i18nstr
+        label.en: Definition
+        help.en: Definition of the subject.
+      title:
+        type: i18nstr
+        label.en: Title
+        help.en: Title of the subject
+      classification_code:
+        type: keyword
+        label.en: Classification code
+        help.en: The classification code used for the subject term in the subject
+          scheme.
+      in_subject_scheme:
+        use: /$defs/subject_scheme
+        label.en: in subject scheme
+    required:
+      - title
+  subject_scheme:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Subject scheme label
+  terms_of_use:
+    properties:
+      iri:
+        type: keyword
+      description:
+        type: keyword
+        label.en: Description
+        help.en: Descriptive text on details of rights and licensing.
+      license:
+        type: keyword
+        label.en: License
+        help.en: Information about licensing details of the resource.
+      access_rights:
+        type: array
+        items:
+          type: keyword
+        label.en: Access rights
+        help.en: Information about who access the resource or an indication of its
+          security status.
+      contact_persons:
+        type: array
+        items:
+          use: /$defs/
+        label.en: Contact person
+        help.en: Contact person for the further details about the terms of use.
+  time_reference:
+    properties:
+      iri:
+        type: keyword
+      date_information:
+        type: keyword
+        label.en: Date information
+        help.en: Additional information to the date in text form.
+      date_type:
+        type: keyword
+        label.en: Date type
+        help.en: Type of the date.
+      date:
+        type: date
+        label.en: Date
+        help.en: A point or period of time associated with an event in the lifecycle
+          of the resource.
+  validation_result:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Validation result label
