@@ -5,6 +5,17 @@
   xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../agent/schema.xsd"/>
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
+  <xs:complexType name="contact_point">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Contact point
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="agent"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="terms_of_use" sawsdl:modelReference="Rights">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -46,7 +57,8 @@
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="contact"
-        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint"
+        type="contact_point">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Contact
@@ -79,11 +91,6 @@
             窓口 - データセットを、VCardを用いて提供されている適切な連絡先情報にリンクします。
           </xs:documentation>
         </xs:annotation>
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element ref="agent"/>
-          </xs:sequence>
-        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
