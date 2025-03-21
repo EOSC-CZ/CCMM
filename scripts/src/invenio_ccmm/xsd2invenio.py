@@ -156,10 +156,10 @@ def convert_schema_to_invenio(schema_type_name: str) -> dict[str, str]:
                 }[schema_type_name]
             }
         case "langString":
-            return {"type": "i18nstr"}
+            return {"type": "i18nStr"}
         case _:
             return {
-                "use": "/$defs/" + schema_type_name,
+                "use": "./ccmm.yaml#/$defs/" + schema_type_name,
             }
 
 
@@ -192,7 +192,6 @@ class SchemaType:
 
     def get_invenio_definition(self, ignored_elements: set[tuple[str, str]]):
         props: dict[str, Any] = {}
-        required: list[str] = []
 
         for el_name, el in list(self.elements.items()):
             # TODO: does not solve cardinalities etc.
@@ -208,16 +207,12 @@ class SchemaType:
             if (self.name, el.name) in ignored_elements:
                 continue
             props[el.name] = el.get_invenio_definition(ignored_elements)
-            if el.min_occurs > 0:
-                required.append(el.name)
-
-        if "iri" in required:
-            required.remove("iri")
+            if el.min_occurs > 0 and el.name != "iri":
+                props[el.name]["required"] = True
 
         return remove_empty(
             {
                 "properties": props,
-                "required": required,
             }
         )
 
@@ -549,12 +544,12 @@ def main(xsd_file: str, output_file: str):
     for el in schema.elements.values():
         el.resolve_substitutions(schema)
 
-    ret = {
-        "$defs": {
-            t.name: t.get_invenio_definition(schema.ignored_elements)
-            for t in sorted(schema.gather_types(), key=lambda x: x.name)
-        }
+    defs = {
+        t.name: t.get_invenio_definition(schema.ignored_elements)
+        for t in sorted(schema.gather_types(), key=lambda x: x.name)
     }
+
+    ret = {"$defs": defs}
 
     yaml = YAML()
     yaml.indent(mapping=2, sequence=4, offset=2)

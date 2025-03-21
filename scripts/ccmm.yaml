@@ -6,7 +6,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Address label
   agent:
@@ -22,7 +22,7 @@ $defs:
       contact_points:
         type: array
         items:
-          use: /$defs/contact_details
+          use: ./ccmm.yaml#/$defs/contact_details
         label.en: Contact point
         help.en: Relevant contact information for the catalogued resource. Use of
           vCard is recommended.
@@ -31,15 +31,14 @@ $defs:
       iri:
         type: keyword
       title:
-        type: i18nstr
+        type: i18nStr
         label.en: Title
         help.en: Alternate title name.
+        required: true
       type:
         type: keyword
         label.en: Type
         help.en: Type of alternate title.
-    required:
-      - title
   application_profile:
     properties:
       iri:
@@ -47,7 +46,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Label of application profile
   contact_details:
@@ -75,18 +74,17 @@ $defs:
       addresses:
         type: array
         items:
-          use: /$defs/address
+          use: ./ccmm.yaml#/$defs/address
         label.en: Address
         help.en: To specify the components of the delivery address for the object
   contact_point:
     properties:
       organization:
-        use: /$defs/organization
+        use: ./ccmm.yaml#/$defs/organization
+        required: true
       person:
-        use: /$defs/person
-    required:
-      - organization
-      - person
+        use: ./ccmm.yaml#/$defs/person
+        required: true
   data_service:
     properties:
       iri:
@@ -94,7 +92,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Data service label.
       endpoint_urls:
@@ -103,8 +101,7 @@ $defs:
           type: url
         label.en: Endpoint URL
         help.en: The root location or primary endpoint of the service (an IRI).
-    required:
-      - endpoint_urls
+        required: true
   dataset:
     properties:
       iri:
@@ -120,9 +117,10 @@ $defs:
       descriptions:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Description
         help.en: A free-text account of the Dataset.
+        required: true
       other_languages:
         type: array
         items:
@@ -133,6 +131,7 @@ $defs:
         type: keyword
         label.en: Other language
         help.en: The primary language of the resource.
+        required: true
       resource_type:
         type: keyword
         label.en: Resource type
@@ -141,84 +140,81 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the resource.
+        required: true
       alternate_titles:
         type: array
         items:
-          use: /$defs/alternate_title
+          use: ./ccmm.yaml#/$defs/alternate_title
         label.en: alternate title
       is_described_by:
         type: array
         items:
-          use: /$defs/metadata_record
+          use: ./ccmm.yaml#/$defs/metadata_record
         label.en: is described by
         help.en: Inverse relation between dataset and metadata record.
+        required: true
       identifiers:
         type: array
         items:
-          use: /$defs/identifier
+          use: ./ccmm.yaml#/$defs/identifier
         label.en: identifier
         help.en: has identifier
+        required: true
       locations:
         type: array
         items:
-          use: /$defs/location
+          use: ./ccmm.yaml#/$defs/location
         label.en: Location
         help.en: The geographical area covered by the dataset.
       provenances:
         type: array
         items:
-          use: /$defs/provenance_statement
+          use: ./ccmm.yaml#/$defs/provenance_statement
         label.en: provenance - A statement about the lineage of a Dataset.
       qualified_relations:
         type: array
         items:
-          use: /$defs/resource_to_agent_relationship
+          use: ./ccmm.yaml#/$defs/resource_to_agent_relationship
         label.en: Qualified relation
         help.en: Attachment of resource to the relationship.
       time_references:
         type: array
         items:
-          use: /$defs/time_reference
+          use: ./ccmm.yaml#/$defs/time_reference
         label.en: time reference
       subjects:
         type: array
         items:
-          use: /$defs/subject
+          use: ./ccmm.yaml#/$defs/subject
         label.en: subject
       validation_results:
         type: array
         items:
-          use: /$defs/validation_result
+          use: ./ccmm.yaml#/$defs/validation_result
         label.en: validation result
       funding_references:
         type: array
         items:
-          use: /$defs/funding_reference
+          use: ./ccmm.yaml#/$defs/funding_reference
         label.en: funding reference
       terms_of_use:
         type: array
         items:
-          use: /$defs/terms_of_use
+          use: ./ccmm.yaml#/$defs/terms_of_use
         label.en: terms of use
       related_resources:
         type: array
         items:
-          use: /$defs/resource
+          use: ./ccmm.yaml#/$defs/resource
         label.en: related resource
       distribution_data_services:
         type: array
         items:
-          use: /$defs/distribution_data_service
+          use: ./ccmm.yaml#/$defs/distribution_data_service
       distribution_downloadable_files:
         type: array
         items:
-          use: /$defs/distribution_downloadable_file
-    required:
-      - descriptions
-      - primary_language
-      - title
-      - is_described_by
-      - identifiers
+          use: ./ccmm.yaml#/$defs/distribution_downloadable_file
   distribution:
     properties:
       iri:
@@ -232,25 +228,25 @@ $defs:
       descriptions:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Description
         help.en: A free-text account of the Distribution.
       documentations:
         type: array
         items:
-          use: /$defs/documentation
+          use: ./ccmm.yaml#/$defs/documentation
         label.en: Documentation
         help.en: A page or document about this Distribution.
       specifications:
         type: array
         items:
-          use: /$defs/application_profile
+          use: ./ccmm.yaml#/$defs/application_profile
         label.en: Specification
         help.en: An established standard to which the distribution conforms.
       access_services:
         type: array
         items:
-          use: /$defs/data_service
+          use: ./ccmm.yaml#/$defs/data_service
         label.en: Access service
         help.en: A site or end-point that gives access to the distribution of the
           dataset.
@@ -267,6 +263,7 @@ $defs:
         label.en: Checksum
         help.en: A mechanism that can be used to verify that the contents of a distribution
           have not changed.
+        required: true
       byte_size:
         type: integer
         label.en: Byte size
@@ -278,11 +275,11 @@ $defs:
       conforms_to_schemas:
         type: array
         items:
-          use: /$defs/application_profile
+          use: ./ccmm.yaml#/$defs/application_profile
         label.en: Conforms to schema
         help.en: An established standard to which the distribution conforms.
       media_type:
-        use: /$defs/media_type
+        use: ./ccmm.yaml#/$defs/media_type
         label.en: Media type
         help.en: The media type of the distribution as defined by IANA
       access_urls:
@@ -291,6 +288,7 @@ $defs:
           type: url
         label.en: Access URL
         help.en: A URL that gives access to a Distribution of the Dataset.
+        required: true
       download_urls:
         type: array
         items:
@@ -303,9 +301,6 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the distribution.
-    required:
-      - checksum
-      - access_urls
   documentation:
     properties:
       iri:
@@ -313,7 +308,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Documentation label
   funder_identifier:
@@ -328,8 +323,7 @@ $defs:
         type: keyword
         label.en: Funder identifier type
         help.en: The type of the funderIdentifier.
-    required:
-      - funder_identifier_type
+        required: true
   funding_reference:
     properties:
       iri:
@@ -349,7 +343,7 @@ $defs:
       funders:
         type: array
         items:
-          use: /$defs/funder_identifier
+          use: ./ccmm.yaml#/$defs/funder_identifier
         label.en: has funder
   geometry:
     properties:
@@ -358,7 +352,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Geometry label
   identifier:
@@ -369,20 +363,19 @@ $defs:
         type: url
         label.en: Identifier scheme
         help.en: Scheme URI of the identifier.
+        required: true
       value:
         type: keyword
         label.en: Value
         help.en: Value of the identifer within the given identifier scheme.
-    required:
-      - identifier_scheme
-      - value
+        required: true
   langString: {}
   location:
     properties:
       iri:
         type: keyword
       bbox:
-        use: /$defs/ows:BoundingBoxType
+        use: ./ccmm.yaml#/$defs/ows:BoundingBoxType
         label.en: Bbox
         help.en: Bounding box of the location geometry.
       location_names:
@@ -398,13 +391,13 @@ $defs:
         label.en: Relation to dataset
         help.en: Type of relation of the spatial location to the dataset.
       geometry:
-        use: /$defs/geometry
+        use: ./ccmm.yaml#/$defs/geometry
         label.en: Geometry
         help.en: The corresponding geometry for a resource.
       related_object_identifiers:
         type: array
         items:
-          use: /$defs/resource
+          use: ./ccmm.yaml#/$defs/resource
         label.en: Related object identifier
         help.en: Relation to the existing spatial object.
   media_type:
@@ -414,7 +407,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Media type label
   metadata_agent_role_type:
@@ -424,7 +417,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Validation result label
   metadata_record:
@@ -450,20 +443,20 @@ $defs:
       qualified_relations:
         type: array
         items:
-          use: /$defs/metadata_to_agent_relationship
+          use: ./ccmm.yaml#/$defs/metadata_to_agent_relationship
         label.en: Qualified relation
         help.en: Attachment of resource to the relationship.
       original_repositories:
         type: array
         items:
-          use: /$defs/repository
+          use: ./ccmm.yaml#/$defs/repository
         label.en: Original repository
         help.en: Link to the repository from which the metadata were originally stored
           and curated.
       conforms_to_standards:
         type: array
         items:
-          use: /$defs/application_profile
+          use: ./ccmm.yaml#/$defs/application_profile
         label.en: Conforms to standard
         help.en: An established standard to which the metadata record conforms.
   metadata_to_agent_relationship:
@@ -471,29 +464,29 @@ $defs:
       iri:
         type: keyword
       role:
-        use: /$defs/metadata_agent_role_type
+        use: ./ccmm.yaml#/$defs/metadata_agent_role_type
         label.en: had role - The function of an entity or agent with respect to another
           entity or resource.
+        required: true
       organization:
-        use: /$defs/organization
+        use: ./ccmm.yaml#/$defs/organization
+        required: true
       person:
-        use: /$defs/person
-    required:
-      - role
-      - organization
-      - person
+        use: ./ccmm.yaml#/$defs/person
+        required: true
   organization:
     properties:
       alternate_names:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Alternate name
         help.en: To specify the organizational name associated with the object
       name:
-        type: i18nstr
+        type: i18nStr
         label.en: Alternate name
         help.en: To specify the organizational name associated with the object
+        required: true
       iri:
         type: keyword
       external_identifiers:
@@ -505,45 +498,44 @@ $defs:
       contact_points:
         type: array
         items:
-          use: /$defs/contact_details
+          use: ./ccmm.yaml#/$defs/contact_details
         label.en: Contact point
         help.en: Relevant contact information for the catalogued resource. Use of
           vCard is recommended.
-    required:
-      - name
   ows:BoundingBoxType:
     properties:
       LowerCorners:
         type: array
         items:
           type: float
+        required: true
       UpperCorners:
         type: array
         items:
           type: float
+        required: true
       crs:
         type: url
       dimensions:
         type: integer
-    required:
-      - LowerCorners
-      - UpperCorners
   person:
     properties:
       family_name:
         type: keyword
         label.en: Family name
         help.en: The family name associated with the object
+        required: true
       given_names:
         type: array
         items:
           type: keyword
         label.en: Given name
         help.en: The given name associated with the object
+        required: true
       affiliations:
         type: array
         items:
-          use: /$defs/organization
+          use: ./ccmm.yaml#/$defs/organization
         label.en: Affiliation
         help.en: Affiliation of the person to the organization.
       iri:
@@ -557,13 +549,10 @@ $defs:
       contact_points:
         type: array
         items:
-          use: /$defs/contact_details
+          use: ./ccmm.yaml#/$defs/contact_details
         label.en: Contact point
         help.en: Relevant contact information for the catalogued resource. Use of
           vCard is recommended.
-    required:
-      - family_name
-      - given_names
   provenance_statement:
     properties:
       iri:
@@ -571,7 +560,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Provenance state label
   repository:
@@ -581,7 +570,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Repository label
   resource:
@@ -608,13 +597,13 @@ $defs:
       qualified_relations:
         type: array
         items:
-          use: /$defs/resource_to_agent_relationship
+          use: ./ccmm.yaml#/$defs/resource_to_agent_relationship
         label.en: Qualified relation
         help.en: Attachment of resource to the relationship.
       time_references:
         type: array
         items:
-          use: /$defs/time_reference
+          use: ./ccmm.yaml#/$defs/time_reference
         label.en: time reference
   resource_agent_role_type:
     properties:
@@ -623,7 +612,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Validation result label
   resource_to_agent_relationship:
@@ -631,39 +620,37 @@ $defs:
       iri:
         type: keyword
       role:
-        use: /$defs/resource_agent_role_type
+        use: ./ccmm.yaml#/$defs/resource_agent_role_type
         label.en: had role - The function of an entity or agent with respect to another
           entity or resource.
+        required: true
       organization:
-        use: /$defs/organization
+        use: ./ccmm.yaml#/$defs/organization
+        required: true
       person:
-        use: /$defs/person
-    required:
-      - role
-      - organization
-      - person
+        use: ./ccmm.yaml#/$defs/person
+        required: true
   subject:
     properties:
       iri:
         type: keyword
       definition:
-        type: i18nstr
+        type: i18nStr
         label.en: Definition
         help.en: Definition of the subject.
       title:
-        type: i18nstr
+        type: i18nStr
         label.en: Title
         help.en: Title of the subject
+        required: true
       classification_code:
         type: keyword
         label.en: Classification code
         help.en: The classification code used for the subject term in the subject
           scheme.
       in_subject_scheme:
-        use: /$defs/subject_scheme
+        use: ./ccmm.yaml#/$defs/subject_scheme
         label.en: in subject scheme
-    required:
-      - title
   subject_scheme:
     properties:
       iri:
@@ -671,7 +658,7 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Subject scheme label
   terms_of_use:
@@ -696,7 +683,7 @@ $defs:
       contacts:
         type: array
         items:
-          use: /$defs/contact_point
+          use: ./ccmm.yaml#/$defs/contact_point
         label.en: Contact
         help.en: Contact person for the further details about the terms of use.
   time_reference:
@@ -723,6 +710,6 @@ $defs:
       labels:
         type: array
         items:
-          type: i18nstr
+          type: i18nStr
         label.en: Label
         help.en: Validation result label
