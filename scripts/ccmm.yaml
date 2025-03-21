@@ -80,10 +80,31 @@ $defs:
         help.en: To specify the components of the delivery address for the object
   contact_point:
     properties:
-      agent:
-        use: /$defs/agent
+      organization:
+        use: /$defs/organization
+      person:
+        use: /$defs/person
     required:
-      - agent
+      - organization
+      - person
+  data_service:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Data service label.
+      endpoint_urls:
+        type: array
+        items:
+          type: url
+        label.en: Endpoint URL
+        help.en: The root location or primary endpoint of the service (an IRI).
+    required:
+      - endpoint_urls
   dataset:
     properties:
       iri:
@@ -169,11 +190,6 @@ $defs:
         items:
           use: /$defs/validation_result
         label.en: validation result
-      distributions:
-        type: array
-        items:
-          use: /$defs/distribution
-        label.en: distribution
       funding_references:
         type: array
         items:
@@ -189,6 +205,14 @@ $defs:
         items:
           use: /$defs/resource
         label.en: related resource
+      distribution_data_services:
+        type: array
+        items:
+          use: /$defs/distribution_data_service
+      distribution_downloadable_files:
+        type: array
+        items:
+          use: /$defs/distribution_downloadable_file
     required:
       - descriptions
       - primary_language
@@ -203,6 +227,95 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the distribution.
+  distribution_data_service:
+    properties:
+      descriptions:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Description
+        help.en: A free-text account of the Distribution.
+      documentations:
+        type: array
+        items:
+          use: /$defs/documentation
+        label.en: Documentation
+        help.en: A page or document about this Distribution.
+      specifications:
+        type: array
+        items:
+          use: /$defs/application_profile
+        label.en: Specification
+        help.en: An established standard to which the distribution conforms.
+      access_services:
+        type: array
+        items:
+          use: /$defs/data_service
+        label.en: Access service
+        help.en: A site or end-point that gives access to the distribution of the
+          dataset.
+      iri:
+        type: keyword
+      title:
+        type: keyword
+        label.en: Title
+        help.en: A name given to the distribution.
+  distribution_downloadable_file:
+    properties:
+      checksum:
+        type: keyword
+        label.en: Checksum
+        help.en: A mechanism that can be used to verify that the contents of a distribution
+          have not changed.
+      byte_size:
+        type: integer
+        label.en: Byte size
+        help.en: The size of a Distribution in bytes.
+      format:
+        type: url
+        label.en: Format
+        help.en: The file format of the Distribution.
+      conforms_to_schemas:
+        type: array
+        items:
+          use: /$defs/application_profile
+        label.en: Conforms to schema
+        help.en: An established standard to which the distribution conforms.
+      media_type:
+        use: /$defs/media_type
+        label.en: Media type
+        help.en: The media type of the distribution as defined by IANA
+      access_urls:
+        type: array
+        items:
+          type: url
+        label.en: Access URL
+        help.en: A URL that gives access to a Distribution of the Dataset.
+      download_urls:
+        type: array
+        items:
+          type: url
+        label.en: Download URL
+        help.en: A URL that is a direct link to a downloadable file in a given format.
+      iri:
+        type: keyword
+      title:
+        type: keyword
+        label.en: Title
+        help.en: A name given to the distribution.
+    required:
+      - checksum
+      - access_urls
+  documentation:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Documentation label
   funder_identifier:
     properties:
       iri:
@@ -294,10 +407,26 @@ $defs:
           use: /$defs/resource
         label.en: Related object identifier
         help.en: Relation to the existing spatial object.
+  media_type:
+    properties:
+      iri:
+        type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Media type label
   metadata_agent_role_type:
     properties:
       iri:
         type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Validation result label
   metadata_record:
     properties:
       iri:
@@ -345,12 +474,43 @@ $defs:
         use: /$defs/metadata_agent_role_type
         label.en: had role - The function of an entity or agent with respect to another
           entity or resource.
-      agent:
-        use: /$defs/agent
-        label.en: relation
+      organization:
+        use: /$defs/organization
+      person:
+        use: /$defs/person
     required:
       - role
-      - agent
+      - organization
+      - person
+  organization:
+    properties:
+      alternate_names:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Alternate name
+        help.en: To specify the organizational name associated with the object
+      name:
+        type: i18nstr
+        label.en: Alternate name
+        help.en: To specify the organizational name associated with the object
+      iri:
+        type: keyword
+      external_identifiers:
+        type: array
+        items:
+          type: keyword
+        label.en: External identifier
+        help.en: External identifer of an Agent.
+      contact_points:
+        type: array
+        items:
+          use: /$defs/contact_details
+        label.en: Contact point
+        help.en: Relevant contact information for the catalogued resource. Use of
+          vCard is recommended.
+    required:
+      - name
   ows:BoundingBoxType:
     properties:
       LowerCorners:
@@ -368,6 +528,42 @@ $defs:
     required:
       - LowerCorners
       - UpperCorners
+  person:
+    properties:
+      family_name:
+        type: keyword
+        label.en: Family name
+        help.en: The family name associated with the object
+      given_names:
+        type: array
+        items:
+          type: keyword
+        label.en: Given name
+        help.en: The given name associated with the object
+      affiliations:
+        type: array
+        items:
+          use: /$defs/organization
+        label.en: Affiliation
+        help.en: Affiliation of the person to the organization.
+      iri:
+        type: keyword
+      external_identifiers:
+        type: array
+        items:
+          type: keyword
+        label.en: External identifier
+        help.en: External identifer of an Agent.
+      contact_points:
+        type: array
+        items:
+          use: /$defs/contact_details
+        label.en: Contact point
+        help.en: Relevant contact information for the catalogued resource. Use of
+          vCard is recommended.
+    required:
+      - family_name
+      - given_names
   provenance_statement:
     properties:
       iri:
@@ -424,6 +620,12 @@ $defs:
     properties:
       iri:
         type: keyword
+      labels:
+        type: array
+        items:
+          type: i18nstr
+        label.en: Label
+        help.en: Validation result label
   resource_to_agent_relationship:
     properties:
       iri:
@@ -432,12 +634,14 @@ $defs:
         use: /$defs/resource_agent_role_type
         label.en: had role - The function of an entity or agent with respect to another
           entity or resource.
-      agent:
-        use: /$defs/agent
-        label.en: relation
+      organization:
+        use: /$defs/organization
+      person:
+        use: /$defs/person
     required:
       - role
-      - agent
+      - organization
+      - person
   subject:
     properties:
       iri:

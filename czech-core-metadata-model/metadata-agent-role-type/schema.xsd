@@ -12,6 +12,17 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="label" type="langString"
+        sawsdl:modelReference="http://www.w3.org/2000/01/rdf-schema#label">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Label
+          </xs:documentation>
+          <xs:documentation xml:lang="en">
+            Validation result label
+          </xs:documentation>
+        </xs:annotation>
+        </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="metadata_agent_role_type" type="metadata_agent_role_type"/>

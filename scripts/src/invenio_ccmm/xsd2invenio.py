@@ -60,6 +60,8 @@ singular_to_plural_element_names = {
     "terms_of_use": "terms_of_use",
     "related_resource": "related_resources",
     "contact": "contacts",
+    "distribution_data_service": "distribution_data_services",
+    "distribution_downloadable_file": "distribution_downloadable_files",
 }
 
 
@@ -76,24 +78,42 @@ class SchemaElement:
     substitutions: list[SchemaElement] = dataclasses.field(default_factory=list)
 
     def resolve(self, schema: Schema):
-        if self.max_occurs is None or self.max_occurs > 1:
-            name = self.name.strip()
-            if name not in singular_to_plural_element_names.values():
-                self.name = singular_to_plural_element_names[name]
+        self.check_plural_name()
 
         if not self.schema_type:
             if self.ref:
                 self.schema_type_name = self.ref
                 self.schema_type = schema.elements[self.ref].schema_type
-
             elif not is_simple_type(self.schema_type_name):
                 if self.schema_type_name not in schema.types:
                     raise ValueError(
                         f"Unknown type '{self.schema_type_name}' for element {self}"
                     )
                 self.schema_type = schema.types[self.schema_type_name]
+
         if self.schema_type:
             self.schema_type.resolve(schema)
+
+    def check_plural_name(self):
+        if self.max_occurs is None or self.max_occurs > 1:
+            name = self.name.strip()
+            if name not in singular_to_plural_element_names.values():
+                self.name = singular_to_plural_element_names[name]
+
+    def resolve_substitutions(self, schema: Schema):
+        if self.substitution_group:
+            self.schema_type = self.schema_type.copy()
+            self.schema_type.elements.update(
+                schema.elements[self.substitution_group].schema_type.elements
+            )
+
+        if self.ref:
+            for s in schema.elements[self.ref].substitutions:
+                if s not in self.substitutions:
+                    self.substitutions.append(s)
+
+        if self.schema_type:
+            self.schema_type.resolve_substitutions(schema)
 
     def get_invenio_definition(
         self, ignored_elements: set[tuple[str, str]]
@@ -158,6 +178,14 @@ class SchemaType:
     documentation: list[str] | tuple[str, ...] = ()
     base_name: Optional[str] = None
 
+    def copy(self) -> SchemaType:
+        return type(self)(
+            name=self.name,
+            elements={**self.elements},
+            documentation=[*self.documentation],
+            base_name=self.base_name,
+        )
+
     def resolve(self, schema: Schema):
         for el in self.elements.values():
             el.resolve(schema)
@@ -171,7 +199,10 @@ class SchemaType:
             if el.substitutions:
                 del self.elements[el_name]
                 for sub in el.substitutions:
-                    self.elements[sub.name] = sub
+                    self.elements[sub.name] = copy.deepcopy(sub)
+                    self.elements[sub.name].min_occurs = el.min_occurs
+                    self.elements[sub.name].max_occurs = el.max_occurs
+                    self.elements[sub.name].check_plural_name()
 
         for el in self.elements.values():
             if (self.name, el.name) in ignored_elements:
@@ -189,6 +220,10 @@ class SchemaType:
                 "required": required,
             }
         )
+
+    def resolve_substitutions(self, schema: Schema):
+        for el in self.elements.values():
+            el.resolve_substitutions(schema)
 
 
 class OWSBoundingBox(SchemaType):
@@ -512,12 +547,7 @@ def main(xsd_file: str, output_file: str):
         el.resolve(schema)
 
     for el in schema.elements.values():
-        if el.substitution_group:
-            schema.elements[el.substitution_group].substitutions.append(el)
-            el.schema_type = copy.copy(el.schema_type)
-            el.schema_type.elements.update(
-                schema.elements[el.substitution_group].schema_type.elements
-            )
+        el.resolve_substitutions(schema)
 
     ret = {
         "$defs": {
