@@ -129,7 +129,7 @@
     rdfs:label "has identifier"@en;
     rdfs:comment "has identifier"@en;
     rdfs:isDefinedBy <https://techlib.cz/profile/ccmm/>;
-    rdfs:domain <http://www.w3.org/ns/dcat#Dataset>;
+    rdfs:domain rdfs:Resource;
     rdfs:range <http://www.w3.org/ns/adms#Identifier>.
 :isDescribedBy a rdf:Property, owl:ObjectProperty;
     rdfs:label "is described by"@en;

@@ -24,7 +24,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" name="description" type="xs:string"
+      <xs:element minOccurs="0" name="description" type="langString"
         sawsdl:modelReference="http://purl.org/dc/terms/description">
         <xs:annotation>
           <xs:documentation xml:lang="en">
@@ -56,9 +56,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact"
-        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint"
-        type="contact_point">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="contact" type="contact"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Contact
@@ -94,5 +93,11 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="contact">
+    <xs:sequence>
+      <xs:element ref="agent"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:element name="terms_of_use" type="terms_of_use"/>
+
 </xs:schema>

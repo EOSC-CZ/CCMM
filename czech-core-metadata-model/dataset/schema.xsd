@@ -111,7 +111,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="primary_language" type="xs:string" sawsdl:modelReference="language">
+      <xs:element name="primary_language" type="xs:string" sawsdl:modelReference="language"
+        minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Other language
@@ -228,7 +229,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" ref="distribution" 
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="distribution"
         sawsdl:modelReference="hasDistribution">
         <xs:annotation>
           <xs:documentation xml:lang="en">

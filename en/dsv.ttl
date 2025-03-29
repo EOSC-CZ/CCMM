@@ -37,20 +37,6 @@
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
 
-<https://techlib.cz/profile/ccmm/Dataset.alternateTitle> dsv:domain <https://techlib.cz/profile/ccmm/Dataset>;
-    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
-    a dsv:Profile;
-    skos:prefLabel "Alternate title"^^rdf:langString;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource <https://techlib.cz/vocabulary/datacite/alternativeTitle>
-];
-    dsv:cardinality <https://w3id.org/dsv#0n>;
-    dsv:property <https://techlib.cz/vocabulary/datacite/alternativeTitle>;
-    a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
-
 <https://techlib.cz/profile/ccmm/Dataset.hasAlternateIdentifier> dsv:domain <https://techlib.cz/profile/ccmm/Dataset>;
     dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -73,7 +59,7 @@
     skos:prefLabel "Primary language"^^rdf:langString;
     skos:definition "Primary language of a dataset."@en;
     <http://purl.org/vocab/vann/usageNote> "Use for the language in which is the dataset created and published."@en;
-    dsv:cardinality <https://w3id.org/dsv#11>;
+    dsv:cardinality <https://w3id.org/dsv#01>;
     dsv:property <https://techlib.cz/vocabulary/datacite/language>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
@@ -259,6 +245,7 @@
   dsv:reusedProperty skos:definition;
   dsv:reusedFromResource <https://techlib.cz/profile/ccmm/qualifiedRelation>
 ];
+    dsv:cardinality <https://w3id.org/dsv#1n>;
     dsv:property <https://techlib.cz/profile/ccmm/qualifiedRelation>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://techlib.cz/profile/ccmm/ResourceToAgentRelationship>.
@@ -401,6 +388,16 @@
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://techlib.cz/profile/ccmm/ContactDetails>.
 
+<https://techlib.cz/profile/ccmm/Agent.externalIdentifierType> dsv:domain <https://techlib.cz/profile/ccmm/Agent>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "External identifier type"^^rdf:langString;
+    skos:definition "Type of external identifier."@en;
+    <http://purl.org/vocab/vann/usageNote> "IČ, DOI, database table..."@en;
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
+
 <https://techlib.cz/profile/ccmm/Person> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
     skos:definition "Physical person. "@en;
@@ -529,7 +526,7 @@
     a dsv:Profile;
     skos:prefLabel "Access rights"^^rdf:langString;
     skos:definition "Information about who access the resource or an indication of its security status."@en;
-    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:cardinality <https://w3id.org/dsv#01>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
 
@@ -565,7 +562,7 @@
 <https://techlib.cz/profile/ccmm/TermsOfUse.contactPoint> dsv:domain <https://techlib.cz/profile/ccmm/TermsOfUse>;
     dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
-    skos:prefLabel "Punto de contacto"@es, "has contact person"@en, "kontaktní bod"@cs, "point de contact"@fr, "punto di contatto"@it, "σημείο επικοινωνίας"@el, "عنوان اتصال"@ar, "窓口"@ja, "kontaktpunkt"@da;
+    skos:prefLabel "Punto de contacto"@es, "has contact"@en, "kontaktní bod"@cs, "point de contact"@fr, "punto di contatto"@it, "σημείο επικοινωνίας"@el, "عنوان اتصال"@ar, "窓口"@ja, "kontaktpunkt"@da;
     skos:definition "Información relevante de contacto para el recurso catalogado. Se recomienda el uso de vCard."@es, "Informazioni di contatto rilevanti per la risorsa catalogata. Si raccomanda l'uso di vCard."@it, "Contact person for the further details about the terms of use."@en, "Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard."@cs, "Relie un jeu de données à une information de contact utile en utilisant VCard."@fr, "Συνδέει ένα σύνολο δεδομένων με ένα σχετικό σημείο επικοινωνίας, μέσω VCard."@el, "تربط قائمة البيانات بعنوان اتصال موصف  باستخدام VCard"@ar, "データセットを、VCardを用いて提供されている適切な連絡先情報にリンクします。"@ja, "Relevante kontaktoplysninger for den katalogiserede ressource. Anvendelse af vCard anbefales."@da;
     dsv:property <http://www.w3.org/ns/dcat#contactPoint>;
     a dsv:ObjectPropertyProfile;
@@ -759,23 +756,6 @@
 ];
     a dsv:ClassProfile.
 
-<https://techlib.cz/profile/ccmm/Resource.identifier> dsv:domain <https://techlib.cz/profile/ccmm/Resource>;
-    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
-    a dsv:Profile;
-    dsv:reusesPropertyValue [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:prefLabel;
-  dsv:reusedFromResource dct:identifier
-], [
-  a dsv:PropertyValueReuse;
-  dsv:reusedProperty skos:definition;
-  dsv:reusedFromResource dct:identifier
-];
-    dsv:cardinality <https://w3id.org/dsv#01>;
-    dsv:property <https://techlib.cz/vocabulary/datacite/identifier>, dct:identifier;
-    a dsv:DatatypePropertyProfile;
-    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
-
 <https://techlib.cz/profile/ccmm/Resource.title> dsv:domain <https://techlib.cz/profile/ccmm/Resource>;
     dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -858,6 +838,23 @@
     dsv:property <https://techlib.cz/profile/ccmm/qualifiedRelation>;
     a dsv:ObjectPropertyProfile;
     dsv:objectPropertyRange <https://techlib.cz/profile/ccmm/ResourceToAgentRelationship>.
+
+<https://techlib.cz/profile/ccmm/Resource.hasIdentifier> dsv:domain <https://techlib.cz/profile/ccmm/Resource>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    dsv:reusesPropertyValue [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:prefLabel;
+  dsv:reusedFromResource <https://techlib.cz/profile/ccmm/hasIdentifier>
+], [
+  a dsv:PropertyValueReuse;
+  dsv:reusedProperty skos:definition;
+  dsv:reusedFromResource <https://techlib.cz/profile/ccmm/hasIdentifier>
+];
+    dsv:cardinality <https://w3id.org/dsv#1n>;
+    dsv:property <https://techlib.cz/profile/ccmm/hasIdentifier>;
+    a dsv:ObjectPropertyProfile;
+    dsv:objectPropertyRange <https://techlib.cz/profile/ccmm/Identifier>.
 
 <https://techlib.cz/profile/ccmm/TimeReference> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -954,6 +951,16 @@
 ];
     a dsv:ClassProfile.
 
+<https://techlib.cz/profile/ccmm/ResourceAgentRoleType.label> dsv:domain <https://techlib.cz/profile/ccmm/ResourceAgentRoleType>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Label"^^rdf:langString;
+    skos:definition "Resource agent role type label"@en;
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property rdfs:label;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
+
 <https://techlib.cz/profile/ccmm/FunderIdentifier> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -988,6 +995,26 @@
     dsv:property <https://techlib.cz/vocabulary/datacite/funderIdentifierSchemeUri>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#anyURI>.
+
+<https://techlib.cz/profile/ccmm/FunderIdentifier.funderName> dsv:domain <https://techlib.cz/profile/ccmm/FunderIdentifier>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Funder name"@en;
+    skos:definition "Funder name"@en;
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property rdfs:label;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#string>.
+
+<https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierValue> dsv:domain <https://techlib.cz/profile/ccmm/FunderIdentifier>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Funder identifier value"^^rdf:langString;
+    skos:definition "Value of the funder identifier."@en;
+    dsv:profileOf <https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation>;
+    dsv:cardinality <https://w3id.org/dsv#01>;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
 
 <https://techlib.cz/profile/ccmm/ContactDetails> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
@@ -1353,6 +1380,16 @@
 ];
     a dsv:ClassProfile.
 
+<https://techlib.cz/profile/ccmm/MetadataAgentRoleType.label> dsv:domain <https://techlib.cz/profile/ccmm/MetadataAgentRoleType>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Label"^^rdf:langString;
+    skos:definition "Metadata agent role type label"@en;
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property rdfs:label;
+    a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdfs:Literal.
+
 <https://techlib.cz/profile/ccmm/Distribution-DownloadableFile> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
     a dsv:Profile;
     dsv:reusesPropertyValue [
@@ -1654,6 +1691,15 @@
     dsv:cardinality <https://w3id.org/dsv#0n>;
     dsv:property <http://www.w3.org/2006/vcard/ns#label>;
     a dsv:DatatypePropertyProfile;
+    dsv:datatypePropertyRange rdf:langString;
+    dsv:domain <https://techlib.cz/profile/ccmm/DataService>;
+    dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
+    a dsv:Profile;
+    skos:prefLabel "Label"^^rdf:langString;
+    skos:definition "Data service label"@en;
+    dsv:cardinality <https://w3id.org/dsv#0n>;
+    dsv:property rdfs:label;
+    a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange rdf:langString.
 
 <https://techlib.cz/profile/ccmm/Documentation> dct:isPartOf <https://techlib.cz/profile/ccmm/applicationProfileConceptualModel>;
@@ -1839,7 +1885,7 @@
     a dsv:Profile;
     skos:prefLabel "Identifier scheme"^^rdf:langString;
     skos:definition "Scheme URI of the identifier."@en;
-    <http://purl.org/vocab/vann/usageNote> "For DOI, ROR etc. use the scheme uri, i.e. https://doi.org/. FOr others use base URI (whole URI except the notation part)."@en;
+    <http://purl.org/vocab/vann/usageNote> "For DOI, ROR etc. use the scheme uri, i.e. https://doi.org/. For others use base URI (whole URI except the notation part)."@en;
     dsv:cardinality <https://w3id.org/dsv#11>;
     a dsv:DatatypePropertyProfile;
     dsv:datatypePropertyRange <http://www.w3.org/2001/XMLSchema#anyURI>.

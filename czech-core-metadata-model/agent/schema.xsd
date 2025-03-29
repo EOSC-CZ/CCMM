@@ -29,6 +29,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element minOccurs="0" name="external_identifier_type" type="xs:string"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="contact_point" type="contact_details"
         sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
         <xs:annotation>
@@ -95,10 +96,10 @@
             sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#organization-name">
             <xs:annotation>
               <xs:documentation xml:lang="en">
-            Alternate name
+            Name
           </xs:documentation>
               <xs:documentation xml:lang="en">
-            To specify the organizational name associated with the object
+            Official organizational name
           </xs:documentation>
             </xs:annotation>
           </xs:element>
