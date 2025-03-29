@@ -1,16 +1,16 @@
 from __future__ import annotations
 
+import copy
+import dataclasses
+import json
+import logging
+import sys
 from pathlib import Path
+from typing import Any, Iterator, Optional
 
 import rich_click as click
-import dataclasses
 import xmltodict
-import logging
-import json
-import sys
-from typing import Optional, Any, Iterator
 from ruamel.yaml import YAML
-import copy
 
 log = logging.getLogger(Path(sys.argv[0]).name)
 
@@ -429,7 +429,9 @@ class Schema:
         assert_empty(annotation)
         ret: list[str] = []
         for doc in documentation:
-            if doc["@http://www.w3.org/XML/1998/namespace:lang"] == "en":
+            if isinstance(doc, str):
+                ret.append(doc)
+            elif doc.get("@http://www.w3.org/XML/1998/namespace:lang", "en") == "en":
                 ret.append(doc["#text"])
         return ret
 

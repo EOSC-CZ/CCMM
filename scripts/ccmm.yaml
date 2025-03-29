@@ -19,6 +19,8 @@ $defs:
           type: keyword
         label.en: External identifier
         help.en: External identifer of an Agent.
+      external_identifier_type:
+        type: keyword
       contact_points:
         type: array
         items:
@@ -49,6 +51,14 @@ $defs:
           type: i18nStr
         label.en: Label
         help.en: Label of application profile
+  contact:
+    properties:
+      organization:
+        use: ./ccmm.yaml#/$defs/organization
+        required: true
+      person:
+        use: ./ccmm.yaml#/$defs/person
+        required: true
   contact_details:
     properties:
       iri:
@@ -77,14 +87,6 @@ $defs:
           use: ./ccmm.yaml#/$defs/address
         label.en: Address
         help.en: To specify the components of the delivery address for the object
-  contact_point:
-    properties:
-      organization:
-        use: ./ccmm.yaml#/$defs/organization
-        required: true
-      person:
-        use: ./ccmm.yaml#/$defs/person
-        required: true
   data_service:
     properties:
       iri:
@@ -131,7 +133,6 @@ $defs:
         type: keyword
         label.en: Other language
         help.en: The primary language of the resource.
-        required: true
       resource_type:
         type: keyword
         label.en: Resource type
@@ -315,6 +316,9 @@ $defs:
     properties:
       iri:
         type: keyword
+      funder_identifier_value:
+        type: keyword
+        required: true
       funder_identifier_scheme_uri:
         type: url
         label.en: Funder identifier scheme URI
@@ -324,6 +328,8 @@ $defs:
         label.en: Funder identifier type
         help.en: The type of the funderIdentifier.
         required: true
+      funder_name:
+        type: keyword
   funding_reference:
     properties:
       iri:
@@ -419,7 +425,7 @@ $defs:
         items:
           type: i18nStr
         label.en: Label
-        help.en: Validation result label
+        help.en: Metadata agent role type label
   metadata_record:
     properties:
       iri:
@@ -484,8 +490,8 @@ $defs:
         help.en: To specify the organizational name associated with the object
       name:
         type: i18nStr
-        label.en: Alternate name
-        help.en: To specify the organizational name associated with the object
+        label.en: Name
+        help.en: Official organizational name
         required: true
       iri:
         type: keyword
@@ -495,6 +501,8 @@ $defs:
           type: keyword
         label.en: External identifier
         help.en: External identifer of an Agent.
+      external_identifier_type:
+        type: keyword
       contact_points:
         type: array
         items:
@@ -546,6 +554,8 @@ $defs:
           type: keyword
         label.en: External identifier
         help.en: External identifer of an Agent.
+      external_identifier_type:
+        type: keyword
       contact_points:
         type: array
         items:
@@ -591,7 +601,7 @@ $defs:
         label.en: Title
         help.en: A name given to the Catalogue Record.
       identifier:
-        type: keyword
+        use: ./ccmm.yaml#/$defs/identifier
         label.en: Identifier
         help.en: An unambiguous reference to the resource within a given context.
       qualified_relations:
@@ -614,7 +624,7 @@ $defs:
         items:
           type: i18nStr
         label.en: Label
-        help.en: Validation result label
+        help.en: Resource to agent role label
   resource_to_agent_relationship:
     properties:
       iri:
@@ -666,7 +676,7 @@ $defs:
       iri:
         type: keyword
       description:
-        type: keyword
+        type: i18nStr
         label.en: Description
         help.en: Descriptive text on details of rights and licensing.
       license:
@@ -683,7 +693,7 @@ $defs:
       contacts:
         type: array
         items:
-          use: ./ccmm.yaml#/$defs/contact_point
+          use: ./ccmm.yaml#/$defs/contact
         label.en: Contact
         help.en: Contact person for the further details about the terms of use.
   time_reference:
