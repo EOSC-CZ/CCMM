@@ -770,7 +770,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#gYear">xsd:gYear</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -865,7 +865,7 @@
       <td>
         <a href="#TermsOfUse">Terms of use</a>
 
-              [0..*]
+              [1..1]
 
     </td>
     </tr>
@@ -1093,7 +1093,8 @@
       <td>
         <a href="#TimeReference">Time reference</a>
 
-        
+              [1..*]
+
     </td>
     </tr>
 
@@ -1488,64 +1489,8 @@
               <p>Zpětné asociace</p>
               <ul>
                   <li><a href="#ResourceToAgentRelationship.relation"></a></li>
-                  <li><a href="#MetadataToAgentRelationship.relation"></a></li>
                   <li><a href="#TermsOfUse.contactPoint"></a></li>
               </ul>
-
-                <section id="Agent.externalIdentifier">
-  <h4>External identifier</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/Agent.externalIdentifier">https://techlib.cz/profile/ccmm/Agent.externalIdentifier</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>External identifier</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>External identifer of an Agent.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#Agent">Agent</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
-
-              [0..*]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      property
-      <a href="#agentExternalIdentifier">External identifier</a> (<a href="https://techlib.cz/profile/ccmm/agentExternalIdentifier">https://techlib.cz/profile/ccmm/agentExternalIdentifier</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>External identifier</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>External identifer of an Agent.</td>
-    </tr>
-
-  </table>
-</section>
 
                 <section id="Agent.contactPoint">
   <h4>contact point</h4>
@@ -1601,35 +1546,34 @@
   </table>
 </section>
 
-                <section id="Agent.externalIdentifierType">
-  <h4>External identifier type</h4>
+                <section id="Agent.hasIdentifier">
+  <h4>has identifier</h4>
 
   <table class="def">
     <tr>
       <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/Agent.externalIdentifierType">https://techlib.cz/profile/ccmm/Agent.externalIdentifierType</a></td>
+      <td><a href="https://techlib.cz/profile/ccmm/Agent.hasIdentifier">https://techlib.cz/profile/ccmm/Agent.hasIdentifier</a></td>
     </tr>
     <tr>
       <td>Label</td>
-      <td>External identifier type</td>
+      <td>has identifier</td>
     </tr>
     <tr>
       <td>Definition</td>
-      <td>Type of external identifier.</td>
+      <td>has identifier</td>
     </tr>
     <tr>
       <td>Domain</td>
       <td>
         <a href="#Agent">Agent</a>
 
-              [0..*]
-
+        
       </td>
     </tr>
     <tr>
       <td>Range</td>
       <td>
-        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+        <a href="#Identifier">Identifier</a>
 
               [0..*]
 
@@ -1638,24 +1582,20 @@
 
     <tr>
       <td>Profiles</td>
-      <td>      
-      <a href="#Dataset.title">Title</a> (<a href="https://techlib.cz/profile/ccmm/Dataset.title">https://techlib.cz/profile/ccmm/Dataset.title</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">title</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">title</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title</a>)
-          <br />
-                property
-      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
-
-
-
+      <td>      property
+      <a href="#hasIdentifier">has identifier</a> (<a href="https://techlib.cz/profile/ccmm/hasIdentifier">https://techlib.cz/profile/ccmm/hasIdentifier</a>)
 </td>
     </tr>
 
+    <tr>
+      <td>Label from vocabulary</td>
+      <td>has identifier</td>
+    </tr>
 
+    <tr>
+      <td>Definition from vocabulary</td>
+      <td>has identifier</td>
+    </tr>
 
   </table>
 </section>
@@ -1731,7 +1671,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [1..*]
+              [0..*]
 
     </td>
     </tr>
@@ -1786,7 +1726,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [1..1]
+              [0..*]
 
     </td>
     </tr>
@@ -1859,6 +1799,65 @@
     <tr>
       <td>Definition from vocabulary</td>
       <td>Affiliation of the person to the organization.</td>
+    </tr>
+
+  </table>
+</section>
+
+                <section id="Person.fullName">
+  <h4>Full name</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/Person.fullName">https://techlib.cz/profile/ccmm/Person.fullName</a></td>
+    </tr>
+    <tr>
+      <td>Label</td>
+      <td>Full name</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>Full name of the person.</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td>
+        <a href="#Person">Person</a>
+
+              [0..*]
+
+      </td>
+    </tr>
+    <tr>
+      <td>Range</td>
+      <td>
+        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+
+              [1..1]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiles</td>
+      <td>      
+      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Agent.name">name</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Agent.name">https://mff-uk.github.io/specifications/dcat-ap/#Agent.name</a>)
+          <br />
+                property
+      <a href="https://datagov-cz.github.io/cache-slovniku/foaf.ttl#name">name</a> (<a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>)
+
+</td>
+    </tr>
+
+    <tr>
+      <td>Label from vocabulary</td>
+      <td>name</td>
+    </tr>
+
+    <tr>
+      <td>Definition from vocabulary</td>
+      <td>A name of the agent.</td>
     </tr>
 
   </table>
@@ -2137,7 +2136,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -2196,7 +2195,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [0..*]
 
     </td>
     </tr>
@@ -2251,7 +2250,7 @@
       <td>
         <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
 
-              [0..1]
+              [0..*]
 
     </td>
     </tr>
@@ -2507,7 +2506,7 @@
       <td>
         <a href="#FunderIdentifier">Funder identifier</a>
 
-              [0..*]
+              [1..*]
 
     </td>
     </tr>
@@ -2667,7 +2666,7 @@
       <td>
         <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3398,7 +3397,7 @@
       <td>
         <a href="#Identifier">Identifier</a>
 
-              [1..*]
+              [0..*]
 
     </td>
     </tr>
@@ -3419,6 +3418,65 @@
       <td>Definition from vocabulary</td>
       <td>has identifier</td>
     </tr>
+
+  </table>
+</section>
+
+                <section id="Resource.resourceURL">
+  <h4>Resource URL</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/Resource.resourceURL">https://techlib.cz/profile/ccmm/Resource.resourceURL</a></td>
+    </tr>
+    <tr>
+      <td>Label</td>
+      <td>Resource URL</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>Resolvable URL representing the resource, preferably human readable.</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td>
+        <a href="#Resource">Resource</a>
+
+              [0..*]
+
+      </td>
+    </tr>
+    <tr>
+      <td>Range</td>
+      <td>
+        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal</a>
+
+              [0..1]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiles</td>
+      <td>      
+      <a href="#Dataset.title">Title</a> (<a href="https://techlib.cz/profile/ccmm/Dataset.title">https://techlib.cz/profile/ccmm/Dataset.title</a>)
+          <br />
+                
+      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">title</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title</a>)
+          <br />
+                
+      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">title</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title</a>)
+          <br />
+                property
+      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#title">Title</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+
+
+
+</td>
+    </tr>
+
+
 
   </table>
 </section>
@@ -3496,7 +3554,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3551,7 +3609,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3684,6 +3742,7 @@
               <ul>
                   <li><a href="#Dataset.qualifiedRelation"></a></li>
                   <li><a href="#Resource.qualifiedRelation"></a></li>
+                  <li><a href="#MetadataRecord.qualifiedRelation"></a></li>
               </ul>
 
                 <section id="ResourceToAgentRelationship.relation">
@@ -3953,116 +4012,6 @@
                   <li><a href="#FundingReference.hasFunder"></a></li>
               </ul>
 
-                <section id="FunderIdentifier.funderIdentifierType">
-  <h4>Funder identifier type</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierType">https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierType</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>Funder identifier type</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>The type of the funderIdentifier.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#FunderIdentifier">Funder identifier</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      property
-      <a href="https://michalmed.github.io/DataCite/en/#funderIdentifierType">funder identifier type</a> (<a href="https://techlib.cz/vocabulary/datacite/funderIdentifierType">https://techlib.cz/vocabulary/datacite/funderIdentifierType</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>funder identifier type</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>The type of the funderIdentifier.</td>
-    </tr>
-
-  </table>
-</section>
-
-                <section id="FunderIdentifier.FunderIdentifierSchemeURI">
-  <h4>Funder identifier scheme URI</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.FunderIdentifierSchemeURI">https://techlib.cz/profile/ccmm/FunderIdentifier.FunderIdentifierSchemeURI</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>Funder identifier scheme URI</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>The URI of the funder identifier scheme.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#FunderIdentifier">Funder identifier</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
-
-              [0..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      property
-      <a href="https://michalmed.github.io/DataCite/en/#funderIdentifierSchemeUri">funder identifier scheme URI</a> (<a href="https://techlib.cz/vocabulary/datacite/funderIdentifierSchemeUri">https://techlib.cz/vocabulary/datacite/funderIdentifierSchemeUri</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>funder identifier scheme URI</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>The URI of the funder identifier scheme.</td>
-    </tr>
-
-  </table>
-</section>
-
                 <section id="FunderIdentifier.funderName">
   <h4>Funder name</h4>
 
@@ -4118,60 +4067,55 @@
   </table>
 </section>
 
-                <section id="FunderIdentifier.funderIdentifierValue">
-  <h4>Funder identifier value</h4>
+                <section id="FunderIdentifier.hasIdentifier">
+  <h4>has identifier</h4>
 
   <table class="def">
     <tr>
       <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierValue">https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierValue</a></td>
+      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.hasIdentifier">https://techlib.cz/profile/ccmm/FunderIdentifier.hasIdentifier</a></td>
     </tr>
     <tr>
       <td>Label</td>
-      <td>Funder identifier value</td>
+      <td>has identifier</td>
     </tr>
     <tr>
       <td>Definition</td>
-      <td>Value of the funder identifier.</td>
+      <td>has identifier</td>
     </tr>
     <tr>
       <td>Domain</td>
       <td>
         <a href="#FunderIdentifier">Funder identifier</a>
 
-              [0..*]
-
+        
       </td>
     </tr>
     <tr>
       <td>Range</td>
       <td>
-        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal</a>
+        <a href="#Identifier">Identifier</a>
 
-              [1..1]
+              [0..*]
 
     </td>
     </tr>
 
     <tr>
       <td>Profiles</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation">notation</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation">https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation</a>)
-          <br />
-                property
-      <a href="https://datagov-cz.github.io/cache-slovniku/skos.rdf#notation">notation</a> (<a href="http://www.w3.org/2004/02/skos/core#notation">skos:notation</a>)
-
+      <td>      property
+      <a href="#hasIdentifier">has identifier</a> (<a href="https://techlib.cz/profile/ccmm/hasIdentifier">https://techlib.cz/profile/ccmm/hasIdentifier</a>)
 </td>
     </tr>
 
     <tr>
       <td>Label from vocabulary</td>
-      <td>notation</td>
+      <td>has identifier</td>
     </tr>
 
     <tr>
       <td>Definition from vocabulary</td>
-      <td>A string that is an identifier in the context of the identifier scheme referenced by its datatype.</td>
+      <td>has identifier</td>
     </tr>
 
   </table>
@@ -4751,59 +4695,6 @@
   </table>
 </section>
 
-                <section id="MetadataRecord.qualifiedRelation">
-  <h4>qualified relation</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation">https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>qualified relation</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>Attachment of resource to the relationship.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#MetadataRecord">Metadata Record</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship</a>
-
-        
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      property
-      <a href="#qualifiedRelation">qualified relation</a> (<a href="https://techlib.cz/profile/ccmm/qualifiedRelation">https://techlib.cz/profile/ccmm/qualifiedRelation</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>qualified relation</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>Attachment of resource to the relationship.</td>
-    </tr>
-
-  </table>
-</section>
-
                 <section id="MetadataRecord.DateCreated">
   <h4>Date Created</h4>
 
@@ -4962,6 +4853,64 @@
     <tr>
       <td>Definition from vocabulary</td>
       <td>Dataset described by the metadata record.</td>
+    </tr>
+
+  </table>
+</section>
+
+                <section id="MetadataRecord.qualifiedRelation">
+  <h4>qualified relation</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation">https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation</a></td>
+    </tr>
+    <tr>
+      <td>Label</td>
+      <td>qualified relation</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>Link to a description of a relationship between metadata record and agent.</td>
+    </tr>
+    <tr>
+      <td>Domain</td>
+      <td>
+        <a href="#MetadataRecord">Metadata Record</a>
+
+        
+      </td>
+    </tr>
+    <tr>
+      <td>Range</td>
+      <td>
+        <a href="#ResourceToAgentRelationship">Resource to Agent Relationship</a>
+
+              [1..*]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiles</td>
+      <td>      
+      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation">qualified relation</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation</a>)
+          <br />
+                property
+      <a href="https://www.w3.org/ns/dcat3.ttl#qualifiedRelation">qualified relation</a> (<a href="http://www.w3.org/ns/dcat#qualifiedRelation">dcat:qualifiedRelation</a>)
+
+</td>
+    </tr>
+
+    <tr>
+      <td>Label from vocabulary</td>
+      <td>qualified relation</td>
+    </tr>
+
+    <tr>
+      <td>Definition from vocabulary</td>
+      <td>Link to a description of a relationship with another resource.</td>
     </tr>
 
   </table>
@@ -5282,277 +5231,6 @@
 
 
             </section>
-            <section id="MetadataToAgentRelationship">
-              <h4>Metadata to agent relationship</h4>
-
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>Metadata to agent relationship</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>Relationship between metadata record and agent.</td>
-                </tr>
-                <tr>
-                  <td>Profiles</td>
-                  <td>                  class
-                  <a href="#MetadataToAgentRelationship">Metadata to agent relationship</a> (<a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship</a>)
-</td>
-                </tr>
-
-                <tr>
-                  <td>Label from vocabulary</td>
-                  <td>Metadata to agent relationship</td>
-                </tr>
-
-                <tr>
-                  <td>Definition from vocabulary</td>
-                  <td>Relationship between metadata record and agent.</td>
-                </tr>
-
-              </table>
-
-              <p>Zpětné asociace</p>
-              <ul>
-                  <li><a href="#MetadataRecord.qualifiedRelation"></a></li>
-              </ul>
-
-                <section id="MetadataToAgentRelationship.hadRole">
-  <h4>had role</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.hadRole">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.hadRole</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>had role</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>The function of an entity or agent with respect to another entity or resource.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="#MetadataAgentRoleType">Metadata agent role type</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole">had role</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole">https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole">had role</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole">https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole</a>)
-          <br />
-                property
-      <a href="https://www.w3.org/ns/dcat3.ttl#hadRole">hadRole</a> (<a href="http://www.w3.org/ns/dcat#hadRole">dcat:hadRole</a>)
-
-
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>had role</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>The function of an entity or agent with respect to another entity or resource.</td>
-    </tr>
-
-  </table>
-</section>
-
-                <section id="MetadataToAgentRelationship.relation">
-  <h4>relation</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.relation">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.relation</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>relation</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>The resource related to the source resource.</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="#Agent">Agent</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation">relation</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation">https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation">relation</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation">https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation</a>)
-          <br />
-                property
-      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#relation">Relation</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
-
-
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>relation</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>The resource related to the source resource.</td>
-    </tr>
-
-  </table>
-</section>
-
-
-            </section>
-            <section id="MetadataAgentRoleType">
-              <h4>Metadata agent role type</h4>
-
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://techlib.cz/profile/ccmm/MetadataAgentRoleType">https://techlib.cz/profile/ccmm/MetadataAgentRoleType</a></td>
-                </tr>
-                <tr>
-                  <td>Label</td>
-                  <td>Metadata agent role type</td>
-                </tr>
-                <tr>
-                  <td>Definition</td>
-                  <td>An idea or notion; a unit of thought.</td>
-                </tr>
-                <tr>
-                  <td>Profiles</td>
-                  <td>                  
-                  <a href="https://mff-uk.github.io/specifications/dcat-ap/#Concept">Concept</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Concept">https://mff-uk.github.io/specifications/dcat-ap/#Concept</a>)
-                      <br />this profiles
-                                        class
-                  <a href="https://datagov-cz.github.io/cache-slovniku/skos.rdf#Concept">Concept</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
-
-</td>
-                </tr>
-
-                <tr>
-                  <td>Label from vocabulary</td>
-                  <td>Concept</td>
-                </tr>
-
-                <tr>
-                  <td>Definition from vocabulary</td>
-                  <td>An idea or notion; a unit of thought.</td>
-                </tr>
-
-                <tr>
-                  <td>Usage note</td>
-                  <td>List of roles of agent in relationship to metadata record.</td>
-                </tr>
-              </table>
-
-              <p>Zpětné asociace</p>
-              <ul>
-                  <li><a href="#MetadataToAgentRelationship.hadRole"></a></li>
-              </ul>
-
-                <section id="MetadataAgentRoleType.label">
-  <h4>Label</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataAgentRoleType.label">https://techlib.cz/profile/ccmm/MetadataAgentRoleType.label</a></td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td>Label</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>Metadata agent role type label</td>
-    </tr>
-    <tr>
-      <td>Domain</td>
-      <td>
-        <a href="#MetadataAgentRoleType">Metadata agent role type</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Range</td>
-      <td>
-        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal</a>
-
-              [0..*]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiles</td>
-      <td>      property
-      <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#label">label</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Label from vocabulary</td>
-      <td>label</td>
-    </tr>
-
-    <tr>
-      <td>Definition from vocabulary</td>
-      <td>A human-readable name for the subject.</td>
-    </tr>
-
-  </table>
-</section>
-
-
-            </section>
             <section id="Distribution-DownloadableFile">
               <h4>Distribution - downloadable file</h4>
 
@@ -5746,7 +5424,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -5863,7 +5541,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -6966,32 +6644,25 @@
                 </tr>
                 <tr>
                   <td>Profiles</td>
-                  <td>                  
-                  <a href="https://mff-uk.github.io/specifications/dcat-ap/#Location">Location</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Location">https://mff-uk.github.io/specifications/dcat-ap/#Location</a>)
-                      <br />
-                                        
-                  <a href="https://mff-uk.github.io/specifications/dcat-dap/#Location">Location</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Location">https://mff-uk.github.io/specifications/dcat-dap/#Location</a>)
-                      <br />this profiles
-                                        class
-                  <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#Location">Location</a> (<a href="http://purl.org/dc/terms/Location">dcterms:Location</a>)
-
-
+                  <td>                  class
+                  <a href="https://michalmed.github.io/DataCite/en/#Geolocation">GeoLocation</a> (<a href="https://techlib.cz/vocabulary/datacite/Geolocation">https://techlib.cz/vocabulary/datacite/Geolocation</a>)
 </td>
                 </tr>
 
                 <tr>
                   <td>Label from vocabulary</td>
-                  <td>Location</td>
+                  <td>GeoLocation</td>
                 </tr>
 
                 <tr>
                   <td>Definition from vocabulary</td>
-                  <td>A spatial region or named place.</td>
+                  <td>Spatial region or named place where the data was gathered or about which the data is focused.</td>
                 </tr>
 
                 <tr>
                   <td>Usage note</td>
-                  <td>Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. </td>
+                  <td>Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. 
+Every Location instance must have at least one of the following attributes/relations: bbox, location name, geometry and/or related object identifier.</td>
                 </tr>
               </table>
 
@@ -7030,7 +6701,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..*]
+              [1..1]
 
     </td>
     </tr>
@@ -7434,6 +7105,8 @@
               <ul>
                   <li><a href="#Dataset.hasIdentifier"></a></li>
                   <li><a href="#Resource.hasIdentifier"></a></li>
+                  <li><a href="#Agent.hasIdentifier"></a></li>
+                  <li><a href="#FunderIdentifier.hasIdentifier"></a></li>
               </ul>
 
                 <section id="Identifier.value">
@@ -8319,12 +7992,6 @@
                   </tr>
               </table>
             </section>
-
-
-
-
-
-
 
 
 

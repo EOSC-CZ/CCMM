@@ -25,7 +25,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
       <xs:element minOccurs="0" name="description" type="langString"
-        sawsdl:modelReference="http://purl.org/dc/terms/description">
+        sawsdl:modelReference="http://purl.org/dc/terms/description" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Description
@@ -36,7 +36,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" name="license" type="xs:string"
-        sawsdl:modelReference="http://purl.org/dc/terms/license">
+        sawsdl:modelReference="http://purl.org/dc/terms/license" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             License
@@ -46,7 +46,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="access_rights" type="xs:string">
+      <xs:element minOccurs="1" maxOccurs="1" name="access_rights" type="xs:string">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Access rights

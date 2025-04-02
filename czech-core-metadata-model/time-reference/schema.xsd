@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
   <xs:complexType name="time_reference" sawsdl:modelReference="TimeReference">
     <xs:annotation>
@@ -12,7 +15,8 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" name="date_information" type="xs:string" sawsdl:modelReference="dateInformation">
+      <xs:element minOccurs="0" name="date_information" type="xs:string"
+        sawsdl:modelReference="dateInformation">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Date information
@@ -22,7 +26,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="date_type" type="xs:string" sawsdl:modelReference="dateType">
+      <xs:element minOccurs="1" name="date_type" type="xs:string" sawsdl:modelReference="dateType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Date type
@@ -32,7 +36,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="date" type="xs:date" sawsdl:modelReference="dateValue">
+      <xs:element minOccurs="1" name="date" type="xs:date" sawsdl:modelReference="dateValue">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Date

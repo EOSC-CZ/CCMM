@@ -52,6 +52,14 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="resource_URL" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Resource URL</xs:documentation>
+          <xs:documentation xml:lang="en">In case it is filled, it must be filled the same in c:iri.
+If more resolvable IRIs, resourceURL shall link to human readable version, machine readable ID is always in c:iri.</xs:documentation>
+          <xs:documentation xml:lang="en">Resolvable URL pointing to some thing representing the resouce.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element minOccurs="0" name="identifier" type="identifier"
         sawsdl:modelReference="identifier http://purl.org/dc/terms/identifier">
         <xs:annotation>

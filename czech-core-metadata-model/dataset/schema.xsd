@@ -61,7 +61,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" name="publication_year" type="xs:gYear"
+      <xs:element minOccurs="1" name="publication_year" type="xs:gYear"
         sawsdl:modelReference="relatedItemPublicationYear">
         <xs:annotation>
           <xs:documentation xml:lang="en">
@@ -205,12 +205,12 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="time_reference" type="time_reference"
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="time_reference" type="time_reference"
         sawsdl:modelReference="hasTimeReference">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            time reference
+          <xs:documentation xml:lang="en">Time reference
           </xs:documentation>
+          <xs:documentation xml:lang="en">Must contain at least one time reference with date type value "Created" from DataCIte controlled vocabulary https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/dateType/.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="subject" type="subject"
@@ -245,7 +245,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="terms_of_use" type="terms_of_use"
+      <xs:element minOccurs="1" maxOccurs="1" name="terms_of_use" type="terms_of_use"
         sawsdl:modelReference="hasVersion">
         <xs:annotation>
           <xs:documentation xml:lang="en">

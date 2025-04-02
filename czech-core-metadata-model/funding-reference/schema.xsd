@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../funder-identifier/schema.xsd"/>
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
   <xs:complexType name="funding_reference" sawsdl:modelReference="FundingReference">
@@ -23,7 +26,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="award_title" type="xs:string" sawsdl:modelReference="awardTitle">
+      <xs:element minOccurs="0" name="award_title" type="xs:string"
+        sawsdl:modelReference="awardTitle">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Award title
@@ -33,7 +37,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="local_identifier" type="xs:string" sawsdl:modelReference="awardNumber">
+      <xs:element minOccurs="0" name="local_identifier" type="xs:string"
+        sawsdl:modelReference="awardNumber">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Local identifier
@@ -43,7 +48,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="funder" type="funder_identifier" sawsdl:modelReference="hasFunderIdentifier">
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="funder" type="funder_identifier"
+        sawsdl:modelReference="hasFunderIdentifier">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             has funder

@@ -18,18 +18,7 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="external_identifiers" type="xs:string"
-        sawsdl:modelReference="agentExternalIdentifier">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">
-            External identifier
-          </xs:documentation>
-          <xs:documentation xml:lang="en">
-            External identifer of an Agent.
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element minOccurs="0" name="external_identifier_type" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="identifier" type="identifier"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="contact_point" type="contact_details"
         sawsdl:modelReference="http://www.w3.org/ns/dcat#contactPoint">
         <xs:annotation>
@@ -120,8 +109,15 @@
     <xs:complexContent>
       <xs:extension base="agent">
         <xs:sequence>
+          <xs:element name="full_name" type="xs:string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Family name</xs:documentation>
+              <xs:documentation xml:lang="en">Full name of the person.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:element name="family_name" type="xs:string"
-            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#family-name">
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#family-name"
+            maxOccurs="unbounded" minOccurs="0">
             <xs:annotation>
               <xs:documentation xml:lang="en">
             Family name
@@ -132,7 +128,7 @@
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="unbounded" name="given_name" type="xs:string"
-            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#given-name">
+            sawsdl:modelReference="http://www.w3.org/2006/vcard/ns#given-name" minOccurs="0">
             <xs:annotation>
               <xs:documentation xml:lang="en">
             Given name

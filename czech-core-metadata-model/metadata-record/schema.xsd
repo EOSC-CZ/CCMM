@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
-  <xs:include schemaLocation="../metadata-to-agent-relationship/schema.xsd"/>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../repository/schema.xsd"/>
   <xs:include schemaLocation="../application-profile/schema.xsd"/>
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
-  <xs:complexType name="metadata_record" sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
+  <xs:complexType name="metadata_record"
+    sawsdl:modelReference="http://www.w3.org/ns/dcat#CatalogRecord">
     <xs:annotation>
       <xs:documentation xml:lang="en">
         Metadata record
@@ -39,7 +42,8 @@
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="date_updated" type="xs:date" sawsdl:modelReference="http://purl.org/dc/terms/modified">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="date_updated" type="xs:date"
+        sawsdl:modelReference="http://purl.org/dc/terms/modified">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Date updated
@@ -49,7 +53,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="date_created" type="xs:date" sawsdl:modelReference="http://purl.org/dc/terms/created">
+      <xs:element minOccurs="0" name="date_created" type="xs:date"
+        sawsdl:modelReference="http://purl.org/dc/terms/created">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Date Created
@@ -59,7 +64,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="language" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/language">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="language" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/language">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Language
@@ -69,17 +75,16 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relation" type="metadata_to_agent_relationship" sawsdl:modelReference="qualifiedRelation">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="qualified_relation"
+        type="resource_to_agent_relationship" sawsdl:modelReference="qualifiedRelation">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Qualified relation
-          </xs:documentation>
-          <xs:documentation xml:lang="en">
-            Attachment of resource to the relationship.
-          </xs:documentation>
+          <xs:documentation xml:lang="en">Qualified relation</xs:documentation>
+          <xs:documentation xml:lang="en">Link to a description of a relationship between metadata record and agent.</xs:documentation>
+          <xs:documentation xml:lang="en">Relationship shall contain at least one agent with role "DataManager" from codelist https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType/.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="original_repository" type="repository" sawsdl:modelReference="originalRepository">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="original_repository" type="repository"
+        sawsdl:modelReference="originalRepository">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Original repository
@@ -89,7 +94,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard" type="application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="conforms_to_standard"
+        type="application_profile" sawsdl:modelReference="http://purl.org/dc/terms/conformsTo">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Conforms to standard

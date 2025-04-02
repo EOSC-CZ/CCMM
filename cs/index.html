@@ -770,7 +770,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#gYear">xsd:gYear</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -865,7 +865,7 @@
       <td>
         <a href="#TermsOfUse">Terms of use (@en)</a>
 
-              [0..*]
+              [1..1]
 
     </td>
     </tr>
@@ -1093,7 +1093,8 @@
       <td>
         <a href="#TimeReference">Time reference (@en)</a>
 
-        
+              [1..*]
+
     </td>
     </tr>
 
@@ -1488,64 +1489,8 @@
               <p>Zpětné asociace</p>
               <ul>
                   <li><a href="#ResourceToAgentRelationship.relation"></a></li>
-                  <li><a href="#MetadataToAgentRelationship.relation"></a></li>
                   <li><a href="#TermsOfUse.contactPoint"></a></li>
               </ul>
-
-                <section id="Agent.externalIdentifier">
-  <h4>External identifier (@en)</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/Agent.externalIdentifier">https://techlib.cz/profile/ccmm/Agent.externalIdentifier</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>External identifier (@en)</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>External identifer of an Agent. (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#Agent">Agent (@en)</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
-
-              [0..*]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      vlastnost
-      <a href="#agentExternalIdentifier">External identifier (@en)</a> (<a href="https://techlib.cz/profile/ccmm/agentExternalIdentifier">https://techlib.cz/profile/ccmm/agentExternalIdentifier</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>External identifier (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>External identifer of an Agent. (@en)</td>
-    </tr>
-
-  </table>
-</section>
 
                 <section id="Agent.contactPoint">
   <h4>kontaktní bod</h4>
@@ -1601,35 +1546,34 @@
   </table>
 </section>
 
-                <section id="Agent.externalIdentifierType">
-  <h4>External identifier type</h4>
+                <section id="Agent.hasIdentifier">
+  <h4>has identifier (@en)</h4>
 
   <table class="def">
     <tr>
       <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/Agent.externalIdentifierType">https://techlib.cz/profile/ccmm/Agent.externalIdentifierType</a></td>
+      <td><a href="https://techlib.cz/profile/ccmm/Agent.hasIdentifier">https://techlib.cz/profile/ccmm/Agent.hasIdentifier</a></td>
     </tr>
     <tr>
       <td>Název</td>
-      <td>External identifier type</td>
+      <td>has identifier (@en)</td>
     </tr>
     <tr>
       <td>Definice</td>
-      <td>Type of external identifier. (@en)</td>
+      <td>has identifier (@en)</td>
     </tr>
     <tr>
       <td>Definiční obor</td>
       <td>
         <a href="#Agent">Agent (@en)</a>
 
-              [0..*]
-
+        
       </td>
     </tr>
     <tr>
       <td>Obor hodnot</td>
       <td>
-        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+        <a href="#Identifier">Identifier (@en)</a>
 
               [0..*]
 
@@ -1638,24 +1582,20 @@
 
     <tr>
       <td>Profiluje</td>
-      <td>      
-      <a href="#Dataset.title">Title</a> (<a href="https://techlib.cz/profile/ccmm/Dataset.title">https://techlib.cz/profile/ccmm/Dataset.title</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">title (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">title (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title</a>)
-          <br />
-                vlastnost
-      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#title">Title (@en)</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
-
-
-
+      <td>      vlastnost
+      <a href="#hasIdentifier">has identifier (@en)</a> (<a href="https://techlib.cz/profile/ccmm/hasIdentifier">https://techlib.cz/profile/ccmm/hasIdentifier</a>)
 </td>
     </tr>
 
+    <tr>
+      <td>Název ze slovníku</td>
+      <td>has identifier (@en)</td>
+    </tr>
 
+    <tr>
+      <td>Definice ze slovníku</td>
+      <td>has identifier (@en)</td>
+    </tr>
 
   </table>
 </section>
@@ -1731,7 +1671,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [1..*]
+              [0..*]
 
     </td>
     </tr>
@@ -1786,7 +1726,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [1..1]
+              [0..*]
 
     </td>
     </tr>
@@ -1859,6 +1799,65 @@
     <tr>
       <td>Definice ze slovníku</td>
       <td>Affiliation of the person to the organization. (@en)</td>
+    </tr>
+
+  </table>
+</section>
+
+                <section id="Person.fullName">
+  <h4>Full name</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/Person.fullName">https://techlib.cz/profile/ccmm/Person.fullName</a></td>
+    </tr>
+    <tr>
+      <td>Název</td>
+      <td>Full name</td>
+    </tr>
+    <tr>
+      <td>Definice</td>
+      <td>Full name of the person. (@en)</td>
+    </tr>
+    <tr>
+      <td>Definiční obor</td>
+      <td>
+        <a href="#Person">Person (@en)</a>
+
+              [0..*]
+
+      </td>
+    </tr>
+    <tr>
+      <td>Obor hodnot</td>
+      <td>
+        <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+
+              [1..1]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiluje</td>
+      <td>      
+      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Agent.name">name (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Agent.name">https://mff-uk.github.io/specifications/dcat-ap/#Agent.name</a>)
+          <br />
+                vlastnost
+      <a href="https://datagov-cz.github.io/cache-slovniku/foaf.ttl#name">name (@en)</a> (<a href="http://xmlns.com/foaf/0.1/name">foaf:name</a>)
+
+</td>
+    </tr>
+
+    <tr>
+      <td>Název ze slovníku</td>
+      <td>name (@en)</td>
+    </tr>
+
+    <tr>
+      <td>Definice ze slovníku</td>
+      <td>A name of the agent. (@en)</td>
     </tr>
 
   </table>
@@ -2137,7 +2136,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -2196,7 +2195,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [0..*]
 
     </td>
     </tr>
@@ -2251,7 +2250,7 @@
       <td>
         <a href="https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text">https://ofn.gov.cz/zdroj/základní-datové-typy/2020-07-01/text</a>
 
-              [0..1]
+              [0..*]
 
     </td>
     </tr>
@@ -2507,7 +2506,7 @@
       <td>
         <a href="#FunderIdentifier">Funder identifier (@en)</a>
 
-              [0..*]
+              [1..*]
 
     </td>
     </tr>
@@ -2667,7 +2666,7 @@
       <td>
         <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3398,7 +3397,7 @@
       <td>
         <a href="#Identifier">Identifier (@en)</a>
 
-              [1..*]
+              [0..*]
 
     </td>
     </tr>
@@ -3419,6 +3418,65 @@
       <td>Definice ze slovníku</td>
       <td>has identifier (@en)</td>
     </tr>
+
+  </table>
+</section>
+
+                <section id="Resource.resourceURL">
+  <h4>Resource URL</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/Resource.resourceURL">https://techlib.cz/profile/ccmm/Resource.resourceURL</a></td>
+    </tr>
+    <tr>
+      <td>Název</td>
+      <td>Resource URL</td>
+    </tr>
+    <tr>
+      <td>Definice</td>
+      <td>Resolvable URL representing the resource, preferably human readable. (@en)</td>
+    </tr>
+    <tr>
+      <td>Definiční obor</td>
+      <td>
+        <a href="#Resource">Resource (@en)</a>
+
+              [0..*]
+
+      </td>
+    </tr>
+    <tr>
+      <td>Obor hodnot</td>
+      <td>
+        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal (@en)</a>
+
+              [0..1]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiluje</td>
+      <td>      
+      <a href="#Dataset.title">Title</a> (<a href="https://techlib.cz/profile/ccmm/Dataset.title">https://techlib.cz/profile/ccmm/Dataset.title</a>)
+          <br />
+                
+      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">title (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title">https://mff-uk.github.io/specifications/dcat-ap/#Dataset.title</a>)
+          <br />
+                
+      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">title (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.title</a>)
+          <br />
+                vlastnost
+      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#title">Title (@en)</a> (<a href="http://purl.org/dc/terms/title">dcterms:title</a>)
+
+
+
+</td>
+    </tr>
+
+
 
   </table>
 </section>
@@ -3496,7 +3554,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3551,7 +3609,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -3684,6 +3742,7 @@
               <ul>
                   <li><a href="#Dataset.qualifiedRelation"></a></li>
                   <li><a href="#Resource.qualifiedRelation"></a></li>
+                  <li><a href="#MetadataRecord.qualifiedRelation"></a></li>
               </ul>
 
                 <section id="ResourceToAgentRelationship.relation">
@@ -3953,116 +4012,6 @@
                   <li><a href="#FundingReference.hasFunder"></a></li>
               </ul>
 
-                <section id="FunderIdentifier.funderIdentifierType">
-  <h4>Funder identifier type</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierType">https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierType</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>Funder identifier type</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>The type of the funderIdentifier. (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#FunderIdentifier">Funder identifier (@en)</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      vlastnost
-      <a href="https://michalmed.github.io/DataCite/en/#funderIdentifierType">funder identifier type (@en)</a> (<a href="https://techlib.cz/vocabulary/datacite/funderIdentifierType">https://techlib.cz/vocabulary/datacite/funderIdentifierType</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>funder identifier type (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>The type of the funderIdentifier. (@en)</td>
-    </tr>
-
-  </table>
-</section>
-
-                <section id="FunderIdentifier.FunderIdentifierSchemeURI">
-  <h4>Funder identifier scheme URI</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.FunderIdentifierSchemeURI">https://techlib.cz/profile/ccmm/FunderIdentifier.FunderIdentifierSchemeURI</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>Funder identifier scheme URI</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>The URI of the funder identifier scheme. (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#FunderIdentifier">Funder identifier (@en)</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
-
-              [0..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      vlastnost
-      <a href="https://michalmed.github.io/DataCite/en/#funderIdentifierSchemeUri">funder identifier scheme URI (@en)</a> (<a href="https://techlib.cz/vocabulary/datacite/funderIdentifierSchemeUri">https://techlib.cz/vocabulary/datacite/funderIdentifierSchemeUri</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>funder identifier scheme URI (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>The URI of the funder identifier scheme. (@en)</td>
-    </tr>
-
-  </table>
-</section>
-
                 <section id="FunderIdentifier.funderName">
   <h4>Funder name (@en)</h4>
 
@@ -4118,60 +4067,55 @@
   </table>
 </section>
 
-                <section id="FunderIdentifier.funderIdentifierValue">
-  <h4>Funder identifier value</h4>
+                <section id="FunderIdentifier.hasIdentifier">
+  <h4>has identifier (@en)</h4>
 
   <table class="def">
     <tr>
       <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierValue">https://techlib.cz/profile/ccmm/FunderIdentifier.funderIdentifierValue</a></td>
+      <td><a href="https://techlib.cz/profile/ccmm/FunderIdentifier.hasIdentifier">https://techlib.cz/profile/ccmm/FunderIdentifier.hasIdentifier</a></td>
     </tr>
     <tr>
       <td>Název</td>
-      <td>Funder identifier value</td>
+      <td>has identifier (@en)</td>
     </tr>
     <tr>
       <td>Definice</td>
-      <td>Value of the funder identifier. (@en)</td>
+      <td>has identifier (@en)</td>
     </tr>
     <tr>
       <td>Definiční obor</td>
       <td>
         <a href="#FunderIdentifier">Funder identifier (@en)</a>
 
-              [0..*]
-
+        
       </td>
     </tr>
     <tr>
       <td>Obor hodnot</td>
       <td>
-        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal (@en)</a>
+        <a href="#Identifier">Identifier (@en)</a>
 
-              [1..1]
+              [0..*]
 
     </td>
     </tr>
 
     <tr>
       <td>Profiluje</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation">notation (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation">https://mff-uk.github.io/specifications/dcat-ap/#Identifier.notation</a>)
-          <br />
-                vlastnost
-      <a href="https://datagov-cz.github.io/cache-slovniku/skos.rdf#notation">notation (@en)</a> (<a href="http://www.w3.org/2004/02/skos/core#notation">skos:notation</a>)
-
+      <td>      vlastnost
+      <a href="#hasIdentifier">has identifier (@en)</a> (<a href="https://techlib.cz/profile/ccmm/hasIdentifier">https://techlib.cz/profile/ccmm/hasIdentifier</a>)
 </td>
     </tr>
 
     <tr>
       <td>Název ze slovníku</td>
-      <td>notation (@en)</td>
+      <td>has identifier (@en)</td>
     </tr>
 
     <tr>
       <td>Definice ze slovníku</td>
-      <td>A string that is an identifier in the context of the identifier scheme referenced by its datatype. (@en)</td>
+      <td>has identifier (@en)</td>
     </tr>
 
   </table>
@@ -4751,59 +4695,6 @@
   </table>
 </section>
 
-                <section id="MetadataRecord.qualifiedRelation">
-  <h4>qualified relation (@en)</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation">https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>qualified relation (@en)</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>Attachment of resource to the relationship. (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#MetadataRecord">Katalogizační záznam</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship (@en)</a>
-
-        
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      vlastnost
-      <a href="#qualifiedRelation">qualified relation (@en)</a> (<a href="https://techlib.cz/profile/ccmm/qualifiedRelation">https://techlib.cz/profile/ccmm/qualifiedRelation</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>qualified relation (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>Attachment of resource to the relationship. (@en)</td>
-    </tr>
-
-  </table>
-</section>
-
                 <section id="MetadataRecord.DateCreated">
   <h4>Date Created (@en)</h4>
 
@@ -4962,6 +4853,64 @@
     <tr>
       <td>Definice ze slovníku</td>
       <td>Dataset described by the metadata record. (@en)</td>
+    </tr>
+
+  </table>
+</section>
+
+                <section id="MetadataRecord.qualifiedRelation">
+  <h4>kvalifikovaný vztah</h4>
+
+  <table class="def">
+    <tr>
+      <td>IRI</td>
+      <td><a href="https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation">https://techlib.cz/profile/ccmm/MetadataRecord.qualifiedRelation</a></td>
+    </tr>
+    <tr>
+      <td>Název</td>
+      <td>kvalifikovaný vztah</td>
+    </tr>
+    <tr>
+      <td>Definice</td>
+      <td>Odkaz na popis vztahu s jiným zdrojem.</td>
+    </tr>
+    <tr>
+      <td>Definiční obor</td>
+      <td>
+        <a href="#MetadataRecord">Katalogizační záznam</a>
+
+        
+      </td>
+    </tr>
+    <tr>
+      <td>Obor hodnot</td>
+      <td>
+        <a href="#ResourceToAgentRelationship">Resource to Agent Relationship (@en)</a>
+
+              [1..*]
+
+    </td>
+    </tr>
+
+    <tr>
+      <td>Profiluje</td>
+      <td>      
+      <a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation">kvalifikovaný vztah</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation">https://mff-uk.github.io/specifications/dcat-dap/#CataloguedResource.qualifiedRelation</a>)
+          <br />
+                vlastnost
+      <a href="https://www.w3.org/ns/dcat3.ttl#qualifiedRelation">kvalifikovaný vztah</a> (<a href="http://www.w3.org/ns/dcat#qualifiedRelation">dcat:qualifiedRelation</a>)
+
+</td>
+    </tr>
+
+    <tr>
+      <td>Název ze slovníku</td>
+      <td>kvalifikovaný vztah</td>
+    </tr>
+
+    <tr>
+      <td>Definice ze slovníku</td>
+      <td>Odkaz na popis vztahu s jiným zdrojem.</td>
     </tr>
 
   </table>
@@ -5282,277 +5231,6 @@
 
 
             </section>
-            <section id="MetadataToAgentRelationship">
-              <h4>Metadata to agent relationship (@en)</h4>
-
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship</a></td>
-                </tr>
-                <tr>
-                  <td>Název</td>
-                  <td>Metadata to agent relationship (@en)</td>
-                </tr>
-                <tr>
-                  <td>Definice</td>
-                  <td>Relationship between metadata record and agent. (@en)</td>
-                </tr>
-                <tr>
-                  <td>Profiluje</td>
-                  <td>                  třída
-                  <a href="#MetadataToAgentRelationship">Metadata to agent relationship (@en)</a> (<a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship</a>)
-</td>
-                </tr>
-
-                <tr>
-                  <td>Název ze slovníku</td>
-                  <td>Metadata to agent relationship (@en)</td>
-                </tr>
-
-                <tr>
-                  <td>Definice ze slovníku</td>
-                  <td>Relationship between metadata record and agent. (@en)</td>
-                </tr>
-
-              </table>
-
-              <p>Zpětné asociace</p>
-              <ul>
-                  <li><a href="#MetadataRecord.qualifiedRelation"></a></li>
-              </ul>
-
-                <section id="MetadataToAgentRelationship.hadRole">
-  <h4>sehraná role</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.hadRole">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.hadRole</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>sehraná role</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship (@en)</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="#MetadataAgentRoleType">Metadata agent role type (@en)</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole">sehraná role</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole">https://mff-uk.github.io/specifications/dcat-ap/#Relationship.hadRole</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole">sehraná role</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole">https://mff-uk.github.io/specifications/dcat-dap/#Relationship.hadRole</a>)
-          <br />
-                vlastnost
-      <a href="https://www.w3.org/ns/dcat3.ttl#hadRole">sehraná role</a> (<a href="http://www.w3.org/ns/dcat#hadRole">dcat:hadRole</a>)
-
-
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>sehraná role</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</td>
-    </tr>
-
-  </table>
-</section>
-
-                <section id="MetadataToAgentRelationship.relation">
-  <h4>relation (@en)</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.relation">https://techlib.cz/profile/ccmm/MetadataToAgentRelationship.relation</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>relation (@en)</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>The resource related to the source resource. (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#MetadataToAgentRelationship">Metadata to agent relationship (@en)</a>
-
-        
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="#Agent">Agent (@en)</a>
-
-              [1..1]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      
-      <a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation">relation (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation">https://mff-uk.github.io/specifications/dcat-ap/#Relationship.relation</a>)
-          <br />
-                
-      <a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation">relation (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation">https://mff-uk.github.io/specifications/dcat-dap/#Relationship.relation</a>)
-          <br />
-                vlastnost
-      <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#relation">Relation (@en)</a> (<a href="http://purl.org/dc/terms/relation">dcterms:relation</a>)
-
-
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>relation (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>The resource related to the source resource. (@en)</td>
-    </tr>
-
-  </table>
-</section>
-
-
-            </section>
-            <section id="MetadataAgentRoleType">
-              <h4>Metadata agent role type (@en)</h4>
-
-              <table class="def">
-                <tr>
-                  <td>IRI</td>
-                  <td><a href="https://techlib.cz/profile/ccmm/MetadataAgentRoleType">https://techlib.cz/profile/ccmm/MetadataAgentRoleType</a></td>
-                </tr>
-                <tr>
-                  <td>Název</td>
-                  <td>Metadata agent role type (@en)</td>
-                </tr>
-                <tr>
-                  <td>Definice</td>
-                  <td>An idea or notion; a unit of thought. (@en)</td>
-                </tr>
-                <tr>
-                  <td>Profiluje</td>
-                  <td>                  
-                  <a href="https://mff-uk.github.io/specifications/dcat-ap/#Concept">Concept (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Concept">https://mff-uk.github.io/specifications/dcat-ap/#Concept</a>)
-                      <br />tato profiluje
-                                        třída
-                  <a href="https://datagov-cz.github.io/cache-slovniku/skos.rdf#Concept">Concept (@en)</a> (<a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a>)
-
-</td>
-                </tr>
-
-                <tr>
-                  <td>Název ze slovníku</td>
-                  <td>Concept (@en)</td>
-                </tr>
-
-                <tr>
-                  <td>Definice ze slovníku</td>
-                  <td>An idea or notion; a unit of thought. (@en)</td>
-                </tr>
-
-                <tr>
-                  <td>Popis použití v profilu</td>
-                  <td>List of roles of agent in relationship to metadata record. (@en)</td>
-                </tr>
-              </table>
-
-              <p>Zpětné asociace</p>
-              <ul>
-                  <li><a href="#MetadataToAgentRelationship.hadRole"></a></li>
-              </ul>
-
-                <section id="MetadataAgentRoleType.label">
-  <h4>Label</h4>
-
-  <table class="def">
-    <tr>
-      <td>IRI</td>
-      <td><a href="https://techlib.cz/profile/ccmm/MetadataAgentRoleType.label">https://techlib.cz/profile/ccmm/MetadataAgentRoleType.label</a></td>
-    </tr>
-    <tr>
-      <td>Název</td>
-      <td>Label</td>
-    </tr>
-    <tr>
-      <td>Definice</td>
-      <td>Metadata agent role type label (@en)</td>
-    </tr>
-    <tr>
-      <td>Definiční obor</td>
-      <td>
-        <a href="#MetadataAgentRoleType">Metadata agent role type (@en)</a>
-
-              [0..*]
-
-      </td>
-    </tr>
-    <tr>
-      <td>Obor hodnot</td>
-      <td>
-        <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#Literal">Literal (@en)</a>
-
-              [0..*]
-
-    </td>
-    </tr>
-
-    <tr>
-      <td>Profiluje</td>
-      <td>      vlastnost
-      <a href="https://datagov-cz.github.io/cache-slovniku/rdfs.ttl#label">label (@en)</a> (<a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a>)
-</td>
-    </tr>
-
-    <tr>
-      <td>Název ze slovníku</td>
-      <td>label (@en)</td>
-    </tr>
-
-    <tr>
-      <td>Definice ze slovníku</td>
-      <td>A human-readable name for the subject. (@en)</td>
-    </tr>
-
-  </table>
-</section>
-
-
-            </section>
             <section id="Distribution-DownloadableFile">
               <h4>Distribution - downloadable file (@en)</h4>
 
@@ -5746,7 +5424,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -5863,7 +5541,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
 
-              [0..1]
+              [1..1]
 
     </td>
     </tr>
@@ -6966,32 +6644,25 @@
                 </tr>
                 <tr>
                   <td>Profiluje</td>
-                  <td>                  
-                  <a href="https://mff-uk.github.io/specifications/dcat-ap/#Location">Location (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-ap/#Location">https://mff-uk.github.io/specifications/dcat-ap/#Location</a>)
-                      <br />
-                                        
-                  <a href="https://mff-uk.github.io/specifications/dcat-dap/#Location">Location (@en)</a> (<a href="https://mff-uk.github.io/specifications/dcat-dap/#Location">https://mff-uk.github.io/specifications/dcat-dap/#Location</a>)
-                      <br />tato profiluje
-                                        třída
-                  <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl#Location">Location (@en)</a> (<a href="http://purl.org/dc/terms/Location">dcterms:Location</a>)
-
-
+                  <td>                  třída
+                  <a href="https://michalmed.github.io/DataCite/en/#Geolocation">GeoLocation (@en)</a> (<a href="https://techlib.cz/vocabulary/datacite/Geolocation">https://techlib.cz/vocabulary/datacite/Geolocation</a>)
 </td>
                 </tr>
 
                 <tr>
                   <td>Název ze slovníku</td>
-                  <td>Location (@en)</td>
+                  <td>GeoLocation (@en)</td>
                 </tr>
 
                 <tr>
                   <td>Definice ze slovníku</td>
-                  <td>A spatial region or named place. (@en)</td>
+                  <td>Spatial region or named place where the data was gathered or about which the data is focused. (@en)</td>
                 </tr>
 
                 <tr>
                   <td>Popis použití v profilu</td>
-                  <td>Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation.  (@en)</td>
+                  <td>Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. 
+Every Location instance must have at least one of the following attributes/relations: bbox, location name, geometry and/or related object identifier. (@en)</td>
                 </tr>
               </table>
 
@@ -7030,7 +6701,7 @@
       <td>
         <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
 
-              [0..*]
+              [1..1]
 
     </td>
     </tr>
@@ -7434,6 +7105,8 @@
               <ul>
                   <li><a href="#Dataset.hasIdentifier"></a></li>
                   <li><a href="#Resource.hasIdentifier"></a></li>
+                  <li><a href="#Agent.hasIdentifier"></a></li>
+                  <li><a href="#FunderIdentifier.hasIdentifier"></a></li>
               </ul>
 
                 <section id="Identifier.value">
@@ -8319,12 +7992,6 @@
                   </tr>
               </table>
             </section>
-
-
-
-
-
-
 
 
 

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"
+  elementFormDefault="unqualified" xmlns:c="https://schemas.dataspecer.com/xsd/core/"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
   <xs:include schemaLocation="../geometry/schema.xsd"/>
   <xs:include schemaLocation="../resource/schema.xsd"/>
   <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
-  <xs:import namespace="http://www.opengis.net/ows/1.1" schemaLocation="https://schemas.opengis.net/ows/1.1.0/owsCommon.xsd"/>
-  <xs:complexType name="location" sawsdl:modelReference="http://purl.org/dc/terms/Location Geolocation">
+  <xs:import namespace="http://www.opengis.net/ows/1.1"
+    schemaLocation="https://schemas.opengis.net/ows/1.1.0/owsCommon.xsd"/>
+  <xs:complexType name="location"
+    sawsdl:modelReference="http://purl.org/dc/terms/Location Geolocation">
     <xs:annotation>
       <xs:documentation xml:lang="en">
       Location  
@@ -12,10 +17,12 @@
       <xs:documentation xml:lang="en">
         Spatial region, named place or geometry representation of a place related to the dataset. 
       </xs:documentation>
+      <xs:documentation xml:lang="en">Location is represented according to the Open Formal Standard for Spatial Data. Locations are represented as a reference to the named place, geographic region or specific geometry according to the standardized geometry object representation. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element minOccurs="0" ref="c:iri"/>
-      <xs:element minOccurs="0" name="bbox" type="ows:BoundingBoxType" sawsdl:modelReference="http://www.w3.org/ns/dcat#bbox">
+      <xs:element minOccurs="0" name="bbox" type="ows:BoundingBoxType"
+        sawsdl:modelReference="http://www.w3.org/ns/dcat#bbox">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Bbox
@@ -37,7 +44,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="location_name" type="xs:string" sawsdl:modelReference="http://purl.org/dc/terms/title">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="location_name" type="xs:string"
+        sawsdl:modelReference="http://purl.org/dc/terms/title">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Location name
@@ -47,7 +55,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataset_relations" type="xs:string" sawsdl:modelReference="relationType">
+      <xs:element minOccurs="1" maxOccurs="1" name="dataset_relations" type="xs:string"
+        sawsdl:modelReference="relationType">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Relation to dataset
@@ -57,7 +66,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="geometry" type="geometry" sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
+      <xs:element minOccurs="0" name="geometry" type="geometry"
+        sawsdl:modelReference="http://www.w3.org/ns/locn#geometry">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Geometry
@@ -67,7 +77,8 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="related_object_identifier" type="resource" sawsdl:modelReference="hasRelatedResource">
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="related_object_identifier"
+        type="resource" sawsdl:modelReference="hasRelatedResource">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Related object identifier

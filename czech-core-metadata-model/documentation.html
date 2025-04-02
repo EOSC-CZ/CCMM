@@ -182,20 +182,6 @@
             <tr><td>XML schéma</td><td><a href="./provenance-statement/schema.xsd">./provenance-statement/schema.xsd</a></td></tr>
             <tr><td>XSLT lifting</td><td><a href="./provenance-statement/lifting.xslt">./provenance-statement/lifting.xslt</a></td></tr>
             <tr><td>XSLT lowering</td><td><a href="./provenance-statement/lowering.xslt">./provenance-statement/lowering.xslt</a></td></tr>
-            <tr><td>JSON schéma</td><td><a href="./metadata-to-agent-relationship/schema.json">./metadata-to-agent-relationship/schema.json</a></td></tr>
-            <tr><td>Příklad JSONu</td><td><a href="./metadata-to-agent-relationship/example.json">./metadata-to-agent-relationship/example.json</a></td></tr>
-            <tr><td>JSON-LD kontext</td><td><a href="./metadata-to-agent-relationship/context.jsonld">./metadata-to-agent-relationship/context.jsonld</a></td></tr>
-            <tr><td>XML sdílené koncepty</td><td><a href="./metadata-to-agent-relationship/2022-07.xsd">./metadata-to-agent-relationship/2022-07.xsd</a></td></tr>
-            <tr><td>XML schéma</td><td><a href="./metadata-to-agent-relationship/schema.xsd">./metadata-to-agent-relationship/schema.xsd</a></td></tr>
-            <tr><td>XSLT lifting</td><td><a href="./metadata-to-agent-relationship/lifting.xslt">./metadata-to-agent-relationship/lifting.xslt</a></td></tr>
-            <tr><td>XSLT lowering</td><td><a href="./metadata-to-agent-relationship/lowering.xslt">./metadata-to-agent-relationship/lowering.xslt</a></td></tr>
-            <tr><td>JSON schéma</td><td><a href="./metadata-agent-role-type/schema.json">./metadata-agent-role-type/schema.json</a></td></tr>
-            <tr><td>Příklad JSONu</td><td><a href="./metadata-agent-role-type/example.json">./metadata-agent-role-type/example.json</a></td></tr>
-            <tr><td>JSON-LD kontext</td><td><a href="./metadata-agent-role-type/context.jsonld">./metadata-agent-role-type/context.jsonld</a></td></tr>
-            <tr><td>XML sdílené koncepty</td><td><a href="./metadata-agent-role-type/2022-07.xsd">./metadata-agent-role-type/2022-07.xsd</a></td></tr>
-            <tr><td>XML schéma</td><td><a href="./metadata-agent-role-type/schema.xsd">./metadata-agent-role-type/schema.xsd</a></td></tr>
-            <tr><td>XSLT lifting</td><td><a href="./metadata-agent-role-type/lifting.xslt">./metadata-agent-role-type/lifting.xslt</a></td></tr>
-            <tr><td>XSLT lowering</td><td><a href="./metadata-agent-role-type/lowering.xslt">./metadata-agent-role-type/lowering.xslt</a></td></tr>
             <tr><td>JSON schéma</td><td><a href="./media-type/schema.json">./media-type/schema.json</a></td></tr>
             <tr><td>Příklad JSONu</td><td><a href="./media-type/example.json">./media-type/example.json</a></td></tr>
             <tr><td>JSON-LD kontext</td><td><a href="./media-type/context.jsonld">./media-type/context.jsonld</a></td></tr>
@@ -217,13 +203,6 @@
             <tr><td>XML schéma</td><td><a href="./organization/schema.xsd">./organization/schema.xsd</a></td></tr>
             <tr><td>XSLT lifting</td><td><a href="./organization/lifting.xslt">./organization/lifting.xslt</a></td></tr>
             <tr><td>XSLT lowering</td><td><a href="./organization/lowering.xslt">./organization/lowering.xslt</a></td></tr>
-            <tr><td>JSON schéma</td><td><a href="./subject-scheme/schema.json">./subject-scheme/schema.json</a></td></tr>
-            <tr><td>Příklad JSONu</td><td><a href="./subject-scheme/example.json">./subject-scheme/example.json</a></td></tr>
-            <tr><td>JSON-LD kontext</td><td><a href="./subject-scheme/context.jsonld">./subject-scheme/context.jsonld</a></td></tr>
-            <tr><td>XML sdílené koncepty</td><td><a href="./subject-scheme/2022-07.xsd">./subject-scheme/2022-07.xsd</a></td></tr>
-            <tr><td>XML schéma</td><td><a href="./subject-scheme/schema.xsd">./subject-scheme/schema.xsd</a></td></tr>
-            <tr><td>XSLT lifting</td><td><a href="./subject-scheme/lifting.xslt">./subject-scheme/lifting.xslt</a></td></tr>
-            <tr><td>XSLT lowering</td><td><a href="./subject-scheme/lowering.xslt">./subject-scheme/lowering.xslt</a></td></tr>
             <tr><td>JSON schéma</td><td><a href="./metadata-record/schema.json">./metadata-record/schema.json</a></td></tr>
             <tr><td>Příklad JSONu</td><td><a href="./metadata-record/example.json">./metadata-record/example.json</a></td></tr>
             <tr><td>JSON-LD kontext</td><td><a href="./metadata-record/context.jsonld">./metadata-record/context.jsonld</a></td></tr>
@@ -320,82 +299,160 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </figcaption>
 </figure>
 
-<section id="konceptuální-třída-alternate-title-AlternateTitle">
-<h3>Alternate title</h3>
+<section id="konceptuální-třída-katalogizační-záznam-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#CatalogRecord">
+<h3>Katalogizační záznam</h3>
 <dl>
 <dt>Popis</dt>
-<dd>Alternate title f the resource</dd>
+<dd>Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu.</dd>
 <dt>Význam</dt>
-<dd>Koncept Alternate title je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="AlternateTitle">Alternate title</a>.</dd>
+<dd>Koncept Katalogizační záznam je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#CatalogRecord">Katalogizační záznam</a>.</dd>
 </dl>
 
-<section id="konceptuální-vlastnost-alternate-title--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;title">
+<section id="konceptuální-vlastnost-katalogizační-záznam--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;modified">
 <h4></h4>
 <dl>
 <dt>Jméno</dt>
 <dd></dd>
 <dt>Popis</dt>
-<dd>Alternate title name.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/title"></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-alternate-title--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;type">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>Type of alternate title.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/type"></a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-data-service-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#DataService">
-<h3>Data service</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Umístění či přístupový bod poskytující operace související s hledáním, přistupem k, či výkonem funkcí na datech či souvisejících zdrojích.</dd>
-<dt>Význam</dt>
-<dd>Koncept Data service je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#DataService">Data service</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-data-service--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#label">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>Data service label.</dd>
+<dd>Date on which the resource was changed.</dd>
 <dt>Povinnost</dt>
 <dd>nepovinné</dd>
 <dt>Kardinalita</dt>
 <dd>0 - ∞</dd>
 <dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#label"></a>.</dd>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/modified"></a>.</dd>
 </section>
-<section id="konceptuální-vlastnost-data-service-přístupový-bod-služby-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#endpointURL">
-<h4>Vztah (asociace): přístupový bod služby</h4>
+<section id="konceptuální-vlastnost-katalogizační-záznam-date-created-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;created">
+<h4>Date Created</h4>
 <dl>
 <dt>Jméno</dt>
-<dd>přístupový bod služby</dd>
+<dd>Date Created</dd>
 <dt>Popis</dt>
-<dd>Kořenové umístění nebo hlavní přístupový bod služby (IRI přístupné přes Web).</dd>
+<dd>The date on which the metadata record was created.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept Date Created je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/created">Date Created</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-katalogizační-záznam-language-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;language">
+<h4>Language</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>Language</dd>
+<dt>Popis</dt>
+<dd>Language of the metadata record</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Význam</dt>
+<dd>Koncept Language je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/language">Language</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-katalogizační-záznam-kvalifikovaný-vztah-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#qualifiedRelation">
+<h4>Vztah (asociace): kvalifikovaný vztah</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>kvalifikovaný vztah</dd>
+<dt>Popis</dt>
+<dd>Odkaz na popis vztahu s jiným zdrojem.</dd>
 <dt>Povinnost</dt>
 <dd>povinné</dd>
 <dt>Kardinalita</dt>
 <dd>1 - ∞</dd>
 <dt>Typ</dt>
-<dd><a href="#konceptuální-třída-resource-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Resource">Resource</a></dd>
+<dd><a href="#konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">Resource to Agent Relationship</a></dd>
 <dt>Význam</dt>
-<dd>Koncept přístupový bod služby je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#endpointURL">přístupový bod služby</a>.</dd>
+<dd>Koncept kvalifikovaný vztah je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#qualifiedRelation">kvalifikovaný vztah</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-katalogizační-záznam-describes-describes">
+<h4>Vztah (asociace): describes</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>describes</dd>
+<dt>Popis</dt>
+<dd>Dataset described by the metadata record.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-datová-sada-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Dataset">Datová sada</a></dd>
+<dt>Význam</dt>
+<dd>Koncept describes je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="describes">describes</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-katalogizační-záznam-original-repository-originalRepository">
+<h4>Vztah (asociace): original repository</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>original repository</dd>
+<dt>Popis</dt>
+<dd>Link to the repository from which the metadata were originally stored and curated.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-katalog-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Catalog">Katalog</a></dd>
+<dt>Význam</dt>
+<dd>Koncept original repository je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="originalRepository">original repository</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-katalogizační-záznam-conforms-to-standard-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;conformsTo">
+<h4>Vztah (asociace): Conforms to standard</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>Conforms to standard</dd>
+<dt>Popis</dt>
+<dd>An established standard to which the metadata record conforms.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-application-profile-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Standard">Application profile</a></dd>
+<dt>Význam</dt>
+<dd>Koncept Conforms to standard je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/conformsTo">Conforms to standard</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">
+<h3>Resource to Agent Relationship</h3>
+<dl>
+<dt>Popis</dt>
+<dd>An association class for attaching additional information to a relationship between Dataset and Agent.</dd>
+<dt>Význam</dt>
+<dd>Koncept Resource to Agent Relationship je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#Relationship">Resource to Agent Relationship</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-resource-to-agent-relationship-sehraná-role-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#hadRole">
+<h4>Vztah (asociace): sehraná role</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>sehraná role</dd>
+<dt>Popis</dt>
+<dd>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">Resource agent role type</a></dd>
+<dt>Význam</dt>
+<dd>Koncept sehraná role je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#hadRole">sehraná role</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-resource-to-agent-relationship-relation-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;relation">
+<h4>Vztah (asociace): relation</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>relation</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a></dd>
+<dt>Význam</dt>
+<dd>Koncept relation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/relation">relation</a>.</dd>
 </section>
 </section>
 <section id="konceptuální-třída-resource-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Resource">
@@ -407,6 +464,20 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Koncept Resource je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>.</dd>
 </dl>
 
+<section id="konceptuální-vlastnost-resource-">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Resolvable URL representing the resource, preferably human readable.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href=""></a>.</dd>
+</section>
 <section id="konceptuální-vlastnost-resource-relation-type-relationType">
 <h4>Relation type</h4>
 <dl>
@@ -449,19 +520,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="relatedItemTitle"></a>.</dd>
 </section>
-<section id="konceptuální-vlastnost-resource-identifier-identifier">
-<h4>Identifier</h4>
+<section id="konceptuální-vlastnost-resource-has-identifier-hasIdentifier">
+<h4>Vztah (asociace): has identifier</h4>
 <dl>
 <dt>Jméno</dt>
-<dd>Identifier</dd>
+<dd>has identifier</dd>
 <dt>Popis</dt>
-<dd>An unambiguous reference to the resource within a given context.</dd>
+<dd>has identifier</dd>
 <dt>Povinnost</dt>
 <dd>nepovinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a></dd>
 <dt>Význam</dt>
-<dd>Koncept Identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="identifier">Identifier</a>.</dd>
+<dd>Koncept has identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasIdentifier">has identifier</a>.</dd>
 </section>
 <section id="konceptuální-vlastnost-resource-qualified-relation-qualifiedRelation">
 <h4>Vztah (asociace): qualified relation</h4>
@@ -492,6 +565,284 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd><a href="#konceptuální-třída-time-reference-TimeReference">Time reference</a></dd>
 <dt>Význam</dt>
 <dd>Koncept has time reference je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasTimeReference">has time reference</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-person-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;prov#Person">
+<h3>Person</h3>
+<dl>
+<dt>Popis</dt>
+<dd>Physical person. </dd>
+<dt>Význam</dt>
+<dd>Koncept Person je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/prov#Person">Person</a>.</dd>
+<dt>Nadřazený typ</dt>
+<dd><a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a></dd>
+</dl>
+
+<section id="konceptuální-vlastnost-person--http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;name">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Full name of the person.</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://xmlns.com/foaf/0.1/name"></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-person--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#family-name">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>The family name associated with the object</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#family-name"></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-person--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#given-name">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>The given name associated with the object</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#given-name"></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-person-has-affiliation-hasAffiliation">
+<h4>Vztah (asociace): has affiliation</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>has affiliation</dd>
+<dt>Popis</dt>
+<dd>Affiliation of the person to the organization.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-organization-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;prov#Organization">Organization</a></dd>
+<dt>Význam</dt>
+<dd>Koncept has affiliation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasAffiliation">has affiliation</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-funder-identifier-FunderIdentifier">
+<h3>Funder identifier</h3>
+<dl>
+<dt>Popis</dt>
+<dd>Uniquely identifies a funding entity, according to various types.</dd>
+<dt>Význam</dt>
+<dd>Koncept Funder identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="FunderIdentifier">Funder identifier</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-funder-identifier-funder-name-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#label">
+<h4>Funder name</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>Funder name</dd>
+<dt>Popis</dt>
+<dd>Funder name</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Význam</dt>
+<dd>Koncept Funder name je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2000/01/rdf-schema#label">Funder name</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-funder-identifier-has-identifier-hasIdentifier">
+<h4>Vztah (asociace): has identifier</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>has identifier</dd>
+<dt>Popis</dt>
+<dd>has identifier</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a></dd>
+<dt>Význam</dt>
+<dd>Koncept has identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasIdentifier">has identifier</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">
+<h3>Identifier</h3>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Význam</dt>
+<dd>Koncept Identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/adms#Identifier">Identifier</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-identifier-">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Scheme URI of the identifier.</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href=""></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-identifier--http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#notation">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Value of the identifer within the given identifier scheme.</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2004/02/skos/core#notation"></a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">
+<h3>Agent</h3>
+<dl>
+<dt>Popis</dt>
+<dd>Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.</dd>
+<dt>Význam</dt>
+<dd>Koncept Agent je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-agent-has-identifier-hasIdentifier">
+<h4>Vztah (asociace): has identifier</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>has identifier</dd>
+<dt>Popis</dt>
+<dd>has identifier</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a></dd>
+<dt>Význam</dt>
+<dd>Koncept has identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasIdentifier">has identifier</a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-agent-kontaktní-bod-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#contactPoint">
+<h4>Vztah (asociace): kontaktní bod</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>kontaktní bod</dd>
+<dt>Popis</dt>
+<dd>Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a></dd>
+<dt>Význam</dt>
+<dd>Koncept kontaktní bod je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#contactPoint">kontaktní bod</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">
+<h3>Resource agent role type</h3>
+<dl>
+<dt>Popis</dt>
+<dd>An idea or notion; a unit of thought.</dd>
+<dt>Význam</dt>
+<dd>Koncept Resource agent role type je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2004/02/skos/core#Concept">Resource agent role type</a>.</dd>
+</dl>
+
+</section>
+<section id="konceptuální-třída-data-service-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#DataService">
+<h3>Data service</h3>
+<dl>
+<dt>Popis</dt>
+<dd>Umístění či přístupový bod poskytující operace související s hledáním, přistupem k, či výkonem funkcí na datech či souvisejících zdrojích.</dd>
+<dt>Význam</dt>
+<dd>Koncept Data service je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#DataService">Data service</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-data-service--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#label">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Data service label.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#label"></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-data-service-přístupový-bod-služby-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#endpointURL">
+<h4>Vztah (asociace): přístupový bod služby</h4>
+<dl>
+<dt>Jméno</dt>
+<dd>přístupový bod služby</dd>
+<dt>Popis</dt>
+<dd>Kořenové umístění nebo hlavní přístupový bod služby (IRI přístupné přes Web).</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - ∞</dd>
+<dt>Typ</dt>
+<dd><a href="#konceptuální-třída-resource-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Resource">Resource</a></dd>
+<dt>Význam</dt>
+<dd>Koncept přístupový bod služby je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#endpointURL">přístupový bod služby</a>.</dd>
+</section>
+</section>
+<section id="konceptuální-třída-alternate-title-AlternateTitle">
+<h3>Alternate title</h3>
+<dl>
+<dt>Popis</dt>
+<dd>Alternate title f the resource</dd>
+<dt>Význam</dt>
+<dd>Koncept Alternate title je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="AlternateTitle">Alternate title</a>.</dd>
+</dl>
+
+<section id="konceptuální-vlastnost-alternate-title--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;title">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Alternate title name.</dd>
+<dt>Povinnost</dt>
+<dd>povinné</dd>
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/title"></a>.</dd>
+</section>
+<section id="konceptuální-vlastnost-alternate-title--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;type">
+<h4></h4>
+<dl>
+<dt>Jméno</dt>
+<dd></dd>
+<dt>Popis</dt>
+<dd>Type of alternate title.</dd>
+<dt>Povinnost</dt>
+<dd>nepovinné</dd>
+<dt>Kardinalita</dt>
+<dd>0 - 1</dd>
+<dt>Význam</dt>
+<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/type"></a>.</dd>
 </section>
 </section>
 <section id="konceptuální-třída-address-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;locn#Address">
@@ -751,9 +1102,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The year when the item was or will be made publicly available.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="relatedItemPublicationYear"></a>.</dd>
 </section>
@@ -885,7 +1236,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Kardinalita</dt>
 <dd>0 - ∞</dd>
 <dt>Typ</dt>
-<dd><a href="#konceptuální-třída-location-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Location">Location</a></dd>
+<dd><a href="#konceptuální-třída-location-Geolocation">Location</a></dd>
 <dt>Význam</dt>
 <dd>Koncept has location je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/spatial">has location</a>.</dd>
 </section>
@@ -913,9 +1264,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Attachment of resource to the relationship.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - ∞</dd>
 <dt>Typ</dt>
 <dd><a href="#konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">Resource to Agent Relationship</a></dd>
 <dt>Význam</dt>
@@ -927,9 +1278,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has time reference</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - ∞</dd>
 <dt>Typ</dt>
 <dd><a href="#konceptuální-třída-time-reference-TimeReference">Time reference</a></dd>
 <dt>Význam</dt>
@@ -997,9 +1348,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has terms of use</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - 1</dd>
 <dt>Typ</dt>
 <dd><a href="#konceptuální-třída-terms-of-use-Rights">Terms of use</a></dd>
 <dt>Význam</dt>
@@ -1018,160 +1369,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd><a href="#konceptuální-třída-resource-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Resource">Resource</a></dd>
 <dt>Význam</dt>
 <dd>Koncept has related resource je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasRelatedResource">has related resource</a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-katalogizační-záznam-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#CatalogRecord">
-<h3>Katalogizační záznam</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu.</dd>
-<dt>Význam</dt>
-<dd>Koncept Katalogizační záznam je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#CatalogRecord">Katalogizační záznam</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-katalogizační-záznam--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;modified">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>Date on which the resource was changed.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/modified"></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-date-created-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;created">
-<h4>Date Created</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>Date Created</dd>
-<dt>Popis</dt>
-<dd>The date on which the metadata record was created.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept Date Created je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/created">Date Created</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-language-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;language">
-<h4>Language</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>Language</dd>
-<dt>Popis</dt>
-<dd>Language of the metadata record</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Význam</dt>
-<dd>Koncept Language je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/language">Language</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-describes-describes">
-<h4>Vztah (asociace): describes</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>describes</dd>
-<dt>Popis</dt>
-<dd>Dataset described by the metadata record.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-datová-sada-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Dataset">Datová sada</a></dd>
-<dt>Význam</dt>
-<dd>Koncept describes je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="describes">describes</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-qualified-relation-qualifiedRelation">
-<h4>Vztah (asociace): qualified relation</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>qualified relation</dd>
-<dt>Popis</dt>
-<dd>Attachment of resource to the relationship.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a></dd>
-<dt>Význam</dt>
-<dd>Koncept qualified relation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="qualifiedRelation">qualified relation</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-original-repository-originalRepository">
-<h4>Vztah (asociace): original repository</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>original repository</dd>
-<dt>Popis</dt>
-<dd>Link to the repository from which the metadata were originally stored and curated.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-katalog-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Catalog">Katalog</a></dd>
-<dt>Význam</dt>
-<dd>Koncept original repository je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="originalRepository">original repository</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-katalogizační-záznam-conforms-to-standard-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;conformsTo">
-<h4>Vztah (asociace): Conforms to standard</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>Conforms to standard</dd>
-<dt>Popis</dt>
-<dd>An established standard to which the metadata record conforms.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-application-profile-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Standard">Application profile</a></dd>
-<dt>Význam</dt>
-<dd>Koncept Conforms to standard je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/conformsTo">Conforms to standard</a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">
-<h3>Identifier</h3>
-<dl>
-<dt>Popis</dt>
-<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
-<dt>Význam</dt>
-<dd>Koncept Identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/adms#Identifier">Identifier</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-identifier-">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>Scheme URI of the identifier.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href=""></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-identifier--http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#notation">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>Value of the identifer within the given identifier scheme.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2004/02/skos/core#notation"></a>.</dd>
 </section>
 </section>
 <section id="konceptuální-třída-time-reference-TimeReference">
@@ -1205,9 +1402,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Type of the date.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="dateType"></a>.</dd>
 </section>
@@ -1219,20 +1416,20 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>A point or period of time associated with an event in the lifecycle of the resource.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept Date je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="dateValue">Date</a>.</dd>
 </section>
 </section>
-<section id="konceptuální-třída-location-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Location">
+<section id="konceptuální-třída-location-Geolocation">
 <h3>Location</h3>
 <dl>
 <dt>Popis</dt>
 <dd>Spatial region, named place or geometry representation of a place related to the dataset. </dd>
 <dt>Význam</dt>
-<dd>Koncept Location je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/Location">Location</a>.</dd>
+<dd>Koncept Location je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="Geolocation">Location</a>.</dd>
 </dl>
 
 <section id="konceptuální-vlastnost-location-ohraničení-oblasti-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#bbox">
@@ -1271,9 +1468,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Type of relation of the spatial location to the dataset.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="relationType"></a>.</dd>
 </section>
@@ -1395,7 +1592,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Povinnost</dt>
 <dd>nepovinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>0 - ∞</dd>
 <dt>Význam</dt>
 <dd>Koncept Description je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/description">Description</a>.</dd>
 </section>
@@ -1409,7 +1606,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Povinnost</dt>
 <dd>nepovinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>0 - ∞</dd>
 <dt>Význam</dt>
 <dd>Koncept License je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/license">License</a>.</dd>
 </section>
@@ -1421,9 +1618,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Information about who access the resource or an indication of its security status.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href=""></a>.</dd>
 </section>
@@ -1444,46 +1641,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Koncept kontaktní bod je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#contactPoint">kontaktní bod</a>.</dd>
 </section>
 </section>
-<section id="konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">
-<h3>Agent</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.</dd>
-<dt>Význam</dt>
-<dd>Koncept Agent je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://xmlns.com/foaf/0.1/Agent">Agent</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-agent-external-identifier-agentExternalIdentifier">
-<h4>External identifier</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>External identifier</dd>
-<dt>Popis</dt>
-<dd>External identifer of an Agent.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Význam</dt>
-<dd>Koncept External identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="agentExternalIdentifier">External identifier</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-agent-kontaktní-bod-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#contactPoint">
-<h4>Vztah (asociace): kontaktní bod</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>kontaktní bod</dd>
-<dt>Popis</dt>
-<dd>Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a></dd>
-<dt>Význam</dt>
-<dd>Koncept kontaktní bod je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#contactPoint">kontaktní bod</a>.</dd>
-</section>
-</section>
 <section id="konceptuální-třída-distribution---data-service-Distribution-DataService">
 <h3>Distribution - data service</h3>
 <dl>
@@ -1491,6 +1648,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Physical embodiment of the dataset as a particular data service. </dd>
 <dt>Význam</dt>
 <dd>Koncept Distribution - data service je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="Distribution-DataService">Distribution - data service</a>.</dd>
+<dt>Nadřazený typ</dt>
+<dd><a href="#konceptuální-třída-distribuce-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Distribution">Distribuce</a></dd>
 </dl>
 
 <section id="konceptuální-vlastnost-distribution---data-service--http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;description">
@@ -1563,6 +1722,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Physical embodiment of the dataset in a particular format. </dd>
 <dt>Význam</dt>
 <dd>Koncept Distribution - downloadable file je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="Distribution-DownloadableFile">Distribution - downloadable file</a>.</dd>
+<dt>Nadřazený typ</dt>
+<dd><a href="#konceptuální-třída-distribuce-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Distribution">Distribuce</a></dd>
 </dl>
 
 <section id="konceptuální-vlastnost-distribution---downloadable-file--http:&#x2F;&#x2F;spdx.org&#x2F;rdf&#x2F;terms#checksumValue">
@@ -1587,9 +1748,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The size of a Distribution in bytes. </dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#byteSize"></a>.</dd>
 </section>
@@ -1601,9 +1762,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The file format of the Distribution. </dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept Format je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/format">Format</a>.</dd>
 </section>
@@ -1689,64 +1850,12 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>A name given to the distribution.</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd>
+<dd>1 - 1</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/title"></a>.</dd>
 </section>
-</section>
-<section id="konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">
-<h3>Metadata to agent relationship</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Relationship between metadata record and agent.</dd>
-<dt>Význam</dt>
-<dd>Koncept Metadata to agent relationship je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="MetadataToAgentRelationship">Metadata to agent relationship</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-metadata-to-agent-relationship-relation-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;relation">
-<h4>Vztah (asociace): relation</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>relation</dd>
-<dt>Popis</dt>
-<dd>The resource related to the source resource.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a></dd>
-<dt>Význam</dt>
-<dd>Koncept relation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/relation">relation</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-metadata-to-agent-relationship-sehraná-role-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#hadRole">
-<h4>Vztah (asociace): sehraná role</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>sehraná role</dd>
-<dt>Popis</dt>
-<dd>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-metadata-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">Metadata agent role type</a></dd>
-<dt>Význam</dt>
-<dd>Koncept sehraná role je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#hadRole">sehraná role</a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-metadata-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">
-<h3>Metadata agent role type</h3>
-<dl>
-<dt>Popis</dt>
-<dd>An idea or notion; a unit of thought.</dd>
-<dt>Význam</dt>
-<dd>Koncept Metadata agent role type je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2004/02/skos/core#Concept">Metadata agent role type</a>.</dd>
-</dl>
-
 </section>
 <section id="konceptuální-třída-organization-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;prov#Organization">
 <h3>Organization</h3>
@@ -1755,6 +1864,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures. </dd>
 <dt>Význam</dt>
 <dd>Koncept Organization je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/prov#Organization">Organization</a>.</dd>
+<dt>Nadřazený typ</dt>
+<dd><a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a></dd>
 </dl>
 
 <section id="konceptuální-vlastnost-organization--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#organization-name">
@@ -1770,60 +1881,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>0 - ∞</dd>
 <dt>Význam</dt>
 <dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#organization-name"></a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-person-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;prov#Person">
-<h3>Person</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Physical person. </dd>
-<dt>Význam</dt>
-<dd>Koncept Person je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/prov#Person">Person</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-person--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#family-name">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>The family name associated with the object</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#family-name"></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-person--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#given-name">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>The given name associated with the object</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - ∞</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#given-name"></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-person-has-affiliation-hasAffiliation">
-<h4>Vztah (asociace): has affiliation</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>has affiliation</dd>
-<dt>Popis</dt>
-<dd>Affiliation of the person to the organization.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-organization-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;prov#Organization">Organization</a></dd>
-<dt>Význam</dt>
-<dd>Koncept has affiliation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasAffiliation">has affiliation</a>.</dd>
 </section>
 </section>
 <section id="konceptuální-třída-contact-details-ContactDetails">
@@ -1894,44 +1951,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Koncept has address je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2006/vcard/ns#hasAddress">has address</a>.</dd>
 </section>
 </section>
-<section id="konceptuální-třída-funder-identifier-FunderIdentifier">
-<h3>Funder identifier</h3>
-<dl>
-<dt>Popis</dt>
-<dd>Uniquely identifies a funding entity, according to various types.</dd>
-<dt>Význam</dt>
-<dd>Koncept Funder identifier je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="FunderIdentifier">Funder identifier</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-funder-identifier--funderIdentifierSchemeUri">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>The URI of the funder identifier scheme.</dd>
-<dt>Povinnost</dt>
-<dd>nepovinné</dd>
-<dt>Kardinalita</dt>
-<dd>0 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="funderIdentifierSchemeUri"></a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-funder-identifier--funderIdentifierType">
-<h4></h4>
-<dl>
-<dt>Jméno</dt>
-<dd></dd>
-<dt>Popis</dt>
-<dd>The type of the funderIdentifier.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Význam</dt>
-<dd>Koncept  je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="funderIdentifierType"></a>.</dd>
-</section>
-</section>
 <section id="konceptuální-třída-funding-reference-FundingReference">
 <h3>Funding reference</h3>
 <dl>
@@ -1989,64 +2008,14 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has funder</dd>
 <dt>Povinnost</dt>
-<dd>nepovinné</dd>
+<dd>povinné</dd>
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd>
+<dd>1 - ∞</dd>
 <dt>Typ</dt>
 <dd><a href="#konceptuální-třída-funder-identifier-FunderIdentifier">Funder identifier</a></dd>
 <dt>Význam</dt>
 <dd>Koncept has funder je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="hasFunderIdentifier">has funder</a>.</dd>
 </section>
-</section>
-<section id="konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">
-<h3>Resource to Agent Relationship</h3>
-<dl>
-<dt>Popis</dt>
-<dd>An association class for attaching additional information to a relationship between Dataset and Agent.</dd>
-<dt>Význam</dt>
-<dd>Koncept Resource to Agent Relationship je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#Relationship">Resource to Agent Relationship</a>.</dd>
-</dl>
-
-<section id="konceptuální-vlastnost-resource-to-agent-relationship-sehraná-role-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#hadRole">
-<h4>Vztah (asociace): sehraná role</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>sehraná role</dd>
-<dt>Popis</dt>
-<dd>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">Resource agent role type</a></dd>
-<dt>Význam</dt>
-<dd>Koncept sehraná role je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/ns/dcat#hadRole">sehraná role</a>.</dd>
-</section>
-<section id="konceptuální-vlastnost-resource-to-agent-relationship-relation-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;relation">
-<h4>Vztah (asociace): relation</h4>
-<dl>
-<dt>Jméno</dt>
-<dd>relation</dd>
-<dt>Povinnost</dt>
-<dd>povinné</dd>
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd>
-<dt>Typ</dt>
-<dd><a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a></dd>
-<dt>Význam</dt>
-<dd>Koncept relation je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://purl.org/dc/terms/relation">relation</a>.</dd>
-</section>
-</section>
-<section id="konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">
-<h3>Resource agent role type</h3>
-<dl>
-<dt>Popis</dt>
-<dd>An idea or notion; a unit of thought.</dd>
-<dt>Význam</dt>
-<dd>Koncept Resource agent role type je definován v <a href="https://slovník.gov.cz/">sémantickém slovníku pojmů</a> jako <a href="http://www.w3.org/2004/02/skos/core#Concept">Resource agent role type</a>.</dd>
-</dl>
-
 </section>
 
 </section>
@@ -2066,19 +2035,27 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <ul>
 <li>
     <code>family_name</code>:
-    povinná
     
-    (1 - 1) položka typu 
+    nepovinná
+    (0 - ∞) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
     <code>given_name</code>:
-    povinná
     
-    (1 - ∞) položka typu 
+    nepovinná
+    (0 - ∞) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
+</li>
+<li>
+    <code>full_name</code>:
+    povinná
+    
+    (1 - 1) položka typu 
+      
+       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
 </li>
 <li>
     <code>affiliation</code>:
@@ -2138,9 +2115,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The family name associated with the object</dd
 <dt>Povinnost</dt>
-<dd>povinné</dd
+<dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>1 - 1</dd
+<dd>0 - ∞</dd
 <dt>Typ</dt>
 
 
@@ -2167,9 +2144,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The given name associated with the object</dd
 <dt>Povinnost</dt>
-<dd>povinné</dd
+<dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>1 - ∞</dd
+<dd>0 - ∞</dd
 <dt>Typ</dt>
 
 
@@ -2183,6 +2160,35 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
 <a href="#konceptuální-vlastnost-person--http:&#x2F;&#x2F;www.w3.org&#x2F;2006&#x2F;vcard&#x2F;ns#given-name"></a>
+</dd>
+</dl>
+</section>
+<section id="json-schéma-vlastnost-person-full_name">
+<h5>Vlastnost <code>full_name</code></h5>
+<dl>
+<dt>Klíč</dt>
+<dd>`full_name`</dd
+<dt>Jméno</dt>
+<dd></dd
+<dt>Popis</dt>
+<dd>Full name of the person.</dd
+<dt>Povinnost</dt>
+<dd>povinné</dd
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd
+<dt>Typ</dt>
+
+
+<dd>
+<a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
+</dd>
+
+
+
+
+<dt>Interpretace</dt>
+<dd>
+<a href="#konceptuální-vlastnost-person--http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;name"></a>
 </dd>
 </dl>
 </section>
@@ -2211,7 +2217,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-person-has-affiliation-hasAffiliation">has affiliation</a>
+<a href="#konceptuální-vlastnost-person-"></a>
 </dd>
 </dl>
 </section>
@@ -2386,10 +2392,13 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-family_name"><code>&lt;family_name&gt;</code></a> [1..1]
+          element <a href="#element-family_name"><code>&lt;family_name&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-given_name"><code>&lt;given_name&gt;</code></a> [1..*]
+          element <a href="#element-given_name"><code>&lt;given_name&gt;</code></a> [0..*]
+      </li>
+      <li>
+          element <a href="#element-full_name"><code>&lt;full_name&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-affiliation"><code>&lt;affiliation&gt;</code></a> [0..*]
@@ -2418,7 +2427,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..1</dd>
+      <dd>0..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-person"></a></dd>
 
@@ -2459,7 +2468,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..*</dd>
+      <dd>0..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-person"></a></dd>
 
@@ -2469,6 +2478,47 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
       <dt>Obsah</dt>
       <dd>
           Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
+      </dd>
+
+
+    
+
+
+    
+  </div>
+
+    
+  </dl>
+</section>
+<section id="element-full_name">
+  <h4>Element <code>&lt;full_name&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-person--http://xmlns.com/foaf/0.1/name"><strong>Full name</strong></a>
+          (Full name of the person.)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>1..1</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-person"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#anySimpleType"><code>xs:anySimpleType</code></a>.
       </dd>
 
 
@@ -2639,19 +2689,19 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
   </a>
 <ul>
 <li>
-    <code>external_identifiers</code>:
-    
-    nepovinná
-    (0 - ∞) položka typu 
-      
-       <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
-</li>
-<li>
     <code>contactPoint</code>:
     
     nepovinná
     (0 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-contact-details">Contact details</a></strong>
+      
+</li>
+<li>
+    <code>identifier</code>:
+    
+    nepovinná
+    (0 - ∞) položka typu 
+      <strong><a href="#json-schéma-objekt-identifier">Identifier</a></strong>
       
 </li>
 </ul>
@@ -2671,35 +2721,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 
-<section id="json-schéma-vlastnost-agent-external_identifiers">
-<h5>Vlastnost <code>external_identifiers</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`external_identifiers`</dd
-<dt>Jméno</dt>
-<dd>External identifier</dd
-<dt>Popis</dt>
-<dd>External identifer of an Agent.</dd
-<dt>Povinnost</dt>
-<dd>nepovinné</dd
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd
-<dt>Typ</dt>
-
-
-<dd>
-<a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
-</dd>
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-agent-external-identifier-agentExternalIdentifier">External identifier</a>
-</dd>
-</dl>
-</section>
 <section id="json-schéma-vlastnost-agent-contactpoint">
 <h5>Vlastnost <code>contactPoint</code></h5>
 <dl>
@@ -2729,6 +2750,35 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-vlastnost-agent-identifier">
+<h5>Vlastnost <code>identifier</code></h5>
+<dl>
+<dt>Klíč</dt>
+<dd>`identifier`</dd
+<dt>Jméno</dt>
+<dd>has identifier</dd
+<dt>Popis</dt>
+<dd>has identifier</dd
+<dt>Povinnost</dt>
+<dd>nepovinné</dd
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd
+<dt>Typ</dt>
+
+<dd>
+  <a href=".&#x2F;documentation.html#json-schéma-objekt-identifier">Identifier</a>
+</dd>
+
+
+
+
+
+<dt>Interpretace</dt>
+<dd>
+<a href="#konceptuální-vlastnost-agent-has-identifier-hasIdentifier">has identifier</a>
+</dd>
+</dl>
+</section>
 
 </section>
 
@@ -2740,6 +2790,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -2796,6 +2861,11 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
         <tr>
             <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
           <td><a href="../contact-details/schema.xsd">../contact-details/schema.xsd</a></td>
+          <td><a href="../documentation.html"></a></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
+          <td><a href="../identifier/schema.xsd">../identifier/schema.xsd</a></td>
           <td><a href="../documentation.html"></a></td>
         </tr>
         <tr>
@@ -2864,55 +2934,14 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-external_identifiers"><code>&lt;external_identifiers&gt;</code></a> [0..*]
+          element <a href="#element-contactPoint"><code>&lt;contactPoint&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-contactPoint"><code>&lt;contactPoint&gt;</code></a> [0..*]
+          element <a href="#element-identifier"><code>&lt;identifier&gt;</code></a> [0..*]
       </li>
   </ul>
 
 
-  </dl>
-</section>
-<section id="element-external_identifiers">
-  <h4>Element <code>&lt;external_identifiers&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-agent-external-identifier-agentExternalIdentifier"><strong>External identifier</strong></a>
-          (External identifer of an Agent.)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-agent"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-    
   </dl>
 </section>
 <section id="element-contactPoint">
@@ -2961,6 +2990,52 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
   </dl>
 </section>
+<section id="element-identifier">
+  <h4>Element <code>&lt;identifier&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-agent-has-identifier-hasIdentifier"><strong>has identifier</strong></a>
+          (has identifier)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>0..*</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-agent"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="#type-identifier"><code>identifier</code></a>.
+      </dd>
+
+
+        <dt>Význam</dt>
+      <dd>
+        <a href="#konceptuální-třída-identifier-http://www.w3.org/ns/adms#Identifier">Identifier</a>
+        (This is based on the UN/CEFACT Identifier class.)
+      </dd>
+
+
+
+    
+  </div>
+
+    
+  </dl>
+</section>
 
 
 </section>
@@ -2981,9 +3056,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <ul>
 <li>
     <code>title</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
@@ -3014,9 +3089,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>A name given to the distribution.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -3133,7 +3208,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-title"><code>&lt;title&gt;</code></a> [0..1]
+          element <a href="#element-title"><code>&lt;title&gt;</code></a> [1..1]
       </li>
   </ul>
 
@@ -3159,7 +3234,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-distribution"></a></dd>
 
@@ -3712,12 +3787,12 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
-    <code>identifier</code>:
+    <code>resource_url</code>:
     
     nepovinná
     (0 - 1) položka typu 
       
-       <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
+       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
 </li>
 <li>
     <code>qualified_relation</code>:
@@ -3733,6 +3808,14 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     nepovinná
     (0 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-time-reference">Time reference</a></strong>
+      
+</li>
+<li>
+    <code>identifier</code>:
+    
+    nepovinná
+    (0 - ∞) položka typu 
+      <strong><a href="#json-schéma-objekt-identifier">Identifier</a></strong>
       
 </li>
 </ul>
@@ -3839,15 +3922,15 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
-<section id="json-schéma-vlastnost-resource-identifier">
-<h5>Vlastnost <code>identifier</code></h5>
+<section id="json-schéma-vlastnost-resource-resource_url">
+<h5>Vlastnost <code>resource_url</code></h5>
 <dl>
 <dt>Klíč</dt>
-<dd>`identifier`</dd
+<dd>`resource_url`</dd
 <dt>Jméno</dt>
-<dd>Identifier</dd
+<dd></dd
 <dt>Popis</dt>
-<dd>An unambiguous reference to the resource within a given context.</dd
+<dd>Resolvable URL representing the resource, preferably human readable.</dd
 <dt>Povinnost</dt>
 <dd>nepovinné</dd
 <dt>Kardinalita</dt>
@@ -3856,7 +3939,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 
 <dd>
-<a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
+<a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
 </dd>
 
 
@@ -3864,7 +3947,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-resource-identifier-identifier">Identifier</a>
+<a href="#konceptuální-vlastnost-resource-"></a>
 </dd>
 </dl>
 </section>
@@ -3893,7 +3976,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-resource-"></a>
+<a href="#konceptuální-vlastnost-resource-qualified-relation-qualifiedRelation">qualified relation</a>
 </dd>
 </dl>
 </section>
@@ -3912,6 +3995,35 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dd>
   <a href=".&#x2F;documentation.html#json-schéma-objekt-time-reference">Time reference</a>
+</dd>
+
+
+
+
+
+<dt>Interpretace</dt>
+<dd>
+<a href="#konceptuální-vlastnost-resource-"></a>
+</dd>
+</dl>
+</section>
+<section id="json-schéma-vlastnost-resource-identifier">
+<h5>Vlastnost <code>identifier</code></h5>
+<dl>
+<dt>Klíč</dt>
+<dd>`identifier`</dd
+<dt>Jméno</dt>
+<dd>has identifier</dd
+<dt>Popis</dt>
+<dd>has identifier</dd
+<dt>Povinnost</dt>
+<dd>nepovinné</dd
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd
+<dt>Typ</dt>
+
+<dd>
+  <a href=".&#x2F;documentation.html#json-schéma-objekt-identifier">Identifier</a>
 </dd>
 
 
@@ -3957,6 +4069,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 <section id="json-schéma-objekt-agent">
 <h4>Referencovaný objekt <i>Agent</i></h4>
 <dl>
@@ -3980,6 +4107,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -4041,6 +4183,11 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
         <tr>
             <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
           <td><a href="../time-reference/schema.xsd">../time-reference/schema.xsd</a></td>
+          <td><a href="../documentation.html"></a></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
+          <td><a href="../identifier/schema.xsd">../identifier/schema.xsd</a></td>
           <td><a href="../documentation.html"></a></td>
         </tr>
         <tr>
@@ -4118,13 +4265,16 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-title"><code>&lt;title&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-identifier"><code>&lt;identifier&gt;</code></a> [0..1]
+          element <a href="#element-resource_url"><code>&lt;resource_url&gt;</code></a> [0..1]
       </li>
       <li>
           element <a href="#element-qualified_relation"><code>&lt;qualified_relation&gt;</code></a> [0..*]
       </li>
       <li>
           element <a href="#element-time_reference"><code>&lt;time_reference&gt;</code></a> [0..*]
+      </li>
+      <li>
+          element <a href="#element-identifier"><code>&lt;identifier&gt;</code></a> [0..*]
       </li>
   </ul>
 
@@ -4254,8 +4404,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
   </dl>
 </section>
-<section id="element-identifier">
-  <h4>Element <code>&lt;identifier&gt;</code></h4>
+<section id="element-resource_url">
+  <h4>Element <code>&lt;resource_url&gt;</code></h4>
 
   <dl>
     <dt>Význam</dt>
@@ -4267,8 +4417,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           
         </i>
 
-          <a href="#konceptuální-vlastnost-resource-identifier-identifier"><strong>Identifier</strong></a>
-          (An unambiguous reference to the resource within a given context.)
+          <a href="#konceptuální-vlastnost-resource-"><strong>Resource URL</strong></a>
+          (Resolvable URL representing the resource, preferably human readable.)
 
     </dd>
 
@@ -4282,7 +4432,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
         <div style="margin-left: 40px;">
       <dt>Obsah</dt>
       <dd>
-          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
+          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#anySimpleType"><code>xs:anySimpleType</code></a>.
       </dd>
 
 
@@ -4387,6 +4537,52 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
   </dl>
 </section>
+<section id="element-identifier">
+  <h4>Element <code>&lt;identifier&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-resource-has-identifier-hasIdentifier"><strong>has identifier</strong></a>
+          (has identifier)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>0..*</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-resource"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="#type-identifier"><code>identifier</code></a>.
+      </dd>
+
+
+        <dt>Význam</dt>
+      <dd>
+        <a href="#konceptuální-třída-identifier-http://www.w3.org/ns/adms#Identifier">Identifier</a>
+        (This is based on the UN/CEFACT Identifier class.)
+      </dd>
+
+
+
+    
+  </div>
+
+    
+  </dl>
+</section>
 
 
 </section>
@@ -4423,9 +4619,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>dataset_relations</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
@@ -4458,7 +4654,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Spatial region, named place or geometry representation of a place related to the dataset. </dd>
 <dt>Interpretace</dt>
 <dd>
-  <a href="#konceptuální-třída-location-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Location">Location</a>
+  <a href="#konceptuální-třída-location-Geolocation">Location</a>
 </dd>
 </dl>
 
@@ -4530,9 +4726,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Type of relation of the spatial location to the dataset.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -4670,6 +4866,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 <section id="json-schéma-objekt-agent">
 <h4>Referencovaný objekt <i>Agent</i></h4>
 <dl>
@@ -4693,6 +4904,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -4809,7 +5035,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
   <dl>
         <dt>Význam</dt>
       <dd>
-        <a href="#konceptuální-třída-location-http://purl.org/dc/terms/Location">Location</a>
+        <a href="#konceptuální-třída-location-Geolocation">Location</a>
         (Spatial region, named place or geometry representation of a place related to the dataset. )
       </dd>
 
@@ -4828,7 +5054,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-location_name"><code>&lt;location_name&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-dataset_relations"><code>&lt;dataset_relations&gt;</code></a> [0..*]
+          element <a href="#element-dataset_relations"><code>&lt;dataset_relations&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-geometry"><code>&lt;geometry&gt;</code></a> [0..1]
@@ -4942,7 +5168,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-location"></a></dd>
 
@@ -5084,17 +5310,17 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>date_type</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
     <code>date</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#date">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#date</a>
 </li>
@@ -5154,9 +5380,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Type of the date.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -5183,9 +5409,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>A point or period of time associated with an event in the lifecycle of the resource.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -5305,10 +5531,10 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-date_information"><code>&lt;date_information&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-date_type"><code>&lt;date_type&gt;</code></a> [0..1]
+          element <a href="#element-date_type"><code>&lt;date_type&gt;</code></a> [1..1]
       </li>
       <li>
-          element <a href="#element-date"><code>&lt;date&gt;</code></a> [0..1]
+          element <a href="#element-date"><code>&lt;date&gt;</code></a> [1..1]
       </li>
   </ul>
 
@@ -5375,7 +5601,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-time_reference"></a></dd>
 
@@ -5416,7 +5642,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-time_reference"></a></dd>
 
@@ -5482,9 +5708,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>funder</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-funder-identifier">Funder identifier</a></strong>
       
 </li>
@@ -5600,9 +5826,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has funder</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - ∞</dd
 <dt>Typ</dt>
 
 <dd>
@@ -5630,6 +5856,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-funder-identifier-FunderIdentifier">Funder identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -5748,7 +5989,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-local_identifier"><code>&lt;local_identifier&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-funder"><code>&lt;funder&gt;</code></a> [0..*]
+          element <a href="#element-funder"><code>&lt;funder&gt;</code></a> [1..*]
       </li>
   </ul>
 
@@ -5897,7 +6138,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-funding_reference"></a></dd>
 
@@ -5943,20 +6184,20 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
   </a>
 <ul>
 <li>
-    <code>funder_identifier_scheme_uri</code>:
+    <code>funder_name</code>:
     
     nepovinná
-    (0 - 1) položka typu 
-      
-       <a href="http://www.w3.org/2001/XMLSchema#anyURI">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#anyURI</a>
-</li>
-<li>
-    <code>funder_identifier_type</code>:
-    povinná
-    
-    (1 - 1) položka typu 
+    (0 - ∞) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
+</li>
+<li>
+    <code>identifier</code>:
+    
+    nepovinná
+    (0 - ∞) položka typu 
+      <strong><a href="#json-schéma-objekt-identifier">Identifier</a></strong>
+      
 </li>
 </ul>
 </li>
@@ -5975,48 +6216,19 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 
-<section id="json-schéma-vlastnost-funder-identifier-funder_identifier_scheme_uri">
-<h5>Vlastnost <code>funder_identifier_scheme_uri</code></h5>
+<section id="json-schéma-vlastnost-funder-identifier-funder_name">
+<h5>Vlastnost <code>funder_name</code></h5>
 <dl>
 <dt>Klíč</dt>
-<dd>`funder_identifier_scheme_uri`</dd
+<dd>`funder_name`</dd
 <dt>Jméno</dt>
-<dd></dd
+<dd>Funder name</dd
 <dt>Popis</dt>
-<dd>The URI of the funder identifier scheme.</dd
+<dd>Funder name</dd
 <dt>Povinnost</dt>
 <dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
-<dt>Typ</dt>
-
-
-<dd>
-<a href="http://www.w3.org/2001/XMLSchema#anyURI">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#anyURI</a>
-</dd>
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-funder-identifier--funderIdentifierSchemeUri"></a>
-</dd>
-</dl>
-</section>
-<section id="json-schéma-vlastnost-funder-identifier-funder_identifier_type">
-<h5>Vlastnost <code>funder_identifier_type</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`funder_identifier_type`</dd
-<dt>Jméno</dt>
-<dd></dd
-<dt>Popis</dt>
-<dd>The type of the funderIdentifier.</dd
-<dt>Povinnost</dt>
-<dd>povinné</dd
-<dt>Kardinalita</dt>
-<dd>1 - 1</dd
+<dd>0 - ∞</dd
 <dt>Typ</dt>
 
 
@@ -6029,13 +6241,57 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-funder-identifier--funderIdentifierType"></a>
+<a href="#konceptuální-vlastnost-funder-identifier-funder-name-http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#label">Funder name</a>
+</dd>
+</dl>
+</section>
+<section id="json-schéma-vlastnost-funder-identifier-identifier">
+<h5>Vlastnost <code>identifier</code></h5>
+<dl>
+<dt>Klíč</dt>
+<dd>`identifier`</dd
+<dt>Jméno</dt>
+<dd>has identifier</dd
+<dt>Popis</dt>
+<dd>has identifier</dd
+<dt>Povinnost</dt>
+<dd>nepovinné</dd
+<dt>Kardinalita</dt>
+<dd>0 - ∞</dd
+<dt>Typ</dt>
+
+<dd>
+  <a href=".&#x2F;documentation.html#json-schéma-objekt-identifier">Identifier</a>
+</dd>
+
+
+
+
+
+<dt>Interpretace</dt>
+<dd>
+<a href="#konceptuální-vlastnost-funder-identifier-"></a>
 </dd>
 </dl>
 </section>
 
 </section>
 
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -6067,6 +6323,11 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
       </tr>
     </thead>
     <tbody>
+        <tr>
+            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
+          <td><a href="../identifier/schema.xsd">../identifier/schema.xsd</a></td>
+          <td><a href="../documentation.html"></a></td>
+        </tr>
         <tr>
             <td><code></code>c</code></td>
             <td><a href="https://schemas.dataspecer.com/xsd/core/">https://schemas.dataspecer.com/xsd/core/</a></td>
@@ -6133,18 +6394,18 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-funder_identifier_scheme_uri"><code>&lt;funder_identifier_scheme_uri&gt;</code></a> [0..1]
+          element <a href="#element-funder_name"><code>&lt;funder_name&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-funder_identifier_type"><code>&lt;funder_identifier_type&gt;</code></a> [1..1]
+          element <a href="#element-identifier"><code>&lt;identifier&gt;</code></a> [0..*]
       </li>
   </ul>
 
 
   </dl>
 </section>
-<section id="element-funder_identifier_scheme_uri">
-  <h4>Element <code>&lt;funder_identifier_scheme_uri&gt;</code></h4>
+<section id="element-funder_name">
+  <h4>Element <code>&lt;funder_name&gt;</code></h4>
 
   <dl>
     <dt>Význam</dt>
@@ -6156,54 +6417,13 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           
         </i>
 
-          <a href="#konceptuální-vlastnost-funder-identifier--funderIdentifierSchemeUri"><strong>Funder identifier scheme URI</strong></a>
-          (The URI of the funder identifier scheme.)
+          <a href="#konceptuální-vlastnost-funder-identifier-funder-name-http://www.w3.org/2000/01/rdf-schema#label"><strong>Funder name</strong></a>
+          (Funder name)
 
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-funder_identifier"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#anyURI"><code>xs:anyURI</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-    
-  </dl>
-</section>
-<section id="element-funder_identifier_type">
-  <h4>Element <code>&lt;funder_identifier_type&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-funder-identifier--funderIdentifierType"><strong>Funder identifier type</strong></a>
-          (The type of the funderIdentifier.)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..1</dd>
+      <dd>0..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-funder_identifier"></a></dd>
 
@@ -6217,6 +6437,52 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 
     
+
+
+    
+  </div>
+
+    
+  </dl>
+</section>
+<section id="element-identifier">
+  <h4>Element <code>&lt;identifier&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-funder-identifier-has-identifier-hasIdentifier"><strong>has identifier</strong></a>
+          (has identifier)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>0..*</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-funder_identifier"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="#type-identifier"><code>identifier</code></a>.
+      </dd>
+
+
+        <dt>Význam</dt>
+      <dd>
+        <a href="#konceptuální-třída-identifier-http://www.w3.org/ns/adms#Identifier">Identifier</a>
+        (This is based on the UN/CEFACT Identifier class.)
+      </dd>
+
 
 
     
@@ -6247,7 +6513,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     <code>description</code>:
     
     nepovinná
-    (0 - 1) položka typu 
+    (0 - ∞) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
@@ -6255,15 +6521,15 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     <code>license</code>:
     
     nepovinná
-    (0 - 1) položka typu 
+    (0 - ∞) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
     <code>access_rights</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
@@ -6304,7 +6570,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Povinnost</dt>
 <dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>0 - ∞</dd
 <dt>Typ</dt>
 
 
@@ -6333,7 +6599,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Povinnost</dt>
 <dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>0 - ∞</dd
 <dt>Typ</dt>
 
 
@@ -6360,9 +6626,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Information about who access the resource or an indication of its security status.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -6404,7 +6670,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-terms-of-use-"></a>
+<a href="#konceptuální-vlastnost-terms-of-use-kontaktní-bod-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#contactPoint">kontaktní bod</a>
 </dd>
 </dl>
 </section>
@@ -6434,6 +6700,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -6558,13 +6839,13 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-description"><code>&lt;description&gt;</code></a> [0..1]
+          element <a href="#element-description"><code>&lt;description&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-license"><code>&lt;license&gt;</code></a> [0..1]
+          element <a href="#element-license"><code>&lt;license&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-access_rights"><code>&lt;access_rights&gt;</code></a> [0..*]
+          element <a href="#element-access_rights"><code>&lt;access_rights&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-contact_person"><code>&lt;contact_person&gt;</code></a> [0..*]
@@ -6593,7 +6874,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>0..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-terms_of_use"></a></dd>
 
@@ -6634,7 +6915,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>0..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-terms_of_use"></a></dd>
 
@@ -6675,7 +6956,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-terms_of_use"></a></dd>
 
@@ -6762,6 +7043,14 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
   </a>
 <ul>
 <li>
+    <code>role</code>:
+    povinná
+    
+    (1 - 1) položka typu 
+      <strong>IRI (<a href="#konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">Resource agent role type</a>)</strong>
+      
+</li>
+<li>
     <code>relation</code>:
     povinná
     
@@ -6786,6 +7075,35 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 
+<section id="json-schéma-vlastnost-resource-to-agent-relationship-role">
+<h5>Vlastnost <code>role</code></h5>
+<dl>
+<dt>Klíč</dt>
+<dd>`role`</dd
+<dt>Jméno</dt>
+<dd>sehraná role</dd
+<dt>Popis</dt>
+<dd>Funkce entity či agenta ve vztahu k jiné entitě či zdroji.</dd
+<dt>Povinnost</dt>
+<dd>povinné</dd
+<dt>Kardinalita</dt>
+<dd>1 - 1</dd
+<dt>Typ</dt>
+
+<dd>
+  IRI (<a href="#konceptuální-třída-resource-agent-role-type-http:&#x2F;&#x2F;www.w3.org&#x2F;2004&#x2F;02&#x2F;skos&#x2F;core#Concept">Resource agent role type</a>)
+</dd>
+
+
+
+
+
+<dt>Interpretace</dt>
+<dd>
+<a href="#konceptuální-vlastnost-resource-to-agent-relationship-"></a>
+</dd>
+</dl>
+</section>
 <section id="json-schéma-vlastnost-resource-to-agent-relationship-relation">
 <h5>Vlastnost <code>relation</code></h5>
 <dl>
@@ -6809,7 +7127,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-resource-to-agent-relationship-relation-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;relation">relation</a>
+<a href="#konceptuální-vlastnost-resource-to-agent-relationship-"></a>
 </dd>
 </dl>
 </section>
@@ -6839,6 +7157,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -6892,6 +7225,11 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
       </tr>
     </thead>
     <tbody>
+        <tr>
+            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
+          <td><a href="../resource-agent-role-type/schema.xsd">../resource-agent-role-type/schema.xsd</a></td>
+          <td><a href="../documentation.html"></a></td>
+        </tr>
         <tr>
             <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
           <td><a href="../agent/schema.xsd">../agent/schema.xsd</a></td>
@@ -6963,11 +7301,60 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
+          element <a href="#element-role"><code>&lt;role&gt;</code></a> [1..1]
+      </li>
+      <li>
           element <a href="#element-relation"><code>&lt;relation&gt;</code></a> [1..1]
       </li>
   </ul>
 
 
+  </dl>
+</section>
+<section id="element-role">
+  <h4>Element <code>&lt;role&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-resource-to-agent-relationship-sehraná-role-http://www.w3.org/ns/dcat#hadRole"><strong>sehraná role</strong></a>
+          (Funkce entity či agenta ve vztahu k jiné entitě či zdroji.)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>1..1</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-resource_to_agent_relationship"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="#type-resource_agent_role_type"><code>resource_agent_role_type</code></a>.
+      </dd>
+
+
+        <dt>Význam</dt>
+      <dd>
+        <a href="#konceptuální-třída-resource-agent-role-type-http://www.w3.org/2004/02/skos/core#Concept">Resource agent role type</a>
+        (An idea or notion; a unit of thought.)
+      </dd>
+
+
+
+    
+  </div>
+
+    
   </dl>
 </section>
 <section id="element-relation">
@@ -7118,7 +7505,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
   <dl>
         <dt>Význam</dt>
       <dd>
-        <a href="#konceptuální-třída-metadata-agent-role-type-http://www.w3.org/2004/02/skos/core#Concept">Resource agent role type</a>
+        <a href="#konceptuální-třída-resource-agent-role-type-http://www.w3.org/2004/02/skos/core#Concept">Resource agent role type</a>
         (An idea or notion; a unit of thought.)
       </dd>
 
@@ -8680,510 +9067,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </section>
 </section>
 <section>
-<h2>Specifikace struktury pro Metadata to agent relationship</h2>
-<p>Datová struktura pro Metadata to agent relationship. Relationship between metadata record and agent.</p>
-
-<section>
-<h3>Přehled JSON struktury</h3>
-<p>JSON Schéma zachycující strukturu pro <i>Metadata to agent relationship</i> je definováno v souboru <a href="./metadata-to-agent-relationship/schema.json"><code>.&#x2F;metadata-to-agent-relationship&#x2F;schema.json</code></a>. Datová sada je tvořena jediným prvkem odpovídající datové struktuře <i>Metadata to agent relationship</i>.</p>
-
-<ul>
-<li>
-  <a href="#json-schéma-objekt-metadata-to-agent-relationship">
-    Metadata to agent relationship
-  </a>
-<ul>
-<li>
-    <code>external_identifiers</code>:
-    
-    nepovinná
-    (0 - ∞) položka typu 
-      
-       <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
-</li>
-<li>
-    <code>contactPoint</code>:
-    
-    nepovinná
-    (0 - ∞) položka typu 
-      <strong><a href="#json-schéma-objekt-contact-details">Contact details</a></strong>
-      
-</li>
-</ul>
-</li>
-</ul>
-
-<h3>Detailní specifikace prvků JSON struktury</h3>
-
-<section id="json-schéma-objekt-metadata-to-agent-relationship">
-<h4>Objekt <i>Metadata to agent relationship</i></h4>
-<dl>
-<dt>Popis</dt>
-<dd>Relationship between metadata record and agent.</dd>
-<dt>Interpretace</dt>
-<dd>
-  <a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a>
-</dd>
-</dl>
-
-<section id="">
-<h5>Vlastnost <code>external_identifiers</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`external_identifiers`</dd
-<dt>Jméno</dt>
-<dd>External identifier</dd
-<dt>Popis</dt>
-<dd>External identifer of an Agent.</dd
-<dt>Povinnost</dt>
-<dd>nepovinné</dd
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd
-<dt>Typ</dt>
-
-
-<dd>
-<a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
-</dd>
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-agent-external-identifier-agentExternalIdentifier">External identifier</a>
-</dd>
-</dl>
-</section>
-<section id="">
-<h5>Vlastnost <code>contactPoint</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`contactPoint`</dd
-<dt>Jméno</dt>
-<dd>kontaktní bod</dd
-<dt>Popis</dt>
-<dd>Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.</dd
-<dt>Povinnost</dt>
-<dd>nepovinné</dd
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd
-<dt>Typ</dt>
-
-<dd>
-  <a href=".&#x2F;documentation.html#json-schéma-objekt-contact-details">Contact details</a>
-</dd>
-
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-agent-"></a>
-</dd>
-</dl>
-</section>
-
-</section>
-
-<section id="json-schéma-objekt-contact-details">
-<h4>Referencovaný objekt <i>Contact details</i></h4>
-<dl>
-<dt>Popis</dt>
-<dd>Contact details such as telephone, e-mail address etc.</dd>
-<dt>Interpretace</dt>
-<dd>
-  <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
-</dd>
-<dt>Schéma</dt>
-<dd>
-  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
-</dd>
-</dl>
-</section>
-<section id="json-schéma-objekt-address">
-<h4>Referencovaný objekt <i>Address</i></h4>
-<dl>
-<dt>Popis</dt>
-<dd>An &quot;address representation&quot; as conceptually defined by the INSPIRE Address Representation data type. The locn:addressId property may be used to link this locn:Address to other representations.</dd>
-<dt>Interpretace</dt>
-<dd>
-  <a href="#konceptuální-třída-address-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;locn#Address">Address</a>
-</dd>
-<dt>Schéma</dt>
-<dd>
-  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
-</dd>
-</dl>
-</section>
-</section>
-
-
-
-
-
-
-
-<section>
-<h3>Přehled XML struktury</h3>
-<p>
-  Tato sekce popisuje XSD zachycující strukturu pro <i>Metadata to agent relationship</i>, jež je definováno
-  v souboru <a href="./metadata-to-agent-relationship/schema.xsd"><code>./metadata-to-agent-relationship/schema.xsd</code></a>.
-</p>
-
-
-<section>
-<h4>Importy</h4>
-<p>
-  Seznam schémat, jež jsou tímto schématem importovány a použity.
-</p>
-  <table class="def">
-    <thead>
-      <tr>
-        <th>Prefix</th>
-        <th>Namespace</th>
-        <th>Lokace schématu</th>
-        <th>Dokumentace</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
-          <td><a href="../contact-details/schema.xsd">../contact-details/schema.xsd</a></td>
-          <td><a href="../documentation.html"></a></td>
-        </tr>
-        <tr>
-            <td><code></code>c</code></td>
-            <td><a href="https://schemas.dataspecer.com/xsd/core/">https://schemas.dataspecer.com/xsd/core/</a></td>
-          <td><a href="https://techlib.cz/specification/ccmm/person/2022-07.xsd">https://techlib.cz/specification/ccmm/person/2022-07.xsd</a></td>
-          <td></td>
-        </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h4>Kořenové entity XSD schématu</h4>
-  <ul>
-      <li> element <a href="#element-metadata_to_agent_relationship"><code>metadata_to_agent_relationship</code></a></li>
-
-
-      <li> komplexní typ <a href="#type-metadata_to_agent_relationship"><code>metadata_to_agent_relationship</code></a></li>
-  </ul>
-</section>
-
-
-
-
-<section id="element-metadata_to_agent_relationship">
-  <h4>Kořenový element <code>&lt;metadata_to_agent_relationship&gt;</code></h4>
-  <dl>
-    
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="#type-metadata_to_agent_relationship"><code>metadata_to_agent_relationship</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-      </dl>
-</section>
-
-
-
-<section id="type-metadata_to_agent_relationship">
-  <h4>Kořenový komplexní typ <code>metadata_to_agent_relationship</code></h4>
-  <dl>
-        <dt>Význam</dt>
-      <dd>
-        <a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a>
-        (Relationship between metadata record and agent.)
-      </dd>
-
-
-        <dt>Obsah 
- - elementy v tomto pořadí
-</dt>
-      <ul style="margin-top: 0;">
-      <li>
-          element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
-      </li>
-      <li>
-          element <a href="#element-external_identifiers"><code>&lt;external_identifiers&gt;</code></a> [0..*]
-      </li>
-      <li>
-          element <a href="#element-contactPoint"><code>&lt;contactPoint&gt;</code></a> [0..*]
-      </li>
-  </ul>
-
-
-  </dl>
-</section>
-<section id="element-external_identifiers">
-  <h4>Element <code>&lt;external_identifiers&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-metadata-to-agent-relationship-relation-http://purl.org/dc/terms/relation"><strong>relation</strong></a>
-          (The resource related to the source resource.)
-
-          <span style="margin: 0 1rem">→</span>
-        <i>
-          odkazující na třídu
-          
-          
-          
-        </i>
-
-          <a href="#konceptuální-třída-agent-http://xmlns.com/foaf/0.1/Agent"><strong>Agent</strong></a>
-          (Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.)
-
-          <span style="margin: 0 1rem">→</span>
-        <i>
-          
-          mající vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-agent-external-identifier-agentExternalIdentifier"><strong>External identifier</strong></a>
-          (External identifer of an Agent.)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-metadata_to_agent_relationship"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-    
-  </dl>
-</section>
-<section id="element-contactPoint">
-  <h4>Element <code>&lt;contactPoint&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-metadata-to-agent-relationship-relation-http://purl.org/dc/terms/relation"><strong>relation</strong></a>
-          (The resource related to the source resource.)
-
-          <span style="margin: 0 1rem">→</span>
-        <i>
-          odkazující na třídu
-          
-          
-          
-        </i>
-
-          <a href="#konceptuální-třída-agent-http://xmlns.com/foaf/0.1/Agent"><strong>Agent</strong></a>
-          (Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.)
-
-          <span style="margin: 0 1rem">→</span>
-        <i>
-          
-          mající vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-agent-kontaktní-bod-http://www.w3.org/ns/dcat#contactPoint"><strong>kontaktní bod</strong></a>
-          (Relevantní kontaktní informace pro katalogizovaný zdroj. Doporučuje se použít slovník VCard.)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-metadata_to_agent_relationship"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="#type-contact_details"><code>contact_details</code></a>.
-      </dd>
-
-
-        <dt>Význam</dt>
-      <dd>
-        <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
-        (Contact details such as telephone, e-mail address etc.)
-      </dd>
-
-
-
-    
-  </div>
-
-    
-  </dl>
-</section>
-
-
-</section>
-</section>
-<section>
-<h2>Specifikace struktury pro Metadata agent role type</h2>
-<p>Datová struktura pro Metadata agent role type. An idea or notion; a unit of thought.</p>
-
-<section>
-<h3>Přehled JSON struktury</h3>
-<p>JSON Schéma zachycující strukturu pro <i>Metadata agent role type</i> je definováno v souboru <a href="./metadata-agent-role-type/schema.json"><code>.&#x2F;metadata-agent-role-type&#x2F;schema.json</code></a>. Datová sada je tvořena jediným prvkem odpovídající datové struktuře <i>Metadata agent role type</i>.</p>
-
-<ul>
-</ul>
-
-<h3>Detailní specifikace prvků JSON struktury</h3>
-
-
-</section>
-
-
-
-
-
-
-
-<section>
-<h3>Přehled XML struktury</h3>
-<p>
-  Tato sekce popisuje XSD zachycující strukturu pro <i>Metadata agent role type</i>, jež je definováno
-  v souboru <a href="./metadata-agent-role-type/schema.xsd"><code>./metadata-agent-role-type/schema.xsd</code></a>.
-</p>
-
-
-<section>
-<h4>Importy</h4>
-<p>
-  Seznam schémat, jež jsou tímto schématem importovány a použity.
-</p>
-  <table class="def">
-    <thead>
-      <tr>
-        <th>Prefix</th>
-        <th>Namespace</th>
-        <th>Lokace schématu</th>
-        <th>Dokumentace</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code></code>c</code></td>
-            <td><a href="https://schemas.dataspecer.com/xsd/core/">https://schemas.dataspecer.com/xsd/core/</a></td>
-          <td><a href="https://techlib.cz/specification/ccmm/person/2022-07.xsd">https://techlib.cz/specification/ccmm/person/2022-07.xsd</a></td>
-          <td></td>
-        </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h4>Kořenové entity XSD schématu</h4>
-  <ul>
-      <li> element <a href="#element-metadata_agent_role_type"><code>metadata_agent_role_type</code></a></li>
-
-
-      <li> komplexní typ <a href="#type-metadata_agent_role_type"><code>metadata_agent_role_type</code></a></li>
-  </ul>
-</section>
-
-
-
-
-<section id="element-metadata_agent_role_type">
-  <h4>Kořenový element <code>&lt;metadata_agent_role_type&gt;</code></h4>
-  <dl>
-    
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="#type-metadata_agent_role_type"><code>metadata_agent_role_type</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-      </dl>
-</section>
-
-
-
-<section id="type-metadata_agent_role_type">
-  <h4>Kořenový komplexní typ <code>metadata_agent_role_type</code></h4>
-  <dl>
-        <dt>Význam</dt>
-      <dd>
-        <a href="#konceptuální-třída-metadata-agent-role-type-http://www.w3.org/2004/02/skos/core#Concept">Metadata agent role type</a>
-        (An idea or notion; a unit of thought.)
-      </dd>
-
-
-        <dt>Obsah 
- - elementy v tomto pořadí
-</dt>
-      <ul style="margin-top: 0;">
-      <li>
-          element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
-      </li>
-  </ul>
-
-
-  </dl>
-</section>
-
-
-</section>
-</section>
-<section>
 <h2>Specifikace struktury pro Media Type</h2>
 <p>Datová struktura pro Media Type. A file format or physical medium.</p>
 
@@ -9442,7 +9325,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
-    <code>in_subject_scheme</code>:
+    <code>scheme</code>:
     
     nepovinná
     (0 - 1) položka typu 
@@ -9553,11 +9436,11 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
-<section id="json-schéma-vlastnost-subject-in_subject_scheme">
-<h5>Vlastnost <code>in_subject_scheme</code></h5>
+<section id="json-schéma-vlastnost-subject-scheme">
+<h5>Vlastnost <code>scheme</code></h5>
 <dl>
 <dt>Klíč</dt>
-<dd>`in_subject_scheme`</dd
+<dd>`scheme`</dd
 <dt>Jméno</dt>
 <dd>in subject scheme</dd
 <dt>Povinnost</dt>
@@ -9709,7 +9592,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-classification_code"><code>&lt;classification_code&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-in_subject_scheme"><code>&lt;in_subject_scheme&gt;</code></a> [0..1]
+          element <a href="#element-scheme"><code>&lt;scheme&gt;</code></a> [0..1]
       </li>
   </ul>
 
@@ -9839,8 +9722,8 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
   </dl>
 </section>
-<section id="element-in_subject_scheme">
-  <h4>Element <code>&lt;in_subject_scheme&gt;</code></h4>
+<section id="element-scheme">
+  <h4>Element <code>&lt;scheme&gt;</code></h4>
 
   <dl>
     <dt>Význam</dt>
@@ -10191,226 +10074,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </section>
 </section>
 <section>
-<h2>Specifikace struktury pro Subject scheme</h2>
-<p>Datová struktura pro Subject scheme. Collection of subjects (keywords, concepts, classification codes) curated by a single source.</p>
-
-<section>
-<h3>Přehled JSON struktury</h3>
-<p>JSON Schéma zachycující strukturu pro <i>Subject scheme</i> je definováno v souboru <a href="./subject-scheme/schema.json"><code>.&#x2F;subject-scheme&#x2F;schema.json</code></a>. Datová sada je tvořena jediným prvkem odpovídající datové struktuře <i>Subject scheme</i>.</p>
-
-<ul>
-<li>
-  <a href="#json-schéma-objekt-subject-scheme">
-    Subject scheme
-  </a>
-<ul>
-<li>
-    <code>label</code>:
-    
-    nepovinná
-    (0 - ∞) položka typu 
-      
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Řetězec anotovaný jazykem</a>
-</li>
-</ul>
-</li>
-</ul>
-
-<h3>Detailní specifikace prvků JSON struktury</h3>
-
-<section id="json-schéma-objekt-subject-scheme">
-<h4>Objekt <i>Subject scheme</i></h4>
-<dl>
-<dt>Popis</dt>
-<dd>Collection of subjects (keywords, concepts, classification codes) curated by a single source.</dd>
-<dt>Interpretace</dt>
-<dd>
-  <a href="#konceptuální-třída-subject-scheme-SubjectScheme">Subject scheme</a>
-</dd>
-</dl>
-
-<section id="json-schéma-vlastnost-subject-scheme-label">
-<h5>Vlastnost <code>label</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`label`</dd
-<dt>Jméno</dt>
-<dd></dd
-<dt>Popis</dt>
-<dd>Subject scheme label</dd
-<dt>Povinnost</dt>
-<dd>nepovinné</dd
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd
-<dt>Typ</dt>
-
-
-<dd>
-<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Řetězec anotovaný jazykem</a>
-</dd>
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-subject-scheme--http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#label"></a>
-</dd>
-</dl>
-</section>
-
-</section>
-
-</section>
-
-
-
-
-
-
-
-<section>
-<h3>Přehled XML struktury</h3>
-<p>
-  Tato sekce popisuje XSD zachycující strukturu pro <i>Subject scheme</i>, jež je definováno
-  v souboru <a href="./subject-scheme/schema.xsd"><code>./subject-scheme/schema.xsd</code></a>.
-</p>
-
-
-<section>
-<h4>Importy</h4>
-<p>
-  Seznam schémat, jež jsou tímto schématem importovány a použity.
-</p>
-  <table class="def">
-    <thead>
-      <tr>
-        <th>Prefix</th>
-        <th>Namespace</th>
-        <th>Lokace schématu</th>
-        <th>Dokumentace</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code></code>c</code></td>
-            <td><a href="https://schemas.dataspecer.com/xsd/core/">https://schemas.dataspecer.com/xsd/core/</a></td>
-          <td><a href="https://techlib.cz/specification/ccmm/person/2022-07.xsd">https://techlib.cz/specification/ccmm/person/2022-07.xsd</a></td>
-          <td></td>
-        </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h4>Kořenové entity XSD schématu</h4>
-  <ul>
-      <li> element <a href="#element-subject_scheme"><code>subject_scheme</code></a></li>
-
-
-      <li> komplexní typ <a href="#type-subject_scheme"><code>subject_scheme</code></a></li>
-  </ul>
-</section>
-
-
-
-
-<section id="element-subject_scheme">
-  <h4>Kořenový element <code>&lt;subject_scheme&gt;</code></h4>
-  <dl>
-    
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="#type-subject_scheme"><code>subject_scheme</code></a>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-      </dl>
-</section>
-
-
-
-<section id="type-subject_scheme">
-  <h4>Kořenový komplexní typ <code>subject_scheme</code></h4>
-  <dl>
-        <dt>Význam</dt>
-      <dd>
-        <a href="#konceptuální-třída-subject-scheme-SubjectScheme">Subject scheme</a>
-        (Collection of subjects (keywords, concepts, classification codes) curated by a single source.)
-      </dd>
-
-
-        <dt>Obsah 
- - elementy v tomto pořadí
-</dt>
-      <ul style="margin-top: 0;">
-      <li>
-          element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
-      </li>
-      <li>
-          element <a href="#element-label"><code>&lt;label&gt;</code></a> [0..*]
-      </li>
-  </ul>
-
-
-  </dl>
-</section>
-<section id="element-label">
-  <h4>Element <code>&lt;label&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-subject-scheme--http://www.w3.org/2000/01/rdf-schema#label"><strong>Label</strong></a>
-          (Subject scheme label)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-subject_scheme"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementue je <i>Řetězec s označením jazyka</i>.
-      </dd>
-
-
-    
-
-
-    
-  </div>
-
-    
-  </dl>
-</section>
-
-
-</section>
-</section>
-<section>
 <h2>Specifikace struktury pro Katalogizační záznam</h2>
 <p>Datová struktura pro Katalogizační záznam. Záznam v datovém katalogu popisující jednu datovou sadu či datovou službu.</p>
 
@@ -10449,14 +10112,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
-    <code>qualified_relation</code>:
-    
-    nepovinná
-    (0 - ∞) položka typu 
-      <strong><a href="#json-schéma-objekt-metadata-to-agent-relationship">Metadata to agent relationship</a></strong>
-      
-</li>
-<li>
     <code>original_repository</code>:
     
     nepovinná
@@ -10470,6 +10125,14 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     nepovinná
     (0 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-application-profile">Application profile</a></strong>
+      
+</li>
+<li>
+    <code>qualified_relation</code>:
+    povinná
+    
+    (1 - ∞) položka typu 
+      <strong><a href="#json-schéma-objekt-resource-to-agent-relationship">Resource to Agent Relationship</a></strong>
       
 </li>
 </ul>
@@ -10576,35 +10239,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
-<section id="json-schéma-vlastnost-katalogizační-záznam-qualified_relation">
-<h5>Vlastnost <code>qualified_relation</code></h5>
-<dl>
-<dt>Klíč</dt>
-<dd>`qualified_relation`</dd
-<dt>Jméno</dt>
-<dd>qualified relation</dd
-<dt>Popis</dt>
-<dd>Attachment of resource to the relationship.</dd
-<dt>Povinnost</dt>
-<dd>nepovinné</dd
-<dt>Kardinalita</dt>
-<dd>0 - ∞</dd
-<dt>Typ</dt>
-
-<dd>
-  <a href=".&#x2F;documentation.html#json-schéma-objekt-metadata-to-agent-relationship">Metadata to agent relationship</a>
-</dd>
-
-
-
-
-
-<dt>Interpretace</dt>
-<dd>
-<a href="#konceptuální-vlastnost-katalogizační-záznam-"></a>
-</dd>
-</dl>
-</section>
 <section id="json-schéma-vlastnost-katalogizační-záznam-original_repository">
 <h5>Vlastnost <code>original_repository</code></h5>
 <dl>
@@ -10630,7 +10264,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-katalogizační-záznam-original-repository-originalRepository">original repository</a>
+<a href="#konceptuální-vlastnost-katalogizační-záznam-"></a>
 </dd>
 </dl>
 </section>
@@ -10659,28 +10293,42 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-katalogizační-záznam-conforms-to-standard-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;conformsTo">Conforms to standard</a>
+<a href="#konceptuální-vlastnost-katalogizační-záznam-"></a>
 </dd>
 </dl>
 </section>
-
-</section>
-
-<section id="json-schéma-objekt-metadata-to-agent-relationship">
-<h4>Referencovaný objekt <i>Metadata to agent relationship</i></h4>
+<section id="json-schéma-vlastnost-katalogizační-záznam-qualified_relation">
+<h5>Vlastnost <code>qualified_relation</code></h5>
 <dl>
+<dt>Klíč</dt>
+<dd>`qualified_relation`</dd
+<dt>Jméno</dt>
+<dd>kvalifikovaný vztah</dd
 <dt>Popis</dt>
-<dd>Relationship between metadata record and agent.</dd>
+<dd>Odkaz na popis vztahu s jiným zdrojem.</dd
+<dt>Povinnost</dt>
+<dd>povinné</dd
+<dt>Kardinalita</dt>
+<dd>1 - ∞</dd
+<dt>Typ</dt>
+
+<dd>
+  <a href=".&#x2F;documentation.html#json-schéma-objekt-resource-to-agent-relationship">Resource to Agent Relationship</a>
+</dd>
+
+
+
+
+
 <dt>Interpretace</dt>
 <dd>
-  <a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a>
-</dd>
-<dt>Schéma</dt>
-<dd>
-  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+<a href="#konceptuální-vlastnost-katalogizační-záznam-"></a>
 </dd>
 </dl>
 </section>
+
+</section>
+
 <section id="json-schéma-objekt-katalog">
 <h4>Referencovaný objekt <i>Katalog</i></h4>
 <dl>
@@ -10711,6 +10359,36 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-objekt-resource-to-agent-relationship">
+<h4>Referencovaný objekt <i>Resource to Agent Relationship</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>An association class for attaching additional information to a relationship between Dataset and Agent.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">Resource to Agent Relationship</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-agent">
+<h4>Referencovaný objekt <i>Agent</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>Any entity carrying out actions with respect to the entities Catalogue and the Catalogued Resources.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-agent-http:&#x2F;&#x2F;xmlns.com&#x2F;foaf&#x2F;0.1&#x2F;Agent">Agent</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 <section id="json-schéma-objekt-contact-details">
 <h4>Referencovaný objekt <i>Contact details</i></h4>
 <dl>
@@ -10719,6 +10397,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -10774,17 +10467,17 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     <tbody>
         <tr>
             <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
-          <td><a href="../metadata-to-agent-relationship/schema.xsd">../metadata-to-agent-relationship/schema.xsd</a></td>
-          <td><a href="../documentation.html"></a></td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
           <td><a href="../repository/schema.xsd">../repository/schema.xsd</a></td>
           <td><a href="../documentation.html"></a></td>
         </tr>
         <tr>
             <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
           <td><a href="../application-profile/schema.xsd">../application-profile/schema.xsd</a></td>
+          <td><a href="../documentation.html"></a></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><i>Stejný namespace jako hlavní dokument</i></td>
+          <td><a href="../resource-to-agent-relationship/schema.xsd">../resource-to-agent-relationship/schema.xsd</a></td>
           <td><a href="../documentation.html"></a></td>
         </tr>
         <tr>
@@ -10862,13 +10555,13 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-language"><code>&lt;language&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-qualified_relation"><code>&lt;qualified_relation&gt;</code></a> [0..*]
-      </li>
-      <li>
           element <a href="#element-original_repository"><code>&lt;original_repository&gt;</code></a> [0..*]
       </li>
       <li>
           element <a href="#element-conforms_to_standard"><code>&lt;conforms_to_standard&gt;</code></a> [0..*]
+      </li>
+      <li>
+          element <a href="#element-qualified_relation"><code>&lt;qualified_relation&gt;</code></a> [1..*]
       </li>
   </ul>
 
@@ -10998,52 +10691,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
   </dl>
 </section>
-<section id="element-qualified_relation">
-  <h4>Element <code>&lt;qualified_relation&gt;</code></h4>
-
-  <dl>
-    <dt>Význam</dt>
-    <dd>
-        <i>
-          
-          vlastnost
-          
-          
-        </i>
-
-          <a href="#konceptuální-vlastnost-katalogizační-záznam-qualified-relation-qualifiedRelation"><strong>qualified relation</strong></a>
-          (Attachment of resource to the relationship.)
-
-    </dd>
-
-      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
-      <dt>Nadřazený element</dt>
-      <dd><a href="#type-metadata_record"></a></dd>
-
-    
-      <dt>Typ elementu</dt>
-        <div style="margin-left: 40px;">
-      <dt>Obsah</dt>
-      <dd>
-          Obsahem elementu je typ <a href="#type-metadata_to_agent_relationship"><code>metadata_to_agent_relationship</code></a>.
-      </dd>
-
-
-        <dt>Význam</dt>
-      <dd>
-        <a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a>
-        (Relationship between metadata record and agent.)
-      </dd>
-
-
-
-    
-  </div>
-
-    
-  </dl>
-</section>
 <section id="element-original_repository">
   <h4>Element <code>&lt;original_repository&gt;</code></h4>
 
@@ -11126,6 +10773,52 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
       <dd>
         <a href="#konceptuální-třída-application-profile-http://purl.org/dc/terms/Standard">Application profile</a>
         (A standard or other specification to which a metadata record conforms.)
+      </dd>
+
+
+
+    
+  </div>
+
+    
+  </dl>
+</section>
+<section id="element-qualified_relation">
+  <h4>Element <code>&lt;qualified_relation&gt;</code></h4>
+
+  <dl>
+    <dt>Význam</dt>
+    <dd>
+        <i>
+          
+          vlastnost
+          
+          
+        </i>
+
+          <a href="#konceptuální-vlastnost-katalogizační-záznam-kvalifikovaný-vztah-http://www.w3.org/ns/dcat#qualifiedRelation"><strong>kvalifikovaný vztah</strong></a>
+          (Odkaz na popis vztahu s jiným zdrojem.)
+
+    </dd>
+
+      <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
+      <dd>1..*</dd>
+      <dt>Nadřazený element</dt>
+      <dd><a href="#type-metadata_record"></a></dd>
+
+    
+      <dt>Typ elementu</dt>
+        <div style="margin-left: 40px;">
+      <dt>Obsah</dt>
+      <dd>
+          Obsahem elementu je typ <a href="#type-resource_to_agent_relationship"><code>resource_to_agent_relationship</code></a>.
+      </dd>
+
+
+        <dt>Význam</dt>
+      <dd>
+        <a href="#konceptuální-třída-resource-to-agent-relationship-http://www.w3.org/ns/dcat#Relationship">Resource to Agent Relationship</a>
+        (An association class for attaching additional information to a relationship between Dataset and Agent.)
       </dd>
 
 
@@ -11376,9 +11069,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <ul>
 <li>
     <code>publication_year</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#gYear">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#gYear</a>
 </li>
@@ -11408,9 +11101,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>primary_language</code>:
-    povinná
     
-    (1 - 1) položka typu 
+    nepovinná
+    (0 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
@@ -11428,7 +11121,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
     (1 - 1) položka typu 
       
-       <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Řetězec anotovaný jazykem</a>
+       <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 <li>
     <code>alternate_title</code>:
@@ -11472,17 +11165,17 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>qualified_relation</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-resource-to-agent-relationship">Resource to Agent Relationship</a></strong>
       
 </li>
 <li>
     <code>time_reference</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - ∞) položka typu 
       <strong><a href="#json-schéma-objekt-time-reference">Time reference</a></strong>
       
 </li>
@@ -11520,9 +11213,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>terms_of_use</code>:
+    povinná
     
-    nepovinná
-    (0 - ∞) položka typu 
+    (1 - 1) položka typu 
       <strong><a href="#json-schéma-objekt-terms-of-use">Terms of use</a></strong>
       
 </li>
@@ -11561,9 +11254,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The year when the item was or will be made publicly available.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -11677,9 +11370,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The primary language of the resource.</dd
 <dt>Povinnost</dt>
-<dd>povinné</dd
+<dd>nepovinné</dd
 <dt>Kardinalita</dt>
-<dd>1 - 1</dd
+<dd>0 - 1</dd
 <dt>Typ</dt>
 
 
@@ -11742,7 +11435,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 
 <dd>
-<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Řetězec anotovaný jazykem</a>
+<a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </dd>
 
 
@@ -11806,7 +11499,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-datová-sada-"></a>
+<a href="#konceptuální-vlastnost-datová-sada-is-described-by-isDescribedBy">is described by</a>
 </dd>
 </dl>
 </section>
@@ -11835,7 +11528,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-datová-sada-"></a>
+<a href="#konceptuální-vlastnost-datová-sada-has-identifier-hasIdentifier">has identifier</a>
 </dd>
 </dl>
 </section>
@@ -11907,9 +11600,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>Attachment of resource to the relationship.</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - ∞</dd
 <dt>Typ</dt>
 
 <dd>
@@ -11922,7 +11615,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-datová-sada-"></a>
+<a href="#konceptuální-vlastnost-datová-sada-qualified-relation-qualifiedRelation">qualified relation</a>
 </dd>
 </dl>
 </section>
@@ -11934,9 +11627,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has time reference</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - ∞</dd
 <dt>Typ</dt>
 
 <dd>
@@ -12069,9 +11762,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Jméno</dt>
 <dd>has terms of use</dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - ∞</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 <dd>
@@ -12170,7 +11863,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dd>Spatial region, named place or geometry representation of a place related to the dataset. </dd>
 <dt>Interpretace</dt>
 <dd>
-  <a href="#konceptuální-třída-location-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Location">Location</a>
+  <a href="#konceptuální-třída-location-Geolocation">Location</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -12343,6 +12036,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 <section id="json-schéma-objekt-agent">
 <h4>Referencovaný objekt <i>Agent</i></h4>
 <dl>
@@ -12366,6 +12074,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-contact-details-ContactDetails">Contact details</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -12418,6 +12141,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
+<section id="json-schéma-objekt-identifier">
+<h4>Referencovaný objekt <i>Identifier</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>This is based on the UN&#x2F;CEFACT Identifier class.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-identifier-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;adms#Identifier">Identifier</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
 <section id="json-schéma-objekt-subject-scheme">
 <h4>Referencovaný objekt <i>Subject scheme</i></h4>
 <dl>
@@ -12463,21 +12201,6 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </dd>
 </dl>
 </section>
-<section id="json-schéma-objekt-metadata-to-agent-relationship">
-<h4>Referencovaný objekt <i>Metadata to agent relationship</i></h4>
-<dl>
-<dt>Popis</dt>
-<dd>Relationship between metadata record and agent.</dd>
-<dt>Interpretace</dt>
-<dd>
-  <a href="#konceptuální-třída-metadata-to-agent-relationship-MetadataToAgentRelationship">Metadata to agent relationship</a>
-</dd>
-<dt>Schéma</dt>
-<dd>
-  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
-</dd>
-</dl>
-</section>
 <section id="json-schéma-objekt-katalog">
 <h4>Referencovaný objekt <i>Katalog</i></h4>
 <dl>
@@ -12501,6 +12224,21 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Interpretace</dt>
 <dd>
   <a href="#konceptuální-třída-application-profile-http:&#x2F;&#x2F;purl.org&#x2F;dc&#x2F;terms&#x2F;Standard">Application profile</a>
+</dd>
+<dt>Schéma</dt>
+<dd>
+  Schéma je definováno v  <a href=".&#x2F;documentation.html"></a>.
+</dd>
+</dl>
+</section>
+<section id="json-schéma-objekt-resource-to-agent-relationship">
+<h4>Referencovaný objekt <i>Resource to Agent Relationship</i></h4>
+<dl>
+<dt>Popis</dt>
+<dd>An association class for attaching additional information to a relationship between Dataset and Agent.</dd>
+<dt>Interpretace</dt>
+<dd>
+  <a href="#konceptuální-třída-resource-to-agent-relationship-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#Relationship">Resource to Agent Relationship</a>
 </dd>
 <dt>Schéma</dt>
 <dd>
@@ -12670,7 +12408,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="https://schemas.dataspecer.com/xsd/core/#iri"><code>&lt;iri&gt;</code></a> [0..1]
       </li>
       <li>
-          element <a href="#element-publication_year"><code>&lt;publication_year&gt;</code></a> [0..1]
+          element <a href="#element-publication_year"><code>&lt;publication_year&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-version"><code>&lt;version&gt;</code></a> [0..1]
@@ -12682,7 +12420,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-other_language"><code>&lt;other_language&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-primary_language"><code>&lt;primary_language&gt;</code></a> [1..1]
+          element <a href="#element-primary_language"><code>&lt;primary_language&gt;</code></a> [0..1]
       </li>
       <li>
           element <a href="#element-resource_type"><code>&lt;resource_type&gt;</code></a> [0..1]
@@ -12706,10 +12444,10 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-provenance"><code>&lt;provenance&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-qualified_relation"><code>&lt;qualified_relation&gt;</code></a> [0..*]
+          element <a href="#element-qualified_relation"><code>&lt;qualified_relation&gt;</code></a> [1..*]
       </li>
       <li>
-          element <a href="#element-time_reference"><code>&lt;time_reference&gt;</code></a> [0..*]
+          element <a href="#element-time_reference"><code>&lt;time_reference&gt;</code></a> [1..*]
       </li>
       <li>
           element <a href="#element-subject"><code>&lt;subject&gt;</code></a> [0..*]
@@ -12724,7 +12462,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-funding_reference"><code>&lt;funding_reference&gt;</code></a> [0..*]
       </li>
       <li>
-          element <a href="#element-terms_of_use"><code>&lt;terms_of_use&gt;</code></a> [0..*]
+          element <a href="#element-terms_of_use"><code>&lt;terms_of_use&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-related_resource"><code>&lt;related_resource&gt;</code></a> [0..*]
@@ -12753,7 +12491,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-dataset"></a></dd>
 
@@ -12917,7 +12655,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>1..1</dd>
+      <dd>0..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-dataset"></a></dd>
 
@@ -13008,7 +12746,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
         <div style="margin-left: 40px;">
       <dt>Obsah</dt>
       <dd>
-          Obsahem elementue je <i>Řetězec s označením jazyka</i>.
+          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
       </dd>
 
 
@@ -13193,7 +12931,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
         <dt>Význam</dt>
       <dd>
-        <a href="#konceptuální-třída-location-http://purl.org/dc/terms/Location">Location</a>
+        <a href="#konceptuální-třída-location-Geolocation">Location</a>
         (Spatial region, named place or geometry representation of a place related to the dataset. )
       </dd>
 
@@ -13270,7 +13008,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-dataset"></a></dd>
 
@@ -13316,7 +13054,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..*</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-dataset"></a></dd>
 
@@ -13546,7 +13284,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..*</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-dataset"></a></dd>
 
@@ -13651,7 +13389,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     
     (1 - 1) položka typu 
       
-       <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
+       <a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </li>
 </ul>
 </li>
@@ -13716,7 +13454,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 
 <dd>
-<a href="http://www.w3.org/2000/01/rdf-schema#Literal">http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;01&#x2F;rdf-schema#Literal</a>
+<a href="http://www.w3.org/2001/XMLSchema#string">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#string</a>
 </dd>
 
 
@@ -13907,7 +13645,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
         <div style="margin-left: 40px;">
       <dt>Obsah</dt>
       <dd>
-          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#anySimpleType"><code>xs:anySimpleType</code></a>.
+          Obsahem elementu je typ <a href="https://www.w3.org/TR/xmlschema-2/#string"><code>xs:string</code></a>.
       </dd>
 
 
@@ -15304,7 +15042,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 
 <dt>Interpretace</dt>
 <dd>
-<a href="#konceptuální-vlastnost-data-service-"></a>
+<a href="#konceptuální-vlastnost-data-service-přístupový-bod-služby-http:&#x2F;&#x2F;www.w3.org&#x2F;ns&#x2F;dcat#endpointURL">přístupový bod služby</a>
 </dd>
 </dl>
 </section>
@@ -15538,17 +15276,17 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 </li>
 <li>
     <code>byte_size</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#integer">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#integer</a>
 </li>
 <li>
     <code>format</code>:
+    povinná
     
-    nepovinná
-    (0 - 1) položka typu 
+    (1 - 1) položka typu 
       
        <a href="http://www.w3.org/2001/XMLSchema#anyURI">http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema#anyURI</a>
 </li>
@@ -15640,9 +15378,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The size of a Distribution in bytes. </dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -15669,9 +15407,9 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
 <dt>Popis</dt>
 <dd>The file format of the Distribution. </dd
 <dt>Povinnost</dt>
-<dd>nepovinné</dd
+<dd>povinné</dd
 <dt>Kardinalita</dt>
-<dd>0 - 1</dd
+<dd>1 - 1</dd
 <dt>Typ</dt>
 
 
@@ -15982,10 +15720,10 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
           element <a href="#element-checksum"><code>&lt;checksum&gt;</code></a> [1..1]
       </li>
       <li>
-          element <a href="#element-byte_size"><code>&lt;byte_size&gt;</code></a> [0..1]
+          element <a href="#element-byte_size"><code>&lt;byte_size&gt;</code></a> [1..1]
       </li>
       <li>
-          element <a href="#element-format"><code>&lt;format&gt;</code></a> [0..1]
+          element <a href="#element-format"><code>&lt;format&gt;</code></a> [1..1]
       </li>
       <li>
           element <a href="#element-conforms_to_schema"><code>&lt;conforms_to_schema&gt;</code></a> [0..*]
@@ -16064,7 +15802,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-distribution_downloadable_file"></a></dd>
 
@@ -16105,7 +15843,7 @@ V této sekci jsou definovány veškeré koncepty, třídy a asociace, potřebn�
     </dd>
 
       <dt>Efektivní kardinalita elementu vůči nadřazeném elementu</dt>
-      <dd>0..1</dd>
+      <dd>1..1</dd>
       <dt>Nadřazený element</dt>
       <dd><a href="#type-distribution_downloadable_file"></a></dd>
 

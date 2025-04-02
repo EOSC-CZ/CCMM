@@ -6,8 +6,7 @@
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:include schemaLocation="../subject-scheme/schema.xsd"/>
-  <xs:import namespace="https://schemas.dataspecer.com/xsd/core/"
-    schemaLocation="./2022-07.xsd"/>
+  <xs:import namespace="https://schemas.dataspecer.com/xsd/core/" schemaLocation="./2022-07.xsd"/>
   <xs:include schemaLocation="../dataset/schema.xsd"/>
   <xs:complexType name="subject" sawsdl:modelReference="Subject">
     <xs:annotation>
@@ -53,7 +52,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element minOccurs="0" name="in_subject_scheme" type="subject_scheme"
+      <xs:element minOccurs="0" name="scheme" type="subject_scheme"
         sawsdl:modelReference="inSubjectScheme">
         <xs:annotation>
           <xs:documentation xml:lang="en">
