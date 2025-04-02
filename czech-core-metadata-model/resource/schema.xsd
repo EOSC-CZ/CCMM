@@ -52,7 +52,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="resource_URL" type="xs:anyURI">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="resourceURL" type="xs:anyURI">
         <xs:annotation>
           <xs:documentation xml:lang="en">Resource URL</xs:documentation>
           <xs:documentation xml:lang="en">In case it is filled, it must be filled the same in c:iri.

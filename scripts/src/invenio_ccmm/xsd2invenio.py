@@ -62,6 +62,10 @@ singular_to_plural_element_names = {
     "contact": "contacts",
     "distribution_data_service": "distribution_data_services",
     "distribution_downloadable_file": "distribution_downloadable_files",
+    "family_name": "family_names",
+    "given_names": "given_names",
+    "resourceURL": "resourceURLs",
+    "license": "licenses",
 }
 
 
