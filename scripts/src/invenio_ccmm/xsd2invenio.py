@@ -211,8 +211,9 @@ class SchemaType:
             if (self.name, el.name) in ignored_elements:
                 continue
             props[el.name] = el.get_invenio_definition(ignored_elements)
-            if el.min_occurs > 0 and el.name != "iri":
-                props[el.name]["required"] = True
+            # required not handled for nma
+            # if el.min_occurs > 0 and el.name != "iri":
+            #     props[el.name]["required"] = True
 
         return remove_empty(
             {

@@ -32,7 +32,6 @@ $defs:
         type: i18nStr
         label.en: Title
         help.en: Alternate title name.
-        required: true
       type:
         type: keyword
         label.en: Type
@@ -51,10 +50,8 @@ $defs:
     properties:
       organization:
         use: ./ccmm.yaml#/$defs/organization
-        required: true
       person:
         use: ./ccmm.yaml#/$defs/person
-        required: true
   contact_details:
     properties:
       iri:
@@ -99,7 +96,6 @@ $defs:
           type: url
         label.en: Endpoint URL
         help.en: The root location or primary endpoint of the service (an IRI).
-        required: true
   dataset:
     properties:
       iri:
@@ -108,7 +104,6 @@ $defs:
         type: integer
         label.en: Publication year
         help.en: The year when the item was or will be made publicly available.
-        required: true
       version:
         type: keyword
         label.en: Version
@@ -119,7 +114,6 @@ $defs:
           type: i18nStr
         label.en: Description
         help.en: A free-text account of the Dataset.
-        required: true
       other_languages:
         type: array
         items:
@@ -138,7 +132,6 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the resource.
-        required: true
       alternate_titles:
         type: array
         items:
@@ -150,14 +143,12 @@ $defs:
           use: ./ccmm.yaml#/$defs/metadata_record
         label.en: is described by
         help.en: Inverse relation between dataset and metadata record.
-        required: true
       identifiers:
         type: array
         items:
           use: ./ccmm.yaml#/$defs/identifier
         label.en: identifier
         help.en: has identifier
-        required: true
       locations:
         type: array
         items:
@@ -183,7 +174,6 @@ $defs:
         help.en: Must contain at least one time reference with date type value "Created"
           from DataCIte controlled vocabulary 
           https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/dateType/.
-        required: true
       subjects:
         type: array
         items:
@@ -202,7 +192,6 @@ $defs:
       terms_of_use:
         use: ./ccmm.yaml#/$defs/terms_of_use
         label.en: terms of use
-        required: true
       related_resources:
         type: array
         items:
@@ -224,7 +213,6 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the distribution.
-        required: true
   distribution_data_service:
     properties:
       descriptions:
@@ -258,7 +246,6 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the distribution.
-        required: true
   distribution_downloadable_file:
     properties:
       checksum:
@@ -266,17 +253,14 @@ $defs:
         label.en: Checksum
         help.en: A mechanism that can be used to verify that the contents of a distribution
           have not changed.
-        required: true
       byte_size:
         type: integer
         label.en: Byte size
         help.en: The size of a Distribution in bytes.
-        required: true
       format:
         type: url
         label.en: Format
         help.en: The file format of the Distribution.
-        required: true
       conforms_to_schemas:
         type: array
         items:
@@ -293,7 +277,6 @@ $defs:
           type: url
         label.en: Access URL
         help.en: A URL that gives access to a Distribution of the Dataset.
-        required: true
       download_urls:
         type: array
         items:
@@ -306,7 +289,6 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the distribution.
-        required: true
   documentation:
     properties:
       iri:
@@ -323,7 +305,6 @@ $defs:
         type: keyword
       funder_identifier_value:
         type: keyword
-        required: true
       funder_identifier_scheme_uri:
         type: url
         label.en: Funder identifier scheme URI
@@ -332,7 +313,6 @@ $defs:
         type: keyword
         label.en: Funder identifier type
         help.en: The type of the funderIdentifier.
-        required: true
       funder_name:
         type: keyword
   funding_reference:
@@ -356,7 +336,6 @@ $defs:
         items:
           use: ./ccmm.yaml#/$defs/funder_identifier
         label.en: has funder
-        required: true
   geometry:
     properties:
       iri:
@@ -375,12 +354,10 @@ $defs:
         type: url
         label.en: Identifier scheme
         help.en: Scheme URI of the identifier.
-        required: true
       value:
         type: keyword
         label.en: Value
         help.en: Value of the identifer within the given identifier scheme.
-        required: true
   langString: {}
   location:
     properties:
@@ -400,7 +377,6 @@ $defs:
         type: keyword
         label.en: Relation to dataset
         help.en: Type of relation of the spatial location to the dataset.
-        required: true
       geometry:
         use: ./ccmm.yaml#/$defs/geometry
         label.en: Geometry
@@ -473,7 +449,6 @@ $defs:
         type: i18nStr
         label.en: Name
         help.en: Official organizational name
-        required: true
       iri:
         type: keyword
       identifiers:
@@ -493,12 +468,10 @@ $defs:
         type: array
         items:
           type: float
-        required: true
       UpperCorners:
         type: array
         items:
           type: float
-        required: true
       crs:
         type: url
       dimensions:
@@ -509,7 +482,6 @@ $defs:
         type: keyword
         label.en: Family name
         help.en: Full name of the person.
-        required: true
       family_names:
         type: array
         items:
@@ -619,13 +591,10 @@ $defs:
         use: ./ccmm.yaml#/$defs/resource_agent_role_type
         label.en: had role - The function of an entity or agent with respect to another
           entity or resource.
-        required: true
       organization:
         use: ./ccmm.yaml#/$defs/organization
-        required: true
       person:
         use: ./ccmm.yaml#/$defs/person
-        required: true
   subject:
     properties:
       iri:
@@ -638,7 +607,6 @@ $defs:
         type: i18nStr
         label.en: Title
         help.en: Title of the subject
-        required: true
       classification_code:
         type: keyword
         label.en: Classification code
@@ -678,7 +646,6 @@ $defs:
         label.en: Access rights
         help.en: Information about who access the resource or an indication of its
           security status.
-        required: true
       contacts:
         type: array
         items:
@@ -697,13 +664,11 @@ $defs:
         type: keyword
         label.en: Date type
         help.en: Type of the date.
-        required: true
       date:
         type: date
         label.en: Date
         help.en: A point or period of time associated with an event in the lifecycle
           of the resource.
-        required: true
   validation_result:
     properties:
       iri:
