@@ -578,13 +578,13 @@ $defs:
         type: keyword
         label.en: Title
         help.en: A name given to the Catalogue Record.
-      resourceURLs:
+      resource_URLs:
         type: array
         items:
           type: url
         label.en: Resource URL
         help.en: "In case it is filled, it must be filled the same in c:iri.\nIf more
-          resolvable IRIs, resourceURL shall link to human readable version, machine
+          resolvable IRIs, Resource URL shall link to human readable version, machine
           readable ID is always in c:iri."
       identifier:
         use: ./ccmm.yaml#/$defs/identifier

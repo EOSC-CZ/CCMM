@@ -64,7 +64,7 @@ singular_to_plural_element_names = {
     "distribution_downloadable_file": "distribution_downloadable_files",
     "family_name": "family_names",
     "given_names": "given_names",
-    "resourceURL": "resourceURLs",
+    "resource_URL": "resource_URLs",
     "license": "licenses",
 }
 
